@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q08",
+    "concept": "quantum generative model diffusion",
+    "arxiv_query": "all:\"quantum generative model\" AND all:\"diffusion\"",
+    "crossref_query": "\"quantum generative model\" diffusion",
+    "rationale": "Generative quantum models with diffusion.",
+    "strategy": "high_recall"
+  },
+  "meta": {
+    "api_total_results": 11,
+    "retrieved_records": 1,
+    "truncated": true
+  }
+}

@@ -1,0 +1,16 @@
+screening_decisions:
+  - include
+  - exclude
+  - maybe
+  - not_screened
+exclusion_reasons:
+  - not a diffusion generative model
+  - physical diffusion only
+  - not quantum-related
+  - classical-only method
+  - editorial or non-research item
+  - duplicate
+  - insufficient methodological detail
+  - outside date range
+  - inaccessible full text
+  - other

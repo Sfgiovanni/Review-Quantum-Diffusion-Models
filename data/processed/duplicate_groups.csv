@@ -1,0 +1,51 @@
+duplicate_group_id,record_id,kept_record_id,database_scope,doi_normalized,title_normalized
+D00001,2026-07-09T173807Z_cb9491e_R000001,2026-07-09T173807Z_cb9491e_R000001,arXiv,,an hybrid quantum classical diffusion model for image generation
+D00001,2026-07-09T173807Z_cb9491e_R000002,2026-07-09T173807Z_cb9491e_R000001,arXiv,,an hybrid quantum classical diffusion model for image generation
+D00001,2026-07-09T173807Z_cb9491e_R000003,2026-07-09T173807Z_cb9491e_R000001,arXiv,,an hybrid quantum classical diffusion model for image generation
+D00001,2026-07-09T173807Z_cb9491e_R000011,2026-07-09T173807Z_cb9491e_R000001,arXiv,,an hybrid quantum classical diffusion model for image generation
+D00002,2026-07-09T173807Z_cb9491e_R000004,2026-07-09T173807Z_cb9491e_R000004,arXiv,,stochastic schrodinger diffusion models for pure state ensemble generation
+D00003,2026-07-09T173807Z_cb9491e_R000005,2026-07-09T173807Z_cb9491e_R000005,arXiv,,quantum fourier generative models trainable at large scale
+D00003,2026-07-09T173807Z_cb9491e_R000006,2026-07-09T173807Z_cb9491e_R000005,arXiv,,quantum fourier generative models trainable at large scale
+D00004,2026-07-09T173807Z_cb9491e_R000007,2026-07-09T173807Z_cb9491e_R000007,arXiv,,lie group diffusion models for hardware aware quantum circuit synthesis
+D00005,2026-07-09T173807Z_cb9491e_R000008,2026-07-09T173807Z_cb9491e_R000008,arXiv,,quantum generative diffusion model for real world time series
+D00005,2026-07-09T173807Z_cb9491e_R000010,2026-07-09T173807Z_cb9491e_R000008,arXiv,,quantum generative diffusion model for real world time series
+D00006,2026-07-09T173807Z_cb9491e_R000009,2026-07-09T173807Z_cb9491e_R000009,arXiv,,hybrid quantum classical corrective diffusion modeling for meteorological downscaling
+D00007,2026-07-09T173807Z_cb9491e_R000012,2026-07-09T173807Z_cb9491e_R000012,arXiv,,physics guided generative optimization for trotter suzuki decomposition
+D00008,2026-07-09T173807Z_cb9491e_R000013,2026-07-09T173807Z_cb9491e_R000013,arXiv,,the score hamiltonian mapping diffusion models to adiabatic transport
+D00009,2026-07-09T173807Z_cb9491e_R000014,2026-07-09T173807Z_cb9491e_R000014,arXiv,,control affine schrodinger bridge and generalized bohm potential
+D00010,2026-07-09T173807Z_cb9491e_R000016,2026-07-09T173807Z_cb9491e_R000016,IEEE,10.1109/qce60285.2024.10371,understanding of the diffusion noise in quantum latent diffusion model
+D00010,2026-07-09T173807Z_cb9491e_R000027,2026-07-09T173807Z_cb9491e_R000016,IEEE,10.1109/qce60285.2024.10371,understanding of the diffusion noise in quantum latent diffusion model
+D00011,2026-07-09T173807Z_cb9491e_R000017,2026-07-09T173807Z_cb9491e_R000017,IEEE,10.1109/qsw62656.2024.00023,quantum denoising diffusion models
+D00011,2026-07-09T173807Z_cb9491e_R000018,2026-07-09T173807Z_cb9491e_R000017,IEEE,10.1109/qsw62656.2024.00023,quantum denoising diffusion models
+D00012,2026-07-09T173807Z_cb9491e_R000019,2026-07-09T173807Z_cb9491e_R000019,IEEE,10.1109/icaiqsa64000.2024.10882211,forecasting ipl score using machine learning techniques
+D00012,2026-07-09T173807Z_cb9491e_R000020,2026-07-09T173807Z_cb9491e_R000019,IEEE,10.1109/icaiqsa64000.2024.10882211,forecasting ipl score using machine learning techniques
+D00013,2026-07-09T173807Z_cb9491e_R000021,2026-07-09T173807Z_cb9491e_R000021,IEEE,10.1109/cdc45484.2021.9683765,from the heisenberg to the schrodinger picture quantum stochastic processes and process tensors
+D00014,2026-07-09T173807Z_cb9491e_R000022,2026-07-09T173807Z_cb9491e_R000022,IEEE,10.1109/ecoc48923.2020.9333375,stochastic anti symmetric schrodinger equations for non manakovian propagation
+D00015,2026-07-09T173807Z_cb9491e_R000023,2026-07-09T173807Z_cb9491e_R000023,IEEE,10.1109/icassp55912.2026.11461991,quantum reinforcement learning guided diffusion model for image synthesis via hybrid quantum classical generative model architectures
+D00016,2026-07-09T173807Z_cb9491e_R000024,2026-07-09T173807Z_cb9491e_R000024,IEEE,10.1109/tgrs.2025.3543670/v1/review1,review for super resolved 3 d satellite lidar imaging of earth via generative diffusion models
+D00017,2026-07-09T173807Z_cb9491e_R000025,2026-07-09T173807Z_cb9491e_R000025,IEEE,10.1109/tqe.2025.3544839,explicit quantum circuit for simulating the advectiondiffusionreaction dynamics
+D00018,2026-07-09T173807Z_cb9491e_R000026,2026-07-09T173807Z_cb9491e_R000026,IEEE,10.1109/ijcnn55064.2022.9892246,neural network model reconstructed from entangled quantum states
+D00019,2026-07-09T173807Z_cb9491e_R000028,2026-07-09T173807Z_cb9491e_R000028,IEEE,10.1109/ncim65934.2025.11160179,quantum machine learning for image classification a hybrid model of residual network with quantum support vector machine
+D00020,2026-07-09T173807Z_cb9491e_R000029,2026-07-09T173807Z_cb9491e_R000029,IEEE,10.1109/tgrs.2025.3564959/v2/review3,review for d3pm dual stream denoising diffusion probabilistic model for change detection in multimodal remote sensing images
+D00021,2026-07-09T173807Z_cb9491e_R000030,2026-07-09T173807Z_cb9491e_R000030,IEEE,10.1109/qce60285.2024.10259,qrng ddpm enhancing diffusion models through fitting mixture noise with quantum random number
+D00022,2026-07-09T173807Z_cb9491e_R000031,2026-07-09T173807Z_cb9491e_R000031,IEEE,10.1109/tmm.2026.3685791,navigating score matching within diffusion models
+D00023,2026-07-09T173807Z_cb9491e_R000032,2026-07-09T173807Z_cb9491e_R000032,IEEE,10.1109/icassp55912.2026.11460455,structure aware diffusion schrodinger bridge
+D00024,2026-07-09T173807Z_cb9491e_R000033,2026-07-09T173807Z_cb9491e_R000033,IEEE,10.1109/nss/mic/rtsd57108.2024.10657633,pet image denoising based on diffusion schrodinger bridge model
+D00025,2026-07-09T173807Z_cb9491e_R000034,2026-07-09T173807Z_cb9491e_R000034,Springer,10.1007/s42484-026-00352-1,quantum latent diffusion model for high dimensional state generation
+D00025,2026-07-09T173807Z_cb9491e_R000046,2026-07-09T173807Z_cb9491e_R000034,Springer,10.1007/s42484-026-00352-1,quantum latent diffusion model for high dimensional state generation
+D00026,2026-07-09T173807Z_cb9491e_R000035,2026-07-09T173807Z_cb9491e_R000035,Springer,10.1007/s42484-024-00224-6,quantum latent diffusion models
+D00027,2026-07-09T173807Z_cb9491e_R000036,2026-07-09T173807Z_cb9491e_R000036,Springer,10.1007/s11128-023-04239-z,denoising quantum mixed states using quantum autoencoders
+D00028,2026-07-09T173807Z_cb9491e_R000037,2026-07-09T173807Z_cb9491e_R000037,Springer,10.1007/s11128-022-03758-5,multiparty quantum private comparison based on quantum walks
+D00028,2026-07-09T173807Z_cb9491e_R000038,2026-07-09T173807Z_cb9491e_R000037,Springer,10.1007/s11128-022-03758-5,multiparty quantum private comparison based on quantum walks
+D00029,2026-07-09T173807Z_cb9491e_R000039,2026-07-09T173807Z_cb9491e_R000039,Springer,10.1007/978-3-030-82331-3_11,exact controllability for stochastic schrodinger equations
+D00030,2026-07-09T173807Z_cb9491e_R000040,2026-07-09T173807Z_cb9491e_R000040,Springer,10.1007/s40828-020-0108-1,stochastic reaction stochastic diffusion
+D00031,2026-07-09T173807Z_cb9491e_R000041,2026-07-09T173807Z_cb9491e_R000041,Springer,10.1007/978-981-96-0029-8_11,diffusion model
+D00032,2026-07-09T173807Z_cb9491e_R000042,2026-07-09T173807Z_cb9491e_R000042,Springer,10.1007/978-3-031-80965-1_4,conditional image synthesis using generative diffusion models application to pathological prostate mr image generation
+D00033,2026-07-09T173807Z_cb9491e_R000043,2026-07-09T173807Z_cb9491e_R000043,Springer,10.1007/s11128-025-04850-2,on the quantum circuit model of a kind of quantum adiabatic evolution
+D00034,2026-07-09T173807Z_cb9491e_R000044,2026-07-09T173807Z_cb9491e_R000044,Springer,10.1007/s11128-023-04217-5,shallow hybrid quantum classical convolutional neural network model for image classification
+D00035,2026-07-09T173807Z_cb9491e_R000045,2026-07-09T173807Z_cb9491e_R000045,Springer,10.1007/s44464-026-00006-y,quantum distortion model for running variational quantum algorithms without error corrections
+D00036,2026-07-09T173807Z_cb9491e_R000047,2026-07-09T173807Z_cb9491e_R000047,Springer,10.1007/s00259-023-06417-8,pet image denoising based on denoising diffusion probabilistic model
+D00037,2026-07-09T173807Z_cb9491e_R000048,2026-07-09T173807Z_cb9491e_R000048,Springer,10.1007/s12530-024-09644-y,a network traffic data generation model based on aot ddpm for abnormal traffic detection
+D00038,2026-07-09T173807Z_cb9491e_R000049,2026-07-09T173807Z_cb9491e_R000049,Springer,10.1007/s11553-023-01048-1,ki basierter rapid evidence generator mit risikoadjustiertem propensity score matching
+D00039,2026-07-09T173807Z_cb9491e_R000050,2026-07-09T173807Z_cb9491e_R000050,Springer,10.1007/s11128-021-03252-4,quantum contracts between schrodinger and a cat
+D00040,2026-07-09T173807Z_cb9491e_R000051,2026-07-09T173807Z_cb9491e_R000051,Springer,10.1007/978-3-030-63300-4_1,time dependent schrodinger equation

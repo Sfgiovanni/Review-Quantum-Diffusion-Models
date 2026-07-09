@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q05",
+    "concept": "score-based quantum",
+    "arxiv_query": "all:\"score-based quantum\"",
+    "crossref_query": "\"score-based quantum\"",
+    "rationale": "Alternative term order.",
+    "strategy": "high_precision"
+  },
+  "meta": {
+    "api_total_results": 0,
+    "retrieved_records": 0,
+    "truncated": false
+  }
+}

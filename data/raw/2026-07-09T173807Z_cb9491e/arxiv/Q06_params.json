@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q06",
+    "concept": "stochastic Schr\u00f6dinger diffusion",
+    "arxiv_query": "all:\"stochastic Schr\u00f6dinger diffusion\"",
+    "crossref_query": "\"stochastic Schr\u00f6dinger diffusion\"",
+    "rationale": "Unicode spelling.",
+    "strategy": "high_precision"
+  },
+  "meta": {
+    "api_total_results": 1,
+    "retrieved_records": 1,
+    "truncated": false
+  }
+}

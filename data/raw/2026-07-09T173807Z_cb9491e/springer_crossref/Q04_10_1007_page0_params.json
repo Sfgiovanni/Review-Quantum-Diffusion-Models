@@ -1,0 +1,7 @@
+{
+  "query.bibliographic": "\"quantum score-based\"",
+  "filter": "from-pub-date:2020-01-01,until-pub-date:2026-07-09",
+  "rows": 1,
+  "cursor": "*",
+  "select": "DOI,title,author,publisher,container-title,type,issued,published-print,published-online,deposited,ISSN,ISBN,volume,issue,page,subject,license,URL,abstract"
+}

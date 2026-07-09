@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/+lidkbz4jHKMtnZ+AlT+2UWYVJM</id>
+  <title>arXiv Query: search_query=all:"quantum" AND all:"Schrödinger bridge" AND all:"diffusion"&amp;id_list=&amp;start=0&amp;max_results=1</title>
+  <updated>2026-07-09T17:22:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum%22+AND+(all:%22Schr%C3%B6dinger+bridge%22+AND+all:%22diffusion%22)&amp;start=0&amp;max_results=1&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2508.08511v2</id>
+    <title>Control-affine Schrödinger Bridge and Generalized Bohm Potential</title>
+    <updated>2025-11-12T17:30:54Z</updated>
+    <link href="https://arxiv.org/abs/2508.08511v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.08511v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The control-affine Schrödinger bridge concerns with a stochastic optimal control problem. Its solution is a controlled evolution of joint state probability density subject to a control-affine Itô diffusion with a given deadline connecting a given pair of initial and terminal densities. In this work, we recast the necessary conditions of optimality for the control-affine Schrödinger bridge problem as a two point boundary value problem for a quantum mechanical Schrödinger PDE with complex potential. This complex-valued potential is a generalization of the real-valued Bohm potential in quantum mechanics. Our derived potential is akin to the optical potential in nuclear physics where the real part of the potential encodes elastic scattering (transmission of wave function), and the imaginary part encodes inelastic scattering (absorption of wave function). The key takeaway is that the process noise that drives the evolution of probability densities induces an absorbing medium in the evolution of wave function. These results make new connections between control theory and non-equilibrium statistical mechanics through the lens of quantum mechanics.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-11T22:41:41Z</published>
+    <arxiv:comment>This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344. Partial funding for this work was provided by LLNL Laboratory Directed Research and Development grant GS 25-ERD-044. Document release number: LLNL-JRNL-2008865</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Alexis M. H. Teter</name>
+    </author>
+    <author>
+      <name>Abhishek Halder</name>
+    </author>
+    <author>
+      <name>Michael D. Schneider</name>
+    </author>
+    <author>
+      <name>Alexx S. Perloff</name>
+    </author>
+    <author>
+      <name>Jane Pratt</name>
+    </author>
+    <author>
+      <name>Conor M. Artman</name>
+    </author>
+    <author>
+      <name>Maria Demireva</name>
+    </author>
+  </entry>
+</feed>

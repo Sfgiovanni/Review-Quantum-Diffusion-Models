@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q15",
+    "concept": "quantum DDPM",
+    "arxiv_query": "all:\"quantum\" AND all:\"DDPM\"",
+    "crossref_query": "quantum DDPM",
+    "rationale": "DDPM acronym.",
+    "strategy": "high_recall"
+  },
+  "meta": {
+    "api_total_results": 4,
+    "retrieved_records": 1,
+    "truncated": true
+  }
+}

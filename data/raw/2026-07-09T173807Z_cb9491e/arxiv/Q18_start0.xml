@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ua4PxrurKmeQJRFhLOM9rpboFHc</id>
+  <title>arXiv Query: search_query=all:"quantum" AND all:"Schrodinger bridge" AND all:"diffusion"&amp;id_list=&amp;start=0&amp;max_results=1</title>
+  <updated>2026-07-09T17:22:13Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum%22+AND+(all:%22Schrodinger+bridge%22+AND+all:%22diffusion%22)&amp;start=0&amp;max_results=1&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1405.6650v3</id>
+    <title>Positive contraction mappings for classical and quantum Schrodinger systems</title>
+    <updated>2014-10-07T13:18:03Z</updated>
+    <link href="https://arxiv.org/abs/1405.6650v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1405.6650v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The classical Schrodinger bridge seeks the most likely probability law for a diffusion process, in path space, that matches marginals at two end points in time; the likelihood is quantified by the relative entropy between the sought law and a prior, and the law dictates a controlled path that abides by the specified marginals. Schrodinger proved that the optimal steering of the density between the two end points is effected by a multiplicative functional transformation of the prior; this transformation represents an automorphism on the space of probability measures and has since been studied by Fortet, Beurling and others. A similar question can be raised for processes evolving in a discrete time and space as well as for processes defined over non-commutative probability spaces. The present paper builds on earlier work by Pavon and Ticozzi and begins with the problem of steering a Markov chain between given marginals. Our approach is based on the Hilbert metric and leads to an alternative proof which, however, is constructive. More specifically, we show that the solution to the Schrodinger bridge is provided by the fixed point of a contractive map. We approach in a similar manner the steering of a quantum system across a quantum channel. We are able to establish existence of quantum transitions that are multiplicative functional transformations of a given Kraus map, but only for the case of uniform marginals. As in the Markov chain case, and for uniform density matrices, the solution of the quantum bridge can be constructed from the fixed point of a certain contractive map. For arbitrary marginal densities, extensive numerical simulations indicate that iteration of a similar map leads to fixed points from which we can construct a quantum bridge. For this general case, however, a proof of convergence remains elusive.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-05-26T17:22:33Z</published>
+    <arxiv:comment>27 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Tryphon T. Georgiou</name>
+    </author>
+    <author>
+      <name>Michele Pavon</name>
+    </author>
+    <arxiv:doi>10.1063/1.4915289</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.4915289" title="doi"/>
+  </entry>
+</feed>

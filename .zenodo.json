@@ -1,0 +1,20 @@
+{
+  "title": "Quantum Diffusion Literature Search",
+  "upload_type": "software",
+  "description": "Reproducible literature-search pipeline for quantum diffusion model review articles.",
+  "creators": [
+    {
+      "name": "TODO: add author name"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "quantum diffusion models",
+    "literature search",
+    "arXiv",
+    "Crossref",
+    "PRISMA-S"
+  ],
+  "related_identifiers": [],
+  "notes": "DOI will be assigned by Zenodo after GitHub release archival."
+}

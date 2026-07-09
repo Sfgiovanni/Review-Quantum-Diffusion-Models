@@ -1,0 +1,266 @@
+study:
+  title: Quantum Diffusion Models literature search
+  description: Reproducible search strategy for quantum diffusion model literature
+    across arXiv and Crossref DOI-prefix scoped IEEE/Springer records.
+  strategy_version: 1.0.0
+date_range:
+  from_pub_date: '2020-01-01'
+  until_pub_date: '2026-07-09'
+sources:
+- arxiv
+- ieee
+- springer
+publishers:
+  ieee:
+    database_scope: IEEE
+    retrieval_source: Crossref
+    retrieval_method: Crossref DOI-prefix search
+    doi_prefixes:
+    - '10.1109'
+  springer:
+    database_scope: Springer
+    retrieval_source: Crossref
+    retrieval_method: Crossref DOI-prefix search
+    doi_prefixes:
+    - '10.1007'
+api:
+  batch_size: 100
+  max_results_per_query: 1
+  sleep_seconds: 0.0
+  timeout_seconds: 30
+  max_attempts: 3
+  backoff:
+    initial_seconds: 2.0
+    multiplier: 2.0
+    max_seconds: 60.0
+  user_agent: quantum-diffusion-literature-search/1.0 (mailto optional via CROSSREF_MAILTO)
+deduplication:
+  title_similarity_candidate_threshold: 94
+  title_similarity_auto_threshold: 98
+  year_tolerance: 1
+relevance:
+  threshold: 6
+  base_terms:
+    quantum: 3
+    diffusion: 3
+  positive_patterns:
+    \bdiffusion model(s)?\b: 6
+    \bdenoising diffusion\b: 7
+    \bdenoising diffusion probabilistic model(s)?\b: 8
+    \bddpm\b: 6
+    \bscore[- ]based\b: 6
+    \bscore matching\b: 5
+    \bgenerative model(s)?\b: 4
+    \bquantum generative\b: 6
+    \bquantum machine learning\b: 4
+    \bquantum neural network(s)?\b: 4
+    \bquantum circuit(s)?\b: 3
+    \bvariational quantum\b: 3
+    \bstochastic schr[oö]dinger diffusion\b: 8
+    \bschr[oö]dinger bridge\b: 4
+    \bdensity matrix\b: 2
+    \bopen quantum system(s)?\b: 2
+  negative_patterns:
+    \bspin diffusion\b: -3
+    \bcharge diffusion\b: -3
+    \bthermal diffusion\b: -3
+    \bneutron diffusion\b: -4
+    \bparticle diffusion\b: -3
+    \bsubdiffusion\b: -2
+    \banderson localization\b: -2
+    \bquantum walk(s)?\b: -1
+topic_patterns:
+  DDPM / denoising diffusion:
+  - denoising diffusion
+  - \bddpm\b
+  score-based diffusion:
+  - score[- ]based
+  - score matching
+  stochastic Schrödinger diffusion:
+  - stochastic schr[oö]dinger diffusion
+  Schrödinger bridge:
+  - schr[oö]dinger bridge
+  quantum circuit diffusion:
+  - quantum circuit
+  variational quantum diffusion:
+  - variational quantum
+  quantum neural-network diffusion:
+  - quantum neural network
+  quantum generative model:
+  - quantum generative
+  classical diffusion applied to quantum data:
+  - quantum data
+  physical quantum diffusion, likely out of scope:
+  - spin diffusion
+  - charge diffusion
+  - thermal diffusion
+  - particle diffusion
+exports:
+  formats:
+  - csv
+  - parquet
+  - xlsx
+  column_order:
+  - record_id
+  - run_id
+  - database_scope
+  - retrieval_source
+  - retrieval_method
+  - query_id
+  - query_text
+  - source_record_id
+  - title
+  - title_normalized
+  - abstract
+  - authors
+  - first_author
+  - publication_date
+  - year
+  - updated_date
+  - doi
+  - doi_normalized
+  - arxiv_id
+  - publisher
+  - container_title
+  - document_type
+  - issn
+  - isbn
+  - volume
+  - issue
+  - pages
+  - subjects
+  - categories
+  - license
+  - is_open_access
+  - landing_page_url
+  - abstract_url
+  - pdf_url
+  - raw_source_file
+  - retrieved_at_utc
+  - relevance_score
+  - positive_matches
+  - negative_matches
+  - score_explanation
+  - topic_class
+  - publisher_validation
+  - publisher_validation_reason
+  - duplicate_group_id
+  - merged_sources
+  - screening_status
+  - exclusion_reason
+  - notes
+directories:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  reports: reports
+  logs: logs
+queries:
+- query_id: Q01
+  concept: quantum diffusion model
+  arxiv_query: all:"quantum diffusion model"
+  crossref_query: '"quantum diffusion model"'
+  rationale: Exact phrase for the central construct.
+  strategy: high_precision
+- query_id: Q02
+  concept: quantum diffusion models
+  arxiv_query: all:"quantum diffusion models"
+  crossref_query: '"quantum diffusion models"'
+  rationale: Plural exact phrase.
+  strategy: high_precision
+- query_id: Q03
+  concept: quantum denoising diffusion
+  arxiv_query: all:"quantum denoising diffusion"
+  crossref_query: '"quantum denoising diffusion"'
+  rationale: Targets denoising diffusion variants.
+  strategy: high_precision
+- query_id: Q04
+  concept: quantum score-based
+  arxiv_query: all:"quantum score-based"
+  crossref_query: '"quantum score-based"'
+  rationale: Targets score-based terminology.
+  strategy: high_precision
+- query_id: Q05
+  concept: score-based quantum
+  arxiv_query: all:"score-based quantum"
+  crossref_query: '"score-based quantum"'
+  rationale: Alternative term order.
+  strategy: high_precision
+- query_id: Q06
+  concept: stochastic Schrödinger diffusion
+  arxiv_query: all:"stochastic Schrödinger diffusion"
+  crossref_query: '"stochastic Schrödinger diffusion"'
+  rationale: Unicode spelling.
+  strategy: high_precision
+- query_id: Q07
+  concept: stochastic Schrodinger diffusion
+  arxiv_query: all:"stochastic Schrodinger diffusion"
+  crossref_query: '"stochastic Schrodinger diffusion"'
+  rationale: ASCII spelling.
+  strategy: high_precision
+- query_id: Q08
+  concept: quantum generative model diffusion
+  arxiv_query: all:"quantum generative model" AND all:"diffusion"
+  crossref_query: '"quantum generative model" diffusion'
+  rationale: Generative quantum models with diffusion.
+  strategy: high_recall
+- query_id: Q09
+  concept: quantum generative models diffusion
+  arxiv_query: all:"quantum generative models" AND all:"diffusion"
+  crossref_query: '"quantum generative models" diffusion'
+  rationale: Plural generative terminology.
+  strategy: high_recall
+- query_id: Q10
+  concept: quantum circuit diffusion model
+  arxiv_query: all:"quantum circuit" AND all:"diffusion model"
+  crossref_query: '"quantum circuit" "diffusion model"'
+  rationale: Circuit-based diffusion models.
+  strategy: high_recall
+- query_id: Q11
+  concept: quantum neural network diffusion model
+  arxiv_query: all:"quantum neural network" AND all:"diffusion model"
+  crossref_query: '"quantum neural network" "diffusion model"'
+  rationale: QNN diffusion models.
+  strategy: high_recall
+- query_id: Q12
+  concept: variational quantum diffusion model
+  arxiv_query: all:"variational quantum" AND all:"diffusion model"
+  crossref_query: '"variational quantum" "diffusion model"'
+  rationale: Variational quantum formulations.
+  strategy: high_recall
+- query_id: Q13
+  concept: quantum machine learning diffusion model
+  arxiv_query: all:"quantum machine learning" AND all:"diffusion model"
+  crossref_query: '"quantum machine learning" "diffusion model"'
+  rationale: QML diffusion model terminology.
+  strategy: high_recall
+- query_id: Q14
+  concept: quantum denoising diffusion probabilistic model
+  arxiv_query: all:"quantum" AND all:"denoising diffusion probabilistic model"
+  crossref_query: quantum "denoising diffusion probabilistic model"
+  rationale: DDPM exact phrase with quantum.
+  strategy: high_precision
+- query_id: Q15
+  concept: quantum DDPM
+  arxiv_query: all:"quantum" AND all:"DDPM"
+  crossref_query: quantum DDPM
+  rationale: DDPM acronym.
+  strategy: high_recall
+- query_id: Q16
+  concept: quantum score matching diffusion
+  arxiv_query: all:"quantum" AND all:"score matching" AND all:"diffusion"
+  crossref_query: quantum "score matching" diffusion
+  rationale: Score matching and diffusion.
+  strategy: high_recall
+- query_id: Q17
+  concept: quantum Schrödinger bridge diffusion
+  arxiv_query: all:"quantum" AND all:"Schrödinger bridge" AND all:"diffusion"
+  crossref_query: quantum "Schrödinger bridge" diffusion
+  rationale: Unicode Schrödinger bridge.
+  strategy: high_recall
+- query_id: Q18
+  concept: quantum Schrodinger bridge diffusion
+  arxiv_query: all:"quantum" AND all:"Schrodinger bridge" AND all:"diffusion"
+  crossref_query: quantum "Schrodinger bridge" diffusion
+  rationale: ASCII Schrodinger bridge.
+  strategy: high_recall

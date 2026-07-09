@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q18",
+    "concept": "quantum Schrodinger bridge diffusion",
+    "arxiv_query": "all:\"quantum\" AND all:\"Schrodinger bridge\" AND all:\"diffusion\"",
+    "crossref_query": "quantum \"Schrodinger bridge\" diffusion",
+    "rationale": "ASCII Schrodinger bridge.",
+    "strategy": "high_recall"
+  },
+  "meta": {
+    "api_total_results": 1,
+    "retrieved_records": 1,
+    "truncated": false
+  }
+}

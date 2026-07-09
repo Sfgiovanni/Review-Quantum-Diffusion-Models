@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q12",
+    "concept": "variational quantum diffusion model",
+    "arxiv_query": "all:\"variational quantum\" AND all:\"diffusion model\"",
+    "crossref_query": "\"variational quantum\" \"diffusion model\"",
+    "rationale": "Variational quantum formulations.",
+    "strategy": "high_recall"
+  },
+  "meta": {
+    "api_total_results": 8,
+    "retrieved_records": 1,
+    "truncated": true
+  }
+}

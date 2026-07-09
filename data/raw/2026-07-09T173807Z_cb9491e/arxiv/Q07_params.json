@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q07",
+    "concept": "stochastic Schrodinger diffusion",
+    "arxiv_query": "all:\"stochastic Schrodinger diffusion\"",
+    "crossref_query": "\"stochastic Schrodinger diffusion\"",
+    "rationale": "ASCII spelling.",
+    "strategy": "high_precision"
+  },
+  "meta": {
+    "api_total_results": 0,
+    "retrieved_records": 0,
+    "truncated": false
+  }
+}

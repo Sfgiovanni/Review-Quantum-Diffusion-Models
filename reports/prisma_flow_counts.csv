@@ -1,0 +1,12 @@
+prisma_item,count,status
+records identified from arXiv,14.0,observed
+records identified from IEEE-scoped Crossref search,18.0,observed
+records identified from Springer-scoped Crossref search,18.0,observed
+duplicate records removed,10.0,computed
+records marked for manual duplicate review,,pending
+records after deduplication,40.0,computed
+records screened,,pending
+records excluded,,pending
+full-text reports sought,,pending
+full-text reports assessed,,pending
+studies included,,pending

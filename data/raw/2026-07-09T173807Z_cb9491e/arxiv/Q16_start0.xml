@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/YKjGwHpnzp8fU2jAeirpzPWXFD4</id>
+  <title>arXiv Query: search_query=all:"quantum" AND all:"score matching" AND all:"diffusion"&amp;id_list=&amp;start=0&amp;max_results=1</title>
+  <updated>2026-07-09T17:22:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum%22+AND+(all:%22score+matching%22+AND+all:%22diffusion%22)&amp;start=0&amp;max_results=1&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05217v2</id>
+    <title>The Score Hamiltonian: Mapping Diffusion Models to Adiabatic Transport</title>
+    <updated>2026-06-22T00:30:31Z</updated>
+    <link href="https://arxiv.org/abs/2606.05217v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05217v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We exhibit an exact correspondence between sampling with score-based diffusion models and adiabatic transport of ground states for a family of Schrödinger operators we call Score Hamiltonians, built from the learned score's quantum potential. We obtain novel density reconstruction bounds and principled annealing schedules via adiabatic theorems for Fokker-Planck equations with time-varying potentials. We find the fundamental limit of sampling is set by the ratio of squared score-matching error to Score Hamiltonian spectral gap - the inverse Poincaré constant of the data density.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-28T18:39:52Z</published>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Peter Halmos</name>
+    </author>
+    <author>
+      <name>Boris Hanin</name>
+    </author>
+  </entry>
+</feed>

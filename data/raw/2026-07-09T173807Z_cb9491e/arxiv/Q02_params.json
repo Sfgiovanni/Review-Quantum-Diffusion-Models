@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q02",
+    "concept": "quantum diffusion models",
+    "arxiv_query": "all:\"quantum diffusion models\"",
+    "crossref_query": "\"quantum diffusion models\"",
+    "rationale": "Plural exact phrase.",
+    "strategy": "high_precision"
+  },
+  "meta": {
+    "api_total_results": 29,
+    "retrieved_records": 1,
+    "truncated": true
+  }
+}
