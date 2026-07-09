@@ -32,6 +32,7 @@ def deduplicate_records(df: pd.DataFrame, cfg: dict[str, Any]) -> tuple[pd.DataF
 
     def union(i: int, j: int, rule: str, score: float | None, auto: bool = True) -> None:
         ri, rj = find(i), find(j)
+        kept_root = ri
         if ri != rj:
             parent[rj] = ri
         decisions.append(
@@ -40,26 +41,24 @@ def deduplicate_records(df: pd.DataFrame, cfg: dict[str, Any]) -> tuple[pd.DataF
                 "record_id_b": work.loc[j, "record_id"],
                 "rule": rule,
                 "similarity_score": score,
-                "kept_record_id": work.loc[ri, "record_id"],
+                "kept_record_id": work.loc[kept_root, "record_id"],
                 "merged_record_id": work.loc[j, "record_id"],
                 "decision": "automatic_merge" if auto else "manual_review_candidate",
                 "conflicting_fields": _conflicts(work.loc[i], work.loc[j]),
             }
         )
 
+
+    if "arxiv_id" in work.columns:
+        for _, group in work.dropna(subset=["arxiv_id"]).groupby("arxiv_id"):
+            idx = list(group.index)
+            for j in idx[1:]:
+                union(idx[0], j, "arxiv_id", 100)
+
     for _, group in work.dropna(subset=["doi_normalized"]).groupby("doi_normalized"):
         idx = list(group.index)
         for j in idx[1:]:
             union(idx[0], j, "doi_normalized", 100)
-
-    for i, a in work.iterrows():
-        if not a.get("doi_normalized") or not a.get("container_title"):
-            continue
-        for j, b in work.iloc[i + 1 :].iterrows():
-            if a.get("doi_normalized") == b.get("doi_normalized"):
-                continue
-            if a.get("title_normalized") and a.get("title_normalized") == b.get("title_normalized") and _same_year(a.get("year"), b.get("year"), 1):
-                union(i, j, "arxiv_publication_title_journal_ref", 100)
 
     tolerance = int(cfg["deduplication"].get("year_tolerance", 1))
     for _, group in work.dropna(subset=["title_normalized"]).groupby("title_normalized"):
@@ -70,30 +69,37 @@ def deduplicate_records(df: pd.DataFrame, cfg: dict[str, Any]) -> tuple[pd.DataF
 
     candidate_threshold = int(cfg["deduplication"].get("title_similarity_candidate_threshold", 94))
     auto_threshold = int(cfg["deduplication"].get("title_similarity_auto_threshold", 98))
-    for i, a in work.iterrows():
-        title_a = a.get("title_normalized")
-        if not title_a:
-            continue
-        for j, b in work.iloc[i + 1 :].iterrows():
-            title_b = b.get("title_normalized")
-            if not title_b or find(i) == find(j) or not _same_year(a.get("year"), b.get("year"), tolerance):
+    if "title_normalized" in work.columns:
+        fuzzy_work = work.dropna(subset=["title_normalized"]).copy()
+        fuzzy_work["_block"] = fuzzy_work["title_normalized"].astype(str).str[:18] + "_" + fuzzy_work["year"].fillna(0).astype(int).astype(str)
+        for _, block in fuzzy_work.groupby("_block"):
+            idxs = list(block.index)
+            if len(idxs) > 80:
                 continue
-            score = fuzz.token_sort_ratio(title_a, title_b)
-            if score >= auto_threshold and _author_overlap(a.get("authors"), b.get("authors")):
-                union(i, j, "conservative_fuzzy_title_author_year", score)
-            elif score >= candidate_threshold:
-                decisions.append(
-                    {
-                        "record_id_a": a["record_id"],
-                        "record_id_b": b["record_id"],
-                        "rule": "fuzzy_title_candidate",
-                        "similarity_score": score,
-                        "kept_record_id": None,
-                        "merged_record_id": None,
-                        "decision": "manual_review_candidate",
-                        "conflicting_fields": _conflicts(a, b),
-                    }
-                )
+            for pos, i in enumerate(idxs):
+                a = work.loc[i]
+                title_a = a.get("title_normalized")
+                for j in idxs[pos + 1 :]:
+                    b = work.loc[j]
+                    title_b = b.get("title_normalized")
+                    if not title_b or find(i) == find(j) or not _same_year(a.get("year"), b.get("year"), tolerance):
+                        continue
+                    score = fuzz.token_sort_ratio(title_a, title_b)
+                    if score >= auto_threshold and _author_overlap(a.get("authors"), b.get("authors")):
+                        union(i, j, "conservative_fuzzy_title_author_year", score)
+                    elif score >= candidate_threshold:
+                        decisions.append(
+                            {
+                                "record_id_a": a["record_id"],
+                                "record_id_b": b["record_id"],
+                                "rule": "fuzzy_title_candidate",
+                                "similarity_score": score,
+                                "kept_record_id": None,
+                                "merged_record_id": None,
+                                "decision": "manual_review_candidate",
+                                "conflicting_fields": _conflicts(a, b),
+                            }
+                        )
 
     groups: dict[int, list[int]] = defaultdict(list)
     for i in range(len(work)):
@@ -137,7 +143,7 @@ def _conflicts(a: pd.Series, b: pd.Series) -> str | None:
 
 
 def _choose_kept(group: pd.DataFrame) -> pd.Series:
-    order = {"Crossref": 0, "arXiv API": 1}
+    order = {"Original notebook reproduction": 0, "arXiv API": 1, "Crossref": 2}
     ranked = group.copy()
     ranked["_rank"] = ranked["retrieval_source"].map(order).fillna(9)
     ranked["_has_doi"] = ranked["doi_normalized"].notna().map({True: 0, False: 1})

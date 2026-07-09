@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/nAueJhQ9EGotF5Uv9E2wrD/LTg4</id>
+  <title>arXiv Query: search_query=all:"quantum" AND all:"DDPM"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-07-09T18:23:33Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum%22+AND+all:%22DDPM%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.13268v2</id>
+    <title>Physics Guided Generative Optimization for Trotter Suzuki Decomposition</title>
+    <updated>2026-06-04T20:01:09Z</updated>
+    <link href="https://arxiv.org/abs/2605.13268v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.13268v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Trotter Suzuki product formulas are the standard route to Hamiltonian evolution on noisy intermediate-scale quantum (\NISQ{}) hardware, but their accuracy depends on three coupled choices: term grouping, product-formula order, and time-step allocation. Grouping and order are discrete, which makes direct gradient optimization infeasible and forces existing compilers to rely on static heuristics.
+  We describe P-GONE, a method that combines a conditional diffusion model (D3PM + DDPM), a graph neural network (\GNN{}) encoder, and closed-loop REINFORCE fine-tuning to jointly learn grouping, order, and time-step optimization over a mixed discrete-continuous space. Under fidelity-matched conditions ($F \geq 0.95$), the method achieves circuit depth 86 versus 1673 for Qiskit fourth-order (ungrouped, Suzuki-4), about $19.4\times$ compression, and 141 for Paulihedral (first-order Trotter), about $1.6\times$ compression. At $T=0.90$ the method also beats the Qiskit group-commuting teacher (65 vs 103, $1.6\times$ compression), though at $T=0.95$ the teacher still leads -- a stratified pattern that points toward fidelity-aware fine-tuning. Under a standard depolarizing noise model, the method achieves noisy fidelity roughly $2\times$ the Qiskit fourth-order baseline (0.743 vs 0.380). Ablation shows a clear hierarchy: order learning $&gt;$ time allocation $&gt;$ grouping. Best-of-N sampling ($N=32$ is a practical sweet spot) and CFG guidance give flexible fidelity-depth trade-offs at inference. The method works well on structured Hamiltonians (TFIM, Heisenberg), but random Pauli Hamiltonians fail entirely at $T \geq 0.95$ -- a boundary that defines where the method applies.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-13T09:48:33Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>WenBin Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.17324v1</id>
+    <title>DiffQ: Unified Parameter Initialization for Variational Quantum Algorithms via Diffusion Models</title>
+    <updated>2025-09-22T02:58:25Z</updated>
+    <link href="https://arxiv.org/abs/2509.17324v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.17324v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Variational Quantum Algorithms (VQAs) are widely used in the noisy intermediate-scale quantum (NISQ) era, but their trainability and performance depend critically on initialization parameters that shape the optimization landscape. Existing machine learning-based initializers achieve state-of-the-art results yet remain constrained to single-task domains and small datasets of only hundreds of samples. We address these limitations by reformulating VQA parameter initialization as a generative modeling problem and introducing DiffQ, a parameter initializer based on the Denoising Diffusion Probabilistic Model (DDPM). To support robust training and evaluation, we construct a dataset of 15,085 instances spanning three domains and five representative tasks. Experiments demonstrate that DiffQ surpasses baselines, reducing initial loss by up to 8.95 and convergence steps by up to 23.4%.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-22T02:58:25Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Chi Zhang</name>
+    </author>
+    <author>
+      <name>Mengxin Zheng</name>
+    </author>
+    <author>
+      <name>Qian Lou</name>
+    </author>
+    <author>
+      <name>Fan Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.12242v4</id>
+    <title>Conditional Diffusion-based Parameter Generation for Quantum Approximate Optimization Algorithm</title>
+    <updated>2025-01-18T04:50:50Z</updated>
+    <link href="https://arxiv.org/abs/2407.12242v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.12242v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Quantum Approximate Optimization Algorithm (QAOA) is a hybrid quantum-classical algorithm that shows promise in efficiently solving the MaxCut problem, a representative example of combinatorial optimization. However, its effectiveness heavily depends on the parameter optimization pipeline, where the parameter initialization strategy is nontrivial due to the non-convex and complex optimization landscapes characterized by issues with low-quality local minima. Recent inspiration comes from the diffusion of classical neural network parameters, which has demonstrated that neural network training can benefit from generating good initial parameters through diffusion models. Therefore, in this work, we formulate the problem of finding good initial parameters as a generative task and propose the initial parameter generation scheme through dataset-conditioned pre-trained parameter sampling. Concretely, the generative machine learning model, specifically the denoising diffusion probabilistic model (DDPM), is trained to learn the distribution of pretrained parameters conditioned on the graph dataset. Intuitively, our proposed framework aims at effectively distilling knowledge from pre-trained parameters to generate well-performing initial parameters for QAOA. Compared to random parameter initialization, experiments on various-sized Max-Cut problem instances consistently show that our conditional DDPM is capable of improving the approximation ratio by as much as 14.4%, 11.0%, 11.4% and 7.49%, 8.31%, 6.08% on average for random, regular, and Watts-Strogatz graphs, respectively. Additionally, the experimental results also indicate that the conditional DDPM trained on small problem instances can be extrapolated to larger ones, improving the approximation ratio by up to 28.4% and 12.1% on average.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-17T01:18:27Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Fanxu Meng</name>
+    </author>
+    <author>
+      <name>Xiangzhen Zhou</name>
+    </author>
+    <author>
+      <name>Pengcheng Zhu</name>
+    </author>
+    <author>
+      <name>Yu Luo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.05866v5</id>
+    <title>Generative quantum machine learning via denoising diffusion probabilistic models</title>
+    <updated>2026-01-30T17:41:16Z</updated>
+    <link href="https://arxiv.org/abs/2310.05866v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.05866v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep generative models are key-enabling technology to computer vision, text generation, and large language models. Denoising diffusion probabilistic models (DDPMs) have recently gained much attention due to their ability to generate diverse and high-quality samples in many computer vision tasks, as well as to incorporate flexible model architectures and a relatively simple training scheme. Quantum generative models, empowered by entanglement and superposition, have brought new insight to learning classical and quantum data. Inspired by the classical counterpart, we propose the quantum denoising diffusion probabilistic model (QuDDPM) to enable efficiently trainable generative learning of quantum data. QuDDPM adopts sufficient layers of circuits to guarantee expressivity, while it introduces multiple intermediate training tasks as interpolation between the target distribution and noise to avoid barren plateau and guarantee efficient training. We provide bounds on the learning error and demonstrate QuDDPM's capability in learning correlated quantum noise model, quantum many-body phases, and topological structure of quantum data. The results provide a paradigm for versatile and efficient quantum generative learning.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-09T17:03:08Z</published>
+    <arxiv:comment>5+10 pages, 16 figures. PRL accepted version. Code available at: https://github.com/francis-hsu/quantgenmdl</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 132, 100602 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Bingzhi Zhang</name>
+    </author>
+    <author>
+      <name>Peng Xu</name>
+    </author>
+    <author>
+      <name>Xiaohui Chen</name>
+    </author>
+    <author>
+      <name>Quntao Zhuang</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.132.100602</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.132.100602" title="doi"/>
+  </entry>
+</feed>

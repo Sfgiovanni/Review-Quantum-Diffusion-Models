@@ -1,0 +1,739 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/lezczkx7YaQ2qQFi0BCnthsLzMU</id>
+  <title>arXiv Query: search_query=all:"quantum diffusion model"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-07-09T18:23:27Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum+diffusion+model%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>29</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07072v1</id>
+    <title>An Hybrid Quantum-Classical Diffusion Model for Image Generation</title>
+    <updated>2026-07-08T07:01:07Z</updated>
+    <link href="https://arxiv.org/abs/2607.07072v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07072v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum diffusion models provide a physics-consistent route to generative learning by formulating noising and denoising directly on quantum states. However, applying such models to classical high-dimensional data is constrained by the qubit cost of state encoding and the computational burden of simulating large density operators. We propose a scalable hybrid generative pipeline that combines a classical autoencoder for dimensionality reduction with a mixed-state quantum denoising diffusion probabilistic model (MSQuDDPM) operating in the learned latent space. The autoencoder compresses data into compact latent codes that can be embedded into a small-qubit Hilbert space, after which the quantum diffusion model learns a generative distribution over latent density operators and decodes samples back to the original domain. Algorithmically, we simplify the reverse dynamics by predicting an estimate of the clean state $ρ_0$ at timestep $t$ and computing the one-step reverse update via an analytic backward propagation rule, rather than learning an explicit predictor for $ρ_{t-1}$. We demonstrate the proposed approach on MNIST image generation and discuss how mixed-state quantum diffusion can serve as a practical backbone for hybrid quantum--classical generative modeling under realistic qubit budgets.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T07:01:07Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Qipeng Qian</name>
+    </author>
+    <author>
+      <name>Keli Deng</name>
+    </author>
+    <author>
+      <name>Yuntao Qian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.00566v3</id>
+    <title>Effective Color Dipole Approach to Color Transparency in $ρ^0$ Electroproduction</title>
+    <updated>2026-07-07T04:09:35Z</updated>
+    <link href="https://arxiv.org/abs/2607.00566v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.00566v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate nuclear transparency in exclusive $ρ^0$ electroproduction on $^{12}$C and $^{56}$Fe nuclei within a multi-channel final-state interaction (FSI) framework that explicitly incorporates the kinematic decay length effect (DLE) arising from the short-lived $ρ^0\toπ^+π^-$ decay. The purely kinematic and nuclear mechanisms prove insufficient to account for the CLAS data: the DLE alone cannot generate the observed $Q^2$-dependent enhancement, and the inclusion of nuclear shadowing further deepens the disagreement, so that a compensating reduction of the in-medium attenuation -- the hallmark of color transparency (CT) -- is required. To incorporate the color dynamics of the initially compact $q\bar{q}$ configuration, we replace the empirical Quantum Diffusion Model (QDM) ansatz for the initial interaction cross section $σ_h(Q^2)$ of the point-like configuration (PLC) by an effective Color Dipole Model (CDM) boundary condition, evaluated through a normalized dipole-weighted $γ^*\toρ^0$ transition overlap. Combined with the standard linear QDM transport at an effective in-medium expansion scale $Δm^2 = 0.3$~GeV$^2$, the CDM boundary condition reproduces both the magnitude and the $Q^2$ dependence of the data for both targets. A $χ^2$ analysis quantifies the pronounced separation between the non-CT and CT-based descriptions and thereby supports the onset of color transparency in the $ρ^0$ channel beyond what kinematic decay-length effects can accommodate.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-01T07:53:25Z</published>
+    <arxiv:comment>7 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Tae Keun Choi</name>
+    </author>
+    <author>
+      <name>Kook-Jin Kong</name>
+    </author>
+    <author>
+      <name>Byung-Geel Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.05612v2</id>
+    <title>Deuteron normalization and channel-dependent formation dynamics in pion and kaon color transparency</title>
+    <updated>2026-04-09T15:44:56Z</updated>
+    <link href="https://arxiv.org/abs/2604.05612v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.05612v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A combined view of the Jefferson Lab data on nuclear transparency in $A(e,e'π^+)$ and $A(e,e'K^+)$ reveals two simple but nontrivial features of the onset of color transparency. First, normalization to deuterium does not play the same role in the two reactions. In pion electroproduction, the missing-mass selection suppresses the neutron-induced $Δ$ channel so strongly that the deuteron normalization becomes effectively proton dominated. In kaon electroproduction, the nearby hyperon channels cannot be removed in the same way, and the deuteron retains a genuine proton--neutron average. Second, the $Q^2$ dependence indicates different in-medium formation dynamics. The pion transparency is well reproduced by the standard quantum diffusion model with $ΔM_π^2 \simeq 0.7~\mathrm{GeV}^2$, whereas the kaon data favor a faster geometric expansion characterized by the scale $R_K \sim \sqrt{σ_{KN}/π}$ and are strongly underestimated by the same pion-like diffusion scale. These results suggest that the pion and kaon data already contain evidence that the onset of color transparency is reaction dependent both in normalization and in propagation through nuclear matter.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-07T09:02:56Z</published>
+    <arxiv:comment>3 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Byung-Geel Yu</name>
+    </author>
+    <author>
+      <name>Kook-Jin Kong</name>
+    </author>
+    <author>
+      <name>Tae Keun Choi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.06488v3</id>
+    <title>Score Reversal Is Not Free for Quantum Diffusion Models</title>
+    <updated>2026-03-19T17:48:32Z</updated>
+    <link href="https://arxiv.org/abs/2603.06488v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.06488v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Classical reverse diffusion is generated by changing the drift at fixed noise. We show that the quantum version of this principle obeys an exact law with a sharp phase boundary. For Gaussian pure-loss dynamics, the canonical model of continuous-variable decoherence, we prove that the unrestricted instantaneous reverse optimum exhibits a noiseless-to-noisy transition: below a critical squeezing-to-thermal ratio, reversal can be noiseless; above it, complete positivity forces irreducible reverse noise whose minimum cost we determine in closed form. The optimal reverse diffusion is uniquely covariance-aligned and simultaneously minimizes the geometric, metrological, and thermodynamic price of reversal. For multimode trajectories, the exact cost is additive in a canonical set of mode-resolved data, and a globally continuous protocol attains this optimum on every mixed-state interval. If a pure nonclassical endpoint is included, the same pointwise law holds for every $t&gt;0$, but the optimum diverges as $2/t$: exact Gaussian reversal of a pure quantum state is dynamically unattainable. These results establish the exact Gaussian benchmark against which any broader theory of quantum reverse diffusion must be measured.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-06T17:16:17Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Ammar Fayad</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.22061v2</id>
+    <title>Learning Quantum Data Distribution via Chaotic Quantum Diffusion Model</title>
+    <updated>2026-03-01T07:27:23Z</updated>
+    <link href="https://arxiv.org/abs/2602.22061v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.22061v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models for quantum data pose significant challenges but hold immense potential in fields such as chemoinformatics and quantum physics. Quantum denoising diffusion probabilistic models (QuDDPMs) enable efficient learning of quantum data distributions by progressively scrambling and denoising quantum states; however, existing implementations typically rely on circuit-based random unitary dynamics that can be costly to realize and sensitive to control imperfections, particularly on analog quantum hardware. We propose the chaotic quantum diffusion model, a framework that generates projected ensembles via chaotic Hamiltonian time evolution, providing a flexible and hardware-compatible diffusion mechanism. Requiring only global, time-independent control, our approach substantially reduces implementation overhead across diverse analog quantum platforms while achieving accuracy comparable to QuDDPMs. This method improves trainability and robustness, broadening the applicability of quantum generative modeling.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-25T16:09:50Z</published>
+    <arxiv:comment>Update citations and Fig. 7</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Quoc Hoan Tran</name>
+    </author>
+    <author>
+      <name>Koki Chinzei</name>
+    </author>
+    <author>
+      <name>Yasuhiro Endo</name>
+    </author>
+    <author>
+      <name>Hirotaka Oshima</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.03405v2</id>
+    <title>Enhancing Quantum Diffusion Models for Complex Image Generation</title>
+    <updated>2026-02-05T16:55:22Z</updated>
+    <link href="https://arxiv.org/abs/2602.03405v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.03405v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum generative models offer a novel approach to exploring high-dimensional Hilbert spaces but face significant challenges in scalability and expressibility when applied to multi-modal distributions. In this study, we explore a Hybrid Quantum-Classical U-Net architecture integrated with Adaptive Non-Local Observables (ANO) as a potential solution to these hurdles. By compressing classical data into a dense quantum latent space and utilizing trainable observables, our model aims to extract non-local features that complement classical processing. We also investigate the role of Skip Connections in preserving semantic information during the reverse diffusion process. Experimental results on the full MNIST dataset (digits 0-9) demonstrate that the proposed architecture is capable of generating structurally coherent and recognizable images for all digit classes. While hardware constraints still impose limitations on resolution, our findings suggest that hybrid architectures with adaptive measurements provide a feasible pathway for mitigating mode collapse and enhancing generative capabilities in the NISQ era.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-03T11:32:19Z</published>
+    <arxiv:comment>18 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Jeongbin Jo</name>
+    </author>
+    <author>
+      <name>Santanam Wishal</name>
+    </author>
+    <author>
+      <name>Shah Md Khalil Ullah</name>
+    </author>
+    <author>
+      <name>Shan Zeng</name>
+    </author>
+    <author>
+      <name>Dikshant Dulal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.20448v1</id>
+    <title>Enriching Earth Observation labeled data with Quantum Conditioned Diffusion Models</title>
+    <updated>2025-12-23T15:40:31Z</updated>
+    <link href="https://arxiv.org/abs/2512.20448v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.20448v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid adoption of diffusion models (DMs) in the Earth Observation (EO) domain has unlocked new generative capabilities aimed at producing new samples, whose statistical properties closely match real imagery, for tasks such as synthesizing missing data, augmenting scarce labeled datasets, and improving image reconstruction. This is particularly relevant in EO, where labeled data are often costly to obtain and limited in availability. However, classical DMs still face significant computational limitations, requiring hundreds to thousands of inference steps, as well as difficulties in capturing the intricate spatial and spectral correlations characteristic of EO data. Recent research in Quantum Machine Learning (QML), including initial attempts of Quantum Generative Models, offers a fundamentally different approach to overcome these challenges. Motivated by these considerations, we introduce the Quanvolutional Conditioned U-Net (QCU-Net), a hybrid quantum--classical architecture that applies quantum operations within a conditioned diffusion framework using a novel quanvolutional feature-extraction approach, for generating synthetic labeled EO imagery. Extensive experiments on the EuroSAT RGB dataset demonstrate that our QCU-Net achieves superior results. Notably, it reduces the Fréchet Inception Distance by 64%, lowers the Kernel Inception Distance by 76%, and yields higher semantic accuracy. Ablation studies further reveal that strategically positioning quantum layers and employing entangling variational circuits enhance model performance and convergence. This work represents the first successful adaptation of class-conditioned quantum diffusion modeling in the EO domain, paving the way for quantum-enhanced remote sensing imagery synthesis.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-23T15:40:31Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Francesco Mauro</name>
+    </author>
+    <author>
+      <name>Francesca De Falco</name>
+    </author>
+    <author>
+      <name>Lorenzo Papa</name>
+    </author>
+    <author>
+      <name>Andrea Ceschini</name>
+    </author>
+    <author>
+      <name>Alessandro Sebastianelli</name>
+    </author>
+    <author>
+      <name>Paolo Gamba</name>
+    </author>
+    <author>
+      <name>Massimo Panella</name>
+    </author>
+    <author>
+      <name>Silvia Ullo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.06695v2</id>
+    <title>Mitigating Barren Plateaus in Quantum Denoising Diffusion Probabilistic Model</title>
+    <updated>2026-04-15T07:37:03Z</updated>
+    <link href="https://arxiv.org/abs/2512.06695v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.06695v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum generative models exploit quantum superposition and entanglement to enhance learning efficiency for both classical and quantum data. Recently, inspired by classical diffusion frameworks, the quantum denoising diffusion probabilistic model (QuDDPM) has emerged as a powerful tool for learning correlated noise models, many-body phases, and topological data structure. However, we demonstrate that QuDDPM's efficacy is currently restricted to small-scale systems (typically $\le$ 5 qubits). As the system size increases, a severe barren plateau (BP) problem emerges, fundamentally limiting the model's scalability. We provide rigorous theoretical proofs and experimental validation to identify the origin of this BP, distinct from previously known causes. To restore trainability, we introduce an architectureal enhancement that mitigates the BP and ensures training stability. Furthermore, we propose a conditional QuDDPM, capable of generating ground states based on Hamiltonian parameters, significantly expanding the utility of quantum generative models for complex quantum state preparation. Our approach not only restores the scalability and trainability bottlenecks of quantum diffusion models but also provides a robust tool for exploring complex quantum matter and state preparation in the NISQ era.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-07T07:01:44Z</published>
+    <arxiv:comment>14 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Haipeng Cao</name>
+    </author>
+    <author>
+      <name>Kaining Zhang</name>
+    </author>
+    <author>
+      <name>Dacheng Tao</name>
+    </author>
+    <author>
+      <name>Zhaofeng Su</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.12221v1</id>
+    <title>Channel-Constrained Markovian Quantum Diffusion Model from Open System Perspective</title>
+    <updated>2025-11-15T13:52:15Z</updated>
+    <link href="https://arxiv.org/abs/2511.12221v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.12221v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a channel-constrained Markovian quantum diffusion (CCMQD) model that prepares quantum states by rigorously framing the generative process within the dynamics of open quantum systems. Our model interprets the forward diffusion process as natural decoherence using quantum master equations, whereas the reverse denoising is achieved by learning inverse quantum channels. Our core innovation is a comprehensive channel-constrained framework: we model the diffusion and denoising steps as quantum channels defined by Kraus operators, ensure their physical validity through optimization on the Stiefel manifold, and introduce tailored training strategies and loss functions that leverage this constrained structure for high-fidelity state reconstruction. Experimental validation on systems ranging from single qubits to entangled states $7$ -qubits demonstrates high-fidelity state generation, achieving fidelities exceeding $0.998$ under both random and depolarizing noise conditions. This work confirms that quantum diffusion can be characterized as a controlled Markov evolution, demonstrating that environmental interactions are not limited to being a source of decoherence but can also be utilized to achieve high-fidelity quantum state synthesis.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-15T13:52:15Z</published>
+    <arxiv:comment>38 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Qin-Sheng Zhu</name>
+    </author>
+    <author>
+      <name>Geng Chen</name>
+    </author>
+    <author>
+      <name>Lian-Hui Yu</name>
+    </author>
+    <author>
+      <name>Xiaodong Xing</name>
+    </author>
+    <author>
+      <name>Xiao-Yu Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.09903v1</id>
+    <title>Hybrid Quantum-Classical Latent Diffusion Models for Medical Image Generation</title>
+    <updated>2025-08-13T16:01:20Z</updated>
+    <link href="https://arxiv.org/abs/2508.09903v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.09903v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative learning models in medical research are crucial in developing training data for deep learning models and advancing diagnostic tools, but the problem of high-quality, diverse images is an open topic of research. Quantum-enhanced generative models have been proposed and tested in the literature but have been restricted to small problems below the scale of industry relevance. In this paper, we propose quantum-enhanced diffusion and variational autoencoder (VAE) models and test them on the fundus retinal image generation task. In our numerical experiments, the images generated using quantum-enhanced models are of higher quality, with 86% classified as gradable by external validation compared to 69% with the classical model, and they match more closely in features to the real image distribution compared to the ones generated using classical diffusion models, even when the classical diffusion models are larger than the quantum model. Additionally, we perform noisy testing to confirm the numerical experiments, finding that quantum-enhanced diffusion model can sometimes produce higher quality images, both in terms of diversity and fidelity, when tested with quantum hardware noise. Our results indicate that quantum diffusion models on current quantum hardware are strong targets for further research on quantum utility in generative modeling for industrially relevant problems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-13T16:01:20Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Kübra Yeter-Aydeniz</name>
+    </author>
+    <author>
+      <name>Nora M. Bauer</name>
+    </author>
+    <author>
+      <name>Pranay Jain</name>
+    </author>
+    <author>
+      <name>Max Masnick</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.08799v4</id>
+    <title>Measurement-Based Quantum Diffusion Models</title>
+    <updated>2026-05-09T19:53:51Z</updated>
+    <link href="https://arxiv.org/abs/2508.08799v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.08799v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce measurement-based quantum diffusion models that bridge classical and quantum diffusion theory through randomized weak measurements. The measurement-based approach naturally generates stochastic quantum trajectories while preserving purity at the trajectory level and inducing depolarization at the ensemble level. We address two quantum state generation problems: trajectory-level recovery of pure state ensembles and ensemble-average recovery of mixed states. For trajectory-level recovery, we establish that quantum score matching is mathematically equivalent to learning unitary generators for the reverse process. For ensemble-average recovery, we introduce local Petz recovery maps for states with finite correlation length and classical shadow reconstruction for general states, both with rigorous error bounds. Our framework establishes Petz recovery maps as quantum generalizations of reverse Fokker-Planck equations, providing a rigorous bridge between quantum recovery channels and classical stochastic reversals. This work enables new approaches to quantum state generation with potential applications in quantum information science.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-12T09:55:50Z</published>
+    <arxiv:comment>11 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Xinyu Liu</name>
+    </author>
+    <author>
+      <name>Jingze Zhuang</name>
+    </author>
+    <author>
+      <name>Wanda Hou</name>
+    </author>
+    <author>
+      <name>Yi-Zhuang You</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.22755v2</id>
+    <title>Scaling Laws of Quantum Information Lifetime in Monitored Quantum Dynamics</title>
+    <updated>2026-04-02T22:50:47Z</updated>
+    <link href="https://arxiv.org/abs/2506.22755v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.22755v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum information is typically fragile under measurements and environmental coupling. Remarkably, we find that its lifetime can scale exponentially with system size when the environment is continuously monitored via mid-circuit measurements -- regardless of bath size. Starting from a maximally entangled state with a reference, we analytically prove this exponential scaling for typical Haar random unitaries and confirm it through numerical simulations in both random unitary circuits and chaotic Hamiltonian systems. In the absence of bath monitoring, the lifetime exhibits a markedly different scaling: it grows at most linearly -- or remains constant -- with system size and decays inversely with the bath size. We further extend our findings numerically to a broad class of initial states. In the intermediate regime of partial monitoring, we identify and prove a two-scale transition, where the QMI decays logarithmically at microscopic time scales but linearly at macroscopic time scales.} We discuss implications for {monitored quantum circuits in the weak measurement limit, quantum algorithms such as quantum diffusion models and quantum reservoir computing, and quantum communication. Finally, we experimentally verify the gap of persisted information on IBM Quantum hardwares.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-28T05:01:21Z</published>
+    <arxiv:comment>20+32 pages, 14+16 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. X 16, 021027 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Bingzhi Zhang</name>
+    </author>
+    <author>
+      <name>Fangjun Hu</name>
+    </author>
+    <author>
+      <name>Runzhe Mo</name>
+    </author>
+    <author>
+      <name>Tianyang Chen</name>
+    </author>
+    <author>
+      <name>Hakan E. Türeci</name>
+    </author>
+    <author>
+      <name>Quntao Zhuang</name>
+    </author>
+    <arxiv:doi>10.1103/7717-1mw2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/7717-1mw2" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.19270v1</id>
+    <title>Continuous-variable Quantum Diffusion Model for State Generation and Restoration</title>
+    <updated>2025-06-24T03:04:21Z</updated>
+    <link href="https://arxiv.org/abs/2506.19270v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.19270v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The generation and preservation of complex quantum states against environmental noise are paramount challenges in advancing continuous-variable (CV) quantum information processing. This paper introduces a novel framework based on continuous-variable quantum diffusion principles, synergizing them with CV quantum neural networks (CVQNNs) to address these dual challenges. For the task of state generation, our Continuous-Variable Quantum Diffusion Generative model (CVQD-G) employs a physically driven forward diffusion process using a thermal loss channel, which is then inverted by a learnable, parameter-efficient backward denoising process based on a CVQNN with time-embedding. This framework's capability is further extended for state recovery by the Continuous-Variable Quantum Diffusion Restoration model (CVQD-R), a specialized variant designed to restore quantum states, particularly coherent states with unknown parameters, from thermal degradation. Extensive numerical simulations validate these dual capabilities, demonstrating the high-fidelity generation of diverse Gaussian (coherent, squeezed) and non-Gaussian (Fock, cat) states, typically with fidelities exceeding 99%, and confirming the model's ability to robustly restore corrupted states. Furthermore, a comprehensive complexity analysis reveals favorable training and inference costs, highlighting the framework's efficiency, scalability, and its potential as a robust tool for quantum state engineering and noise mitigation in realistic CV quantum systems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-24T03:04:21Z</published>
+    <arxiv:comment>15+3 pages, 14 figures, 7 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Haitao Huang</name>
+    </author>
+    <author>
+      <name>Chuangtao Chen</name>
+    </author>
+    <author>
+      <name>Qinglin Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.15331v4</id>
+    <title>Naive parton picture for kaon color transparency in $A(e,e'K^+)$</title>
+    <updated>2026-05-06T07:56:12Z</updated>
+    <link href="https://arxiv.org/abs/2506.15331v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.15331v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Nuclear transparency in the electronuclear reaction $A(e,e'K^+)$ is investigated in parallel with our previous study of pion transparency in Phys.\ Rev.\ C {\bf 111}, 064608 (2025). Based on an extended Glauber framework that incorporates shadowing from the initial-state two-step process, kaon color transparency (CT) is analyzed to show that the steeper $Q^2$ dependence observed for kaon CT, compared with the pion case, is more naturally described by the naive parton model (NPM) than by the quantum diffusion model (QDM). The inclusion of initial-state shadowing further reduces the transparency and improves the agreement with the experimental data. The $Q^2$ and $A$ dependences of the kaon transparency are presented up to $Q^2=10$~GeV$^2/c^2$, together with the corresponding $α(Q^2)$ and the supplementary ratio $T_A/T_C$, for comparison with the Jefferson Lab (JLab) data obtained with the 6-GeV electron beam on $^{12}$C, $^{63}$Cu, and $^{197}$Au nuclei.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-18T10:11:08Z</published>
+    <arxiv:comment>6 pages, 5 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <arxiv:journal_ref>Chin. Phys. C 50, 084106 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Kook-Jin Kong</name>
+    </author>
+    <author>
+      <name>Tae Keun Choi</name>
+    </author>
+    <author>
+      <name>Byung-Geel Yu</name>
+    </author>
+    <arxiv:doi>10.1088/1674-1137/ae6b20</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1674-1137/ae6b20" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22193v1</id>
+    <title>Physics-inspired Generative AI models via real hardware-based noisy quantum diffusion</title>
+    <updated>2025-05-28T10:11:48Z</updated>
+    <link href="https://arxiv.org/abs/2505.22193v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.22193v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum Diffusion Models (QDMs) are an emerging paradigm in Generative AI that aims to use quantum properties to improve the performances of their classical counterparts. However, existing algorithms are not easily scalable due to the limitations of near-term quantum devices. Following our previous work on QDMs, here we propose and implement two physics-inspired protocols. In the first, we use the formalism of quantum stochastic walks, showing that a specific interplay of quantum and classical dynamics in the forward process produces statistically more robust models generating sets of MNIST images with lower Fréchet Inception Distance (FID) than using totally classical dynamics. In the second approach, we realize an algorithm to generate images by exploiting the intrinsic noise of real IBM quantum hardware with only four qubits. Our work could be a starting point to pave the way for new scenarios for large-scale algorithms in quantum Generative AI, where quantum noise is neither mitigated nor corrected, but instead exploited as a useful resource.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-28T10:11:48Z</published>
+    <arxiv:comment>17 pages, 9 figures. Supplementary materials: 2 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Marco Parigi</name>
+    </author>
+    <author>
+      <name>Stefano Martina</name>
+    </author>
+    <author>
+      <name>Francesco Aldo Venturelli</name>
+    </author>
+    <author>
+      <name>Filippo Caruso</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.11174v1</id>
+    <title>Quantum Latent Diffusion Models</title>
+    <updated>2025-01-19T21:24:02Z</updated>
+    <link href="https://arxiv.org/abs/2501.11174v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.11174v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The introduction of quantum concepts is increasingly making its way into generative machine learning models. However, while there are various implementations of quantum Generative Adversarial Networks, the integration of quantum elements into diffusion models remains an open and challenging task. In this work, we propose a potential version of a quantum diffusion model that leverages the established idea of classical latent diffusion models. This involves using a traditional autoencoder to reduce images, followed by operations with variational circuits in the latent space. To effectively assess the benefits brought by quantum computing, the images generated by the quantum latent diffusion model have been compared to those generated by a classical model with a similar number of parameters, evaluated in terms of quantitative metrics. The results demonstrate an advantage in using a quantum version, as evidenced by obtaining better metrics for the images generated by the quantum version compared to those obtained by the classical version. Furthermore, quantum models continue to outperform even when considering small percentages of the dataset for training, demonstrating the quantum's ability to extract features more effectively even in a few shot learning scenario.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-19T21:24:02Z</published>
+    <arxiv:comment>40 pages, 15 figures, 5 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum Machine Intelligence, Vol. 6, No. 2, Article No. 85, pp. 1-20, ISSN: 2524-4906, Springer Nature, Switzerland, December 2024</arxiv:journal_ref>
+    <author>
+      <name>Francesca De Falco</name>
+    </author>
+    <author>
+      <name>Andrea Ceschini</name>
+    </author>
+    <author>
+      <name>Alessandro Sebastianelli</name>
+    </author>
+    <author>
+      <name>Bertrand Le Saux</name>
+    </author>
+    <author>
+      <name>Massimo Panella</name>
+    </author>
+    <arxiv:doi>10.1007/s42484-024-00224-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s42484-024-00224-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.21082v1</id>
+    <title>Quantum Diffusion Model for Quark and Gluon Jet Generation</title>
+    <updated>2024-12-30T17:00:54Z</updated>
+    <link href="https://arxiv.org/abs/2412.21082v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.21082v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models have demonstrated remarkable success in image generation, but they are computationally intensive and time-consuming to train. In this paper, we introduce a novel diffusion model that benefits from quantum computing techniques in order to mitigate computational challenges and enhance generative performance within high energy physics data. The fully quantum diffusion model replaces Gaussian noise with random unitary matrices in the forward process and incorporates a variational quantum circuit within the U-Net in the denoising architecture. We run evaluations on the structurally complex quark and gluon jets dataset from the Large Hadron Collider. The results demonstrate that the fully quantum and hybrid models are competitive with a similar classical model for jet generation, highlighting the potential of using quantum techniques for machine learning problems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-30T17:00:54Z</published>
+    <arxiv:comment>Accepted for the NeurIPS 2024 MLNCP workshop</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mariia Baidachna</name>
+    </author>
+    <author>
+      <name>Rey Guadarrama</name>
+    </author>
+    <author>
+      <name>Gopal Ramesh Dahale</name>
+    </author>
+    <author>
+      <name>Tom Magorsch</name>
+    </author>
+    <author>
+      <name>Isabel Pedraza</name>
+    </author>
+    <author>
+      <name>Konstantin T. Matchev</name>
+    </author>
+    <author>
+      <name>Katia Matcheva</name>
+    </author>
+    <author>
+      <name>Kyoungchul Kong</name>
+    </author>
+    <author>
+      <name>Sergei Gleyzer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.15973v1</id>
+    <title>Enhancing Quantum Diffusion Models with Pairwise Bell State Entanglement</title>
+    <updated>2024-11-24T20:14:57Z</updated>
+    <link href="https://arxiv.org/abs/2411.15973v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.15973v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces a novel quantum diffusion model designed for Noisy Intermediate-Scale Quantum (NISQ) devices. Unlike previous methods, this model efficiently processes higher-dimensional images with complex pixel structures, even on qubit-limited platforms. This is accomplished through a pairwise Bell-state entangling technique, which reduces space complexity. Additionally, parameterized quantum circuits enable the generation of quantum states with minimal parameters, while still delivering high performance. We conduct comprehensive experiments, comparing the proposed model with both classical and quantum techniques using datasets such as MNIST and CIFAR-10. The results show significant improvements in computational efficiency and performance metrics such as FID, SSIM and PSNR. By leveraging quantum entanglement and superposition, this approach advances quantum generative learning. This advancement paves the way for more sophisticated and resource-efficient quantum diffusion algorithms capable of handling complex data on the NISQ devices.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-24T20:14:57Z</published>
+    <arxiv:comment>16 pages, 6 figures, 2 tables, ICPR 2024</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Shivalee Shah</name>
+    </author>
+    <author>
+      <name>Mayank Vatsa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.04217v1</id>
+    <title>Quantum Diffusion Models for Few-Shot Learning</title>
+    <updated>2024-11-06T19:25:06Z</updated>
+    <link href="https://arxiv.org/abs/2411.04217v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.04217v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern quantum machine learning (QML) methods involve the variational optimization of parameterized quantum circuits on training datasets, followed by predictions on testing datasets. Most state-of-the-art QML algorithms currently lack practical advantages due to their limited learning capabilities, especially in few-shot learning tasks. In this work, we propose three new frameworks employing quantum diffusion model (QDM) as a solution for the few-shot learning: label-guided generation inference (LGGI); label-guided denoising inference (LGDI); and label-guided noise addition inference (LGNAI). Experimental results demonstrate that our proposed algorithms significantly outperform existing methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-06T19:25:06Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ruhan Wang</name>
+    </author>
+    <author>
+      <name>Ye Wang</name>
+    </author>
+    <author>
+      <name>Jing Liu</name>
+    </author>
+    <author>
+      <name>Toshiaki Koike-Akino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.05129v7</id>
+    <title>Nuclear transparency and shadowing of the two-step process in the $A(e,e'π^+)$ reaction</title>
+    <updated>2025-06-09T16:52:28Z</updated>
+    <link href="https://arxiv.org/abs/2409.05129v7" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.05129v7" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate nuclear transparency induced by pion electroproduction on nuclei, $A(e,e'π^+)$, with our interest in the role of the two-step process in the Glauber multiple scattering theory. Based on the framework in which the quantum diffusion model is incorporated into the Glauber theory, the experimental data in the range of photon virtuality $0.5&lt; Q^2&lt; 10$ GeV$^2/c^2$ are analyzed, including the recent JLab data at the 6 GeV electron beam together with the proposal for the 12 GeV upgrade. Application of the quantum diffusion model during the formation length of the quark/antiquark $(q\bar{q})$ structure of a pion reproduces the increase in the nuclear transparency up to high $Q^2$, showing evidence of color transparency. In contrast, through the coherent length of the $γ^*$ fluctuation into $ρ^0$, the two-step process with the $ρN$ scattering cross section chosen to be $σ_{ρN}=σ_{πN}$ contributes to a reduction of the nuclear transparency in the whole range of $Q^2$. Combined with the one-step process (direct photon coupling) usually adopted in the original formulation of the Glauber theory, this reaction mechanism provides another source of the $Q^2$ dependence of the transparency at low virtualities through the shadowing in the initial state interaction. By the further absorption due to the shadowing, a better agreement is obtained with the pion transparency measured in the $A(e,e'π^+)$ reaction for $^{12}$C, $^{27}$Al, $^{63}$Cu, and $^{197}$Au nuclei. A discussion of the $Q^2$ dependence of the parameter $α$ for the transparency $T_A=A^{α-1}$ is given.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-08T15:18:42Z</published>
+    <arxiv:comment>7 pages, 4 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>Tae Keun Choi</name>
+    </author>
+    <author>
+      <name>Kook-Jin Kong</name>
+    </author>
+    <author>
+      <name>Byung-Geel Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.16147v1</id>
+    <title>Towards Efficient Quantum Hybrid Diffusion Models</title>
+    <updated>2024-02-25T16:57:51Z</updated>
+    <link href="https://arxiv.org/abs/2402.16147v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.16147v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we propose a new methodology to design quantum hybrid diffusion models, derived from classical U-Nets with ResNet and Attention layers. Specifically, we propose two possible different hybridization schemes combining quantum computing's superior generalization with classical networks' modularity. In the first one, we acted at the vertex: ResNet convolutional layers are gradually replaced with variational circuits to create Quantum ResNet blocks. In the second proposed architecture, we extend the hybridization to the intermediate level of the encoder, due to its higher sensitivity in the feature extraction process. In order to conduct an in-depth analysis of the potential advantages stemming from the integration of quantum layers, images generated by quantum hybrid diffusion models are compared to those generated by classical models, and evaluated in terms of several quantitative metrics. The results demonstrate an advantage in using a hybrid quantum diffusion models, as they generally synthesize better-quality images and converges faster. Moreover, they show the additional advantage of having a lower number of parameters to train compared to the classical one, with a reduction that depends on the extent to which the vertex is hybridized.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-25T16:57:51Z</published>
+    <arxiv:comment>23 pages, 14 figures (many with subfigures), 2 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>KI - Künstliche Intelligenz, Vol. 38, No. 4, pp. 311-326, 2024</arxiv:journal_ref>
+    <author>
+      <name>Francesca De Falco</name>
+    </author>
+    <author>
+      <name>Andrea Ceschini</name>
+    </author>
+    <author>
+      <name>Alessandro Sebastianelli</name>
+    </author>
+    <author>
+      <name>Bertrand Le Saux</name>
+    </author>
+    <author>
+      <name>Massimo Panella</name>
+    </author>
+    <arxiv:doi>10.1007/s13218-024-00858-5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s13218-024-00858-5" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.07049v1</id>
+    <title>Quantum Denoising Diffusion Models</title>
+    <updated>2024-01-13T11:38:08Z</updated>
+    <link href="https://arxiv.org/abs/2401.07049v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.07049v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In recent years, machine learning models like DALL-E, Craiyon, and Stable Diffusion have gained significant attention for their ability to generate high-resolution images from concise descriptions. Concurrently, quantum computing is showing promising advances, especially with quantum machine learning which capitalizes on quantum mechanics to meet the increasing computational requirements of traditional machine learning algorithms. This paper explores the integration of quantum machine learning and variational quantum circuits to augment the efficacy of diffusion-based image generation models. Specifically, we address two challenges of classical diffusion models: their low sampling speed and the extensive parameter requirements. We introduce two quantum diffusion models and benchmark their capabilities against their classical counterparts using MNIST digits, Fashion MNIST, and CIFAR-10. Our models surpass the classical models with similar parameter counts in terms of performance metrics FID, SSIM, and PSNR. Moreover, we introduce a consistency model unitary single sampling architecture that combines the diffusion procedure into a single step, enabling a fast one-step image generation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-13T11:38:08Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Michael Kölle</name>
+    </author>
+    <author>
+      <name>Gerhard Stenzel</name>
+    </author>
+    <author>
+      <name>Jonas Stein</name>
+    </author>
+    <author>
+      <name>Sebastian Zielinski</name>
+    </author>
+    <author>
+      <name>Björn Ommer</name>
+    </author>
+    <author>
+      <name>Claudia Linnhoff-Popien</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.15444v1</id>
+    <title>Quantum Diffusion Models</title>
+    <updated>2023-11-26T22:07:12Z</updated>
+    <link href="https://arxiv.org/abs/2311.15444v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.15444v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a quantum version of a generative diffusion model. In this algorithm, artificial neural networks are replaced with parameterized quantum circuits, in order to directly generate quantum states. We present both a full quantum and a latent quantum version of the algorithm; we also present a conditioned version of these models. The models' performances have been evaluated using quantitative metrics complemented by qualitative assessments. An implementation of a simplified version of the algorithm has been executed on real NISQ quantum hardware.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-26T22:07:12Z</published>
+    <arxiv:comment>20 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Andrea Cacioppo</name>
+    </author>
+    <author>
+      <name>Lorenzo Colantonio</name>
+    </author>
+    <author>
+      <name>Simone Bordoni</name>
+    </author>
+    <author>
+      <name>Stefano Giagu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.08832v2</id>
+    <title>Color coherence effects in the reaction $d(p,2p)n$</title>
+    <updated>2022-12-21T08:22:29Z</updated>
+    <link href="https://arxiv.org/abs/2208.08832v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.08832v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The hard proton knock-out by the proton from the deuteron at relativistic energies is considered with a focus on the color transparency (CT) effect which influences the initial and final state interactions. The calculations are performed in the framework of the generalized eikonal approximation supplemented by the quantum diffusion model of CT. The main results of the previous calculations [1] at the beam momentum below 20 GeV/c are confirmed, including the dependence of the nuclear transparency on the transverse momentum of the spectator neutron, $p_{st}$, and on the relative azimuthal angle $φ$ between proton and neutron: absorption at $p_{st} &lt; 0.2$ GeV/c and enhancement at $p_{st} &gt; 0.3$ GeV/c due to rescattering on the neutron, the change of $φ$-dependence between these two regions, and the enhancement of CT effects with $p_{\rm lab}$. The study is then generalized to higher beam momenta, up to 75 GeV/c. It is shown that such behavior of the transparency is mainly preserved up to $p_{\rm lab}\simeq 50$ GeV/c, but changes significantly at higher beam momenta due to the interference of valence quark configurations of small and large sizes. As a result, the transparency at small $p_{st}$ exhibits oscillations as a function of the beam momentum (the nuclear filtering effect). The tensor analyzing power due to the longitudinal polarization of the deuteron is calculated. The event rate at NICA-SPD is estimated.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-18T13:50:16Z</published>
+    <arxiv:comment>39 pages, 12 figures, uncertainty range of CT effect extended according to ref. [49], accepted in Phys. Rev. C</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <arxiv:journal_ref>Phys.Rev.C 107 (2023) 1, 014605</arxiv:journal_ref>
+    <author>
+      <name>A. B. Larionov</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevC.107.014605</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevC.107.014605" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.14953v2</id>
+    <title>Neutron tunneling: A new mechanism to power explosive phenomena in neutron stars, magnetars, and neutron star mergers</title>
+    <updated>2021-03-23T21:17:45Z</updated>
+    <link href="https://arxiv.org/abs/2011.14953v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.14953v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neutron tunneling between neutron-rich nuclei in inhomogeneous dense matter encountered in neutron star crusts can release enormous energy on a short-timescale to power explosive phenomena in neutron stars. In this work we clarify aspects of this process that can occur in the outer regions of neutron stars when oscillations or cataclysmic events increase the ambient density. We use a time-dependent Hartree-Fock-Bogoliubov formalism to determine the rate of neutron diffusion and find that large amounts of energy can be released rapidly. The role of nuclear binding, the two-body interaction and pairing, on the neutron diffusion times is investigated. We consider a one-dimensional quantum diffusion model and extend our analysis to study the impact of diffusion in three-dimensions. We find that these novel neutron transfer reactions can generate energy at the amount of $\simeq 10^{40}-10^{44}$ ergs under suitable conditions.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-30T16:26:45Z</published>
+    <arxiv:comment>9 pages, 3 figures, changes made in text and definitions, accepted for publication in the Astrophysical Journal</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>Carlos A. Bertulani</name>
+    </author>
+    <author>
+      <name>Ronaldo V. Lobato</name>
+    </author>
+    <arxiv:doi>10.3847/1538-4357/abf141</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3847/1538-4357/abf141" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1701.04084v1</id>
+    <title>Quantum Brownian motion at strong dissipation probed by superconducting tunnel junctions</title>
+    <updated>2017-01-15T17:43:43Z</updated>
+    <link href="https://arxiv.org/abs/1701.04084v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1701.04084v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We have studied the temporal evolution of a quantum system subjected to strong dissipation at ultra-low temperatures where the system-bath interaction represents the leading energy scale. In this regime, theory predicts the time evolution of the system to follow a generalization of the classical Smoluchowski description, the quantum Smoluchowski equation, thus, exhibiting quantum Brownian motion characteristics. For this purpose, we have investigated the phase dynamics of a superconducting tunnel junction in the presence of high damping. We performed current-biased measurements on the small-capacitance Josephson junction of a scanning tunneling microscope placed in a low impedance environment at milli-Kelvin temperatures. We can describe our experimental findings by a quantum diffusion model with high accuracy in agreement with theoretical predications based on the quantum Smoluchowski equation. In this way we experimentally demonstrate that quantum systems subjected to strong dissipation follow quasi-classical dynamics with significant quantum effects as the leading corrections.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-01-15T17:43:43Z</published>
+    <arxiv:comment>5 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 119, 147702 (2017)</arxiv:journal_ref>
+    <author>
+      <name>Berthold Jäck</name>
+    </author>
+    <author>
+      <name>Jacob Senkpiel</name>
+    </author>
+    <author>
+      <name>Markus Etzkorn</name>
+    </author>
+    <author>
+      <name>Joachim Ankerhold</name>
+    </author>
+    <author>
+      <name>Christian R. Ast</name>
+    </author>
+    <author>
+      <name>Klaus Kern</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.119.147702</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.119.147702" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.00889v2</id>
+    <title>Symmetries of general non-Markovian Gaussian diffusive unravelings</title>
+    <updated>2015-11-09T13:19:14Z</updated>
+    <link href="https://arxiv.org/abs/1509.00889v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.00889v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By using a condition of average trace preservation we derive a general class of non-Markovian Gaussian diffusive unravelings [L. Diosi and L. Ferialdi, Phys. Rev. Lett. \textbf{113}, 200403 (2014)], here valid for arbitrary non-Hermitian system operators and noise correlations. The conditions under which the generalized stochastic Schrodinger equation has the same symmetry properties (invariance under unitary changes of operator base) than a microscopic system-bath Hamiltonian dynamics are determined. While the standard quantum diffusion model (standard noise correlations) always share the same invariance symmetry, the generalized stochastic dynamics can be mapped with an arbitrary bosonic environment only if some specific correlation constraints are fulfilled. These features are analyzed for different non-Markovian unravelings equivalent in average. Results based on quantum measurement theory that lead to specific cases of the generalized dynamics [J. Gambetta and H. M. Wiseman, Phys. Rev. A \textbf{66}, 012108 (2002)]\ are studied from the perspective of the present analysis.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-02T22:05:27Z</published>
+    <arxiv:comment>10 pages, published version</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. A 92, 052101 (2015)</arxiv:journal_ref>
+    <author>
+      <name>Adrian A. Budini</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.92.052101</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.92.052101" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1311.7540v1</id>
+    <title>Entropy dissipative one-leg multistep time approximations of nonlinear diffusive equations</title>
+    <updated>2013-11-29T12:22:20Z</updated>
+    <link href="https://arxiv.org/abs/1311.7540v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1311.7540v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>New one-leg multistep time discretizations of nonlinear evolution equations are investigated. The main features of the scheme are the preservation of the nonnegativity and the entropy-dissipation structure of the diffusive equations. The key ideas are to combine Dahlquist's G-stability theory with entropy-dissipation methods and to introduce a nonlinear transformation of variables which provides a quadratic structure in the equations. It is shown that G-stability of the one-leg scheme is sufficient to derive discrete entropy dissipation estimates. The general result is applied to a cross-diffusion system from population dynamics and a nonlinear fourth-order quantum diffusion model, for which the existence of semi-discrete weak solutions is proved. Under some assumptions on the operator of the evolution equation, the second-order convergence of solutions is shown. Moreover, some numerical experiments for the population model are presented, which underline the theoretical results.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-11-29T12:22:20Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Ansgar Jüngel</name>
+    </author>
+    <author>
+      <name>Josipa-Pina Milišić</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/9411102v1</id>
+    <title>Mesoscopic Fluctuations in Models of Classical and Quantum Diffusion</title>
+    <updated>1994-11-24T10:00:30Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/9411102v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/9411102v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  It is shown that the characteristics of the mesoscopic fluctuations in the conventional quantum-diffusion model and the model of the non-coherent (`classical') diffusion in media with long-range correlated disorder are quite similar in the weak-disorder limit. The relative values of the variance and of the high-order moments of the fluctuations in one model are obtained from those in another one by substituting a proper weak-disorder parameter. As behaviour of the ensemble-averaged diffusion coefficient is quite different in these models, it suggests that the mesoscopic properties, including a possible universality in the distribution functions, could be independent of the behaviour of the averaged quantities.</summary>
+    <category term="cond-mat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1994-11-24T10:00:30Z</published>
+    <arxiv:comment>17 pages, REVTeX, no figures, to be published in NATO ASI series</arxiv:comment>
+    <arxiv:primary_category term="cond-mat"/>
+    <arxiv:journal_ref>NATO ASI Series E:291 1995 51</arxiv:journal_ref>
+    <author>
+      <name>Igor V. Lerner</name>
+    </author>
+  </entry>
+</feed>

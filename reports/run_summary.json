@@ -1,8 +1,8 @@
 {
-  "run_id": "2026-07-09T173807Z_cb9491e",
-  "raw_records": 50,
-  "deduplicated_records": 40,
-  "relevant_candidates": 28,
-  "truncated_queries": 49,
+  "run_id": "2026-07-09T184559Z_780688a",
+  "raw_records": 7408,
+  "deduplicated_records": 4892,
+  "relevant_candidates": 1967,
+  "truncated_queries": 0,
   "failed_queries": 0
 }

@@ -19,9 +19,12 @@ from .clients.crossref_client import CrossrefClient
 from .config import dump_yaml, load_config, new_run_id, resolve_config
 from .deduplication import deduplicate_records
 from .exporters import create_screening_template, enforce_schema, write_table
+from .final_screening import build_final_screening
+from .legacy import reconcile_legacy, reproduce_legacy_from_arxiv_records
 from .logging_utils import setup_logging
 from .models import SCHEMA_COLUMNS, SearchLogEntry
 from .provenance import build_manifest, write_manifest
+from .quality import query_quality_indicators
 from .relevance import score_record
 from .reporting import generate_reports
 from .screening import load_screening_reasons
@@ -73,6 +76,7 @@ def run_search(args: argparse.Namespace) -> int:
     logs: list[dict[str, Any]] = []
     failures: list[str] = []
     records: list[dict[str, Any]] = []
+    arxiv_records: list[dict[str, Any]] = []
     command = " ".join(sys.argv)
 
     for source in cfg.get("sources", []):
@@ -80,7 +84,9 @@ def run_search(args: argparse.Namespace) -> int:
             client = ArxivClient(cfg, raw_root / "arxiv")
             (raw_root / "arxiv").mkdir(exist_ok=True)
             for query in cfg["queries"]:
+                before = len(records)
                 records, logs, failures = _run_arxiv_query(client, query, cfg, run_id, records, logs, failures, logger)
+                arxiv_records.extend(records[before:])
         elif source in {"ieee", "springer"}:
             pub_cfg = cfg["publishers"][source]
             client = CrossrefClient(cfg, raw_root / f"{source}_crossref")
@@ -91,7 +97,7 @@ def run_search(args: argparse.Namespace) -> int:
         else:
             raise ValueError(f"Unknown source: {source}")
 
-    produced = process_and_export(records, cfg, run_id, processed_dir, reports_dir, logs)
+    produced = process_and_export(records, cfg, run_id, processed_dir, reports_dir, logs, arxiv_records=arxiv_records)
     manifest = build_manifest(
         run_id=run_id,
         command=command,
@@ -176,44 +182,162 @@ def _run_crossref_query(client: CrossrefClient, query: dict[str, Any], cfg: dict
     return records, logs, failures
 
 
-def process_and_export(records: list[dict[str, Any]], cfg: dict[str, Any], run_id: str, processed_dir: Path, reports_dir: Path, logs: list[dict[str, Any]]) -> list[str]:
+def process_and_export(
+    records: list[dict[str, Any]],
+    cfg: dict[str, Any],
+    run_id: str,
+    processed_dir: Path,
+    reports_dir: Path,
+    logs: list[dict[str, Any]],
+    *,
+    arxiv_records: list[dict[str, Any]] | None = None,
+) -> list[str]:
+    legacy_dir = Path("data/legacy_notebook") if not str(processed_dir).startswith("data/smoke") else Path("data/smoke/legacy_notebook")
+    legacy_all, legacy_filtered, legacy_records = reproduce_legacy_from_arxiv_records(arxiv_records or [], cfg, legacy_dir)
+    for r in legacy_records:
+        r["run_id"] = run_id
+    records = [*records, *legacy_records]
+
     df = pd.DataFrame(records)
     if df.empty:
         df = pd.DataFrame(columns=SCHEMA_COLUMNS)
     for i in range(len(df)):
         df.loc[i, "record_id"] = f"{run_id}_R{i + 1:06d}"
+    for col in ["topic_class", "legacy_notebook_source", "legacy_notebook_included", "retrieval_status"]:
+        if col not in df.columns:
+            df[col] = pd.Series([pd.NA] * len(df), dtype="object")
     for idx, row in df.iterrows():
         scoring = score_record(row.to_dict(), cfg["relevance"])
         for key, value in scoring.items():
             df.loc[idx, key] = value
-        df.loc[idx, "topic_class"] = classify_record(row.to_dict(), cfg["topic_patterns"])
-    all_records = enforce_schema(df, cfg["exports"]["column_order"])
+        if pd.notna(row.get("legacy_notebook_relevance_score")):
+            df.loc[idx, "relevance_score"] = max(int(df.loc[idx, "relevance_score"]), int(row.get("legacy_notebook_relevance_score")))
+        df.loc[idx, "topic_class"] = row.get("legacy_notebook_topic_class") or classify_record(row.to_dict(), cfg["topic_patterns"])
+        for key, value in query_quality_indicators(row.to_dict()).items():
+            df.loc[idx, key] = value
+        if pd.isna(df.loc[idx].get("legacy_notebook_source")):
+            df.loc[idx, "legacy_notebook_source"] = False
+            df.loc[idx, "legacy_notebook_included"] = False
+        if pd.isna(df.loc[idx].get("retrieval_status")):
+            df.loc[idx, "retrieval_status"] = "retrieved"
+
+    base_columns = list(dict.fromkeys([*cfg["exports"]["column_order"], *[c for c in df.columns if c not in cfg["exports"]["column_order"]]]))
+    all_records = enforce_schema(df, base_columns)
     if not all_records.empty:
         from_date = pd.to_datetime(cfg["date_range"]["from_pub_date"], errors="coerce")
         until_date = pd.to_datetime(cfg["date_range"]["until_pub_date"], errors="coerce")
         pub_dates = pd.to_datetime(all_records["publication_date"], errors="coerce", utc=True).dt.tz_localize(None)
         mask = pub_dates.isna() | ((pub_dates >= from_date) & (pub_dates <= until_date))
         all_records = all_records.loc[mask].reset_index(drop=True)
+
     deduped, duplicate_groups, decisions = deduplicate_records(all_records, cfg)
-    deduped = enforce_schema(deduped, cfg["exports"]["column_order"])
-    relevant = deduped[deduped["relevance_score"].fillna(0).astype(int) >= int(cfg["relevance"]["threshold"])].copy() if not deduped.empty else deduped.copy()
+    unique_records = _build_unique_records(deduped, all_records, duplicate_groups)
+    relevant = unique_records[unique_records["relevance_score"].fillna(0).astype(int) >= int(cfg["relevance"]["threshold"])].copy() if not unique_records.empty else unique_records.copy()
 
     produced: list[str] = []
     produced.extend(write_table(all_records, processed_dir / "all_source_records"))
-    produced.extend(write_table(deduped, processed_dir / "deduplicated_records"))
+    produced.extend(write_table(unique_records, processed_dir / "deduplicated_records"))
+    produced.extend(write_table(all_records, processed_dir / "all_retrieved_records"))
+    produced.extend(write_table(unique_records, processed_dir / "all_unique_records"))
     produced.extend(write_table(relevant, processed_dir / "relevant_candidates", xlsx=True))
     duplicate_groups.to_csv(processed_dir / "duplicate_groups.csv", index=False)
     decisions.to_csv(processed_dir / "deduplication_decisions.csv", index=False)
     produced.extend([str(processed_dir / "duplicate_groups.csv"), str(processed_dir / "deduplication_decisions.csv")])
     reasons = load_screening_reasons("configs/screening_reasons.yaml")
-    produced.append(create_screening_template(deduped, processed_dir / "screening_template.xlsx", reasons))
+    produced.append(create_screening_template(unique_records, processed_dir / "screening_template.xlsx", reasons))
+    final_screening, final_files = build_final_screening(unique_records, processed_dir, reports_dir)
+    produced.extend(final_files)
+    reconciliation = reconcile_legacy(legacy_filtered, unique_records, reports_dir / "legacy_notebook_reconciliation.csv")
+    produced.append(str(reports_dir / "legacy_notebook_reconciliation.csv"))
+
     log_df = pd.DataFrame(logs)
     if not log_df.empty:
         unique_counts = all_records.groupby(["database_scope", "query_id"]).size().to_dict()
         for i, row in log_df.iterrows():
             log_df.loc[i, "unique_records_before_cross_source_deduplication"] = unique_counts.get((row["database_scope"], row["query_id"]), 0)
-    produced.extend(generate_reports(all_records, deduped, log_df, cfg, run_id, reports_dir))
+    produced.extend(generate_reports(all_records, unique_records, log_df, cfg, run_id, reports_dir))
+    produced.extend(_write_final_counts_reports(all_records, unique_records, final_screening, legacy_filtered, reconciliation, log_df, reports_dir, cfg, run_id))
     return produced
+
+
+def _build_unique_records(deduped: pd.DataFrame, all_records: pd.DataFrame, groups: pd.DataFrame) -> pd.DataFrame:
+    if deduped.empty:
+        return deduped.copy()
+    unique = deduped.copy()
+    if groups.empty:
+        groups = pd.DataFrame({"duplicate_group_id": unique["duplicate_group_id"], "record_id": unique["record_id"], "kept_record_id": unique["record_id"]})
+    for idx, row in unique.iterrows():
+        gid = row.get("duplicate_group_id")
+        ids = groups.loc[groups["duplicate_group_id"] == gid, "record_id"].tolist()
+        group = all_records[all_records["record_id"].isin(ids)] if ids else all_records[all_records["record_id"] == row.get("record_id")]
+        if group.empty:
+            continue
+        sources = sorted(set(str(x) for x in group["database_scope"].dropna()))
+        unique.loc[idx, "all_sources"] = "; ".join(sources)
+        unique.loc[idx, "all_query_ids"] = "; ".join(sorted(set(str(x) for x in group["query_id"].dropna())))
+        unique.loc[idx, "all_source_record_ids"] = "; ".join(sorted(set(str(x) for x in group["source_record_id"].dropna())))
+        legacy_series = group["legacy_notebook_source"] if "legacy_notebook_source" in group else pd.Series([], dtype=object)
+        unique.loc[idx, "legacy_notebook_source"] = any(str(v).lower() == "true" or v is True for v in legacy_series.dropna().tolist())
+        unique.loc[idx, "arxiv_source"] = bool((group["database_scope"] == "arXiv").any())
+        unique.loc[idx, "ieee_crossref_source"] = bool((group["database_scope"] == "IEEE").any())
+        unique.loc[idx, "springer_crossref_source"] = bool((group["database_scope"] == "Springer").any())
+        unique.loc[idx, "preprint_publication_link"] = bool((group["database_scope"].isin(["arXiv", "Legacy arXiv notebook"]).any()) and (group["database_scope"].isin(["IEEE", "Springer"]).any()))
+        for col in ["arxiv_id", "doi_normalized", "doi", "abstract", "pdf_url", "abstract_url", "landing_page_url", "container_title"]:
+            if pd.isna(unique.loc[idx].get(col)) or unique.loc[idx].get(col) in [None, ""]:
+                vals = group[col].dropna().astype(str).tolist() if col in group else []
+                if vals:
+                    unique.loc[idx, col] = vals[0]
+        legacy_scores = pd.to_numeric(group.get("legacy_notebook_relevance_score", pd.Series(dtype=float)), errors="coerce").dropna()
+        if not legacy_scores.empty:
+            unique.loc[idx, "legacy_notebook_relevance_score"] = int(legacy_scores.max())
+        unique.loc[idx, "retrieval_status"] = "legacy_only" if bool(unique.loc[idx, "legacy_notebook_source"]) and not bool(unique.loc[idx, "arxiv_source"]) else "retrieved"
+    return unique
+
+
+def _write_final_counts_reports(all_records: pd.DataFrame, unique: pd.DataFrame, final: pd.DataFrame, legacy_filtered: pd.DataFrame, reconciliation: pd.DataFrame, log_df: pd.DataFrame, reports_dir: Path, cfg: dict[str, Any], run_id: str) -> list[str]:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    files: list[str] = []
+    counts = {
+        "Original notebook filtered records": int(len(legacy_filtered)),
+        "Fresh arXiv records": int((all_records["database_scope"] == "arXiv").sum()) if not all_records.empty else 0,
+        "IEEE-scoped Crossref records": int((all_records["database_scope"] == "IEEE").sum()) if not all_records.empty else 0,
+        "Springer-scoped Crossref records": int((all_records["database_scope"] == "Springer").sum()) if not all_records.empty else 0,
+        "Total before deduplication": int(len(all_records)),
+        "Total after deduplication": int(len(unique)),
+        "CORE": int((final["screening_category"] == "CORE").sum()),
+        "RELATED": int((final["screening_category"] == "RELATED").sum()),
+        "BACKGROUND": int((final["screening_category"] == "BACKGROUND").sum()),
+        "MANUAL_REVIEW": int((final["screening_category"] == "MANUAL_REVIEW").sum()),
+        "EXCLUDE": int((final["screening_category"] == "EXCLUDE").sum()),
+        "Primary quantum-diffusion models": int((final["count_as_quantum_diffusion_model"] == "YES").sum()),
+        "Legacy records matched": int((reconciliation["final_status"] == "matched").sum()),
+        "Legacy-only records": int((unique.get("retrieval_status", pd.Series(dtype=str)) == "legacy_only").sum()),
+        "Queries truncated": int(log_df["truncated"].fillna(False).astype(bool).sum()) if not log_df.empty else 0,
+        "Queries failed": int((log_df["status"] != "ok").sum()) if not log_df.empty and "status" in log_df else 0,
+    }
+    lines = ["# Search report", "", f"Run ID: `{run_id}`", f"Date range: {cfg['date_range']['from_pub_date']} to {cfg['date_range']['until_pub_date']}", "", "## Final counts"]
+    lines.extend([f"- {k}: {v}" for k, v in counts.items()])
+    lines.extend(["", "## Method", "arXiv was queried through the public arXiv API. IEEE-scoped and Springer-scoped records were retrieved from Crossref using DOI prefixes `10.1109` and `10.1007`, respectively. The original notebook filtered records were reproduced and included as a mandatory legacy source before deduplication."])
+    (reports_dir / "search_report.md").write_text("\n".join(lines), encoding="utf-8")
+    files.append(str(reports_dir / "search_report.md"))
+    prisma = pd.DataFrame([
+        ("records identified from original notebook", counts["Original notebook filtered records"], "observed"),
+        ("records identified from fresh arXiv search", counts["Fresh arXiv records"], "observed"),
+        ("records identified from IEEE-scoped Crossref", counts["IEEE-scoped Crossref records"], "observed"),
+        ("records identified from Springer-scoped Crossref", counts["Springer-scoped Crossref records"], "observed"),
+        ("duplicate records removed", counts["Total before deduplication"] - counts["Total after deduplication"], "computed"),
+        ("records after deduplication", counts["Total after deduplication"], "computed"),
+        ("records screened", counts["Total after deduplication"], "automated metadata screening"),
+        ("records excluded", counts["EXCLUDE"], "automated metadata screening"),
+        ("records marked for manual review", counts["MANUAL_REVIEW"], "automated metadata screening"),
+        ("records included as CORE", counts["CORE"], "automated metadata screening"),
+        ("records included as RELATED", counts["RELATED"], "automated metadata screening"),
+        ("records included as BACKGROUND", counts["BACKGROUND"], "automated metadata screening"),
+        ("primary quantum-diffusion studies", counts["Primary quantum-diffusion models"], "computed"),
+    ], columns=["prisma_item", "count", "status"])
+    prisma.to_csv(reports_dir / "prisma_flow_counts.csv", index=False)
+    files.append(str(reports_dir / "prisma_flow_counts.csv"))
+    return files
 
 
 def run_report(run_id: str) -> int:

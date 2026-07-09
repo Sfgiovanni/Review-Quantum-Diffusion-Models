@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/5dafpQPWmKDtInURlbePTeTlxHY</id>
+  <title>arXiv Query: search_query=all:"quantum machine learning" AND all:"diffusion model"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-07-09T18:23:33Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum+machine+learning%22+AND+all:%22diffusion+model%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27561v1</id>
+    <title>Quantum Generative Diffusion Model for Real-World Time Series</title>
+    <updated>2026-06-25T21:33:57Z</updated>
+    <link href="https://arxiv.org/abs/2606.27561v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27561v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models have achieved remarkable success in data synthesis, though recent advances driven by increasing model scale have introduced challenges in computational cost and efficiency. Quantum machine learning offers a promising alternative, representing complex data distributions using compact, highly expressive models. Here, we propose QDiffusion-TS, the first quantum generative diffusion model for time series synthesis, and validate it on the IQM quantum processor. The framework extends a classical diffusion architecture by replacing feed-forward components within the denoising transformer with quantum neural networks, yielding a hybrid quantum transformer that reduces the number of trainable parameters in each replaced component by nearly three orders of magnitude. Evaluated on financial time series from Apple and Amazon, the model generates synthetic data that more accurately reproduces the real distributions, reducing Wasserstein distance by approximately 44% relative to its classical counterpart across both datasets. In a downstream forecasting task, augmentation with the generated data improves predictive performance by up to 71% in RMSE over a baseline trained solely on real data. These results show that quantum enhanced architectures can consistently match and frequently surpass classical performance with substantially fewer parameters, establishing a practical framework towards more efficient and scalable data-driven generative modelling.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T21:33:57Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jack Waller</name>
+    </author>
+    <author>
+      <name>Filippo Caruso</name>
+    </author>
+    <author>
+      <name>Dimitrios Makris</name>
+    </author>
+    <author>
+      <name>Rajagopal Nilavalan</name>
+    </author>
+    <author>
+      <name>Xing Liang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.03573v3</id>
+    <title>Stochastic Schrödinger Diffusion Models for Pure-State Ensemble Generation</title>
+    <updated>2026-06-15T12:42:57Z</updated>
+    <link href="https://arxiv.org/abs/2605.03573v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.03573v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum machine learning increasingly relies on pure-state representations, motivating generative models that sample directly in quantum representation space rather than perturbing classical inputs and re-encoding. We introduce Stochastic Schrödinger Diffusion Models (SSDMs), a score-based generative framework that defines diffusion, scores, and reverse-time sampling intrinsically on the complex projective manifold $\mathbb{CP}^{d-1}$ under the Fubini--Study metric. SSDMs combine a Riemannian Ornstein--Uhlenbeck forward diffusion with a stochastic Schrödinger realization, and learn reverse-time dynamics driven by the Riemannian score. Our central technical contribution is a local-time learning objective that exploits the local Euclidean OU limit of intrinsic manifold diffusions in Fubini-Study normal coordinates to obtain an analytic teacher score, bypassing the intractable transition densities that limit existing Riemannian score-based models. Across synthetic, physics-inspired (TFIM, XXZ), and quantum feature-state benchmarks up to $14$ qubits, SSDMs match target pure-state ensembles by orders of magnitude on MMD and observable statistics over both ambient Euclidean and matched Riemannian score-based baselines, and improve representation-level diagnostics for downstream quantum kernel methods.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-05T09:44:14Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Jian Xu</name>
+    </author>
+    <author>
+      <name>Wei Chen</name>
+    </author>
+    <author>
+      <name>Shigui Li</name>
+    </author>
+    <author>
+      <name>Chao Li</name>
+    </author>
+    <author>
+      <name>Jingyuan Zheng</name>
+    </author>
+    <author>
+      <name>Delu Zeng</name>
+    </author>
+    <author>
+      <name>John Paisley</name>
+    </author>
+    <author>
+      <name>Qibin Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01367v1</id>
+    <title>From Characterization To Construction: Generative Quantum Circuit Synthesis from Gate Set Tomography Data</title>
+    <updated>2026-05-02T10:25:10Z</updated>
+    <link href="https://arxiv.org/abs/2605.01367v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01367v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-fidelity circuit execution on noisy intermediate-scale quantum devices is bottlenecked by compilation pipelines that disregard complex, correlated noise. To address this, this methodology article proposes a quantum machine learning control (QMLC) framework for generative quantum circuit synthesis from gate-set tomography (GST) data that bypasses the traditional two-step pipeline of characterizing native quantum gates via GST followed by unitary decomposition algorithms. Instead, a generative concept space is directly learnt from GST data, enabling conditional synthesis of quantum circuits on a desired output distribution. Our approach tokenizes GST germ circuits and embeds them into a structured latent space using a curriculum-learning-motivated strategy, starting with short circuits and progressively incorporating longer ones with diverse output statistics. The embedded sequences are processed by a set-vision transformer with permutation-invariant pooling, producing k-seed vectors that represent the learned concept space of the quantum device. Aggregating data across multiple circuits makes this latent representation inherently context-aware, capturing the shared physical noise environment (e.g., crosstalk, drift) that isolated gate metrics miss. We propose an unconditional diffusion model to sample from the concept space. During inference, a user provides a target measurement distribution, and the model generates a corresponding circuit. To ensure fidelity and robustness, the output is denoised using a diffusion model that operates on the target conditional covariance matrix. This end-to-end framework is a step towards context-aware, hardware-native circuit synthesis directly from raw GST data, which offers a new paradigm for integrating quantum control and compilation. The QMLC framework is particularly suited for near-term quantum devices with complex calibration procedures.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-02T10:25:10Z</published>
+    <arxiv:comment>19 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>King Yiu Yu</name>
+    </author>
+    <author>
+      <name>Aritra Sarkar</name>
+    </author>
+    <author>
+      <name>Erbing Hua</name>
+    </author>
+    <author>
+      <name>Maximilian Rimbach-Russ</name>
+    </author>
+    <author>
+      <name>Ryoichi Ishihara</name>
+    </author>
+    <author>
+      <name>Sebastian Feld</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.20448v1</id>
+    <title>Enriching Earth Observation labeled data with Quantum Conditioned Diffusion Models</title>
+    <updated>2025-12-23T15:40:31Z</updated>
+    <link href="https://arxiv.org/abs/2512.20448v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.20448v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid adoption of diffusion models (DMs) in the Earth Observation (EO) domain has unlocked new generative capabilities aimed at producing new samples, whose statistical properties closely match real imagery, for tasks such as synthesizing missing data, augmenting scarce labeled datasets, and improving image reconstruction. This is particularly relevant in EO, where labeled data are often costly to obtain and limited in availability. However, classical DMs still face significant computational limitations, requiring hundreds to thousands of inference steps, as well as difficulties in capturing the intricate spatial and spectral correlations characteristic of EO data. Recent research in Quantum Machine Learning (QML), including initial attempts of Quantum Generative Models, offers a fundamentally different approach to overcome these challenges. Motivated by these considerations, we introduce the Quanvolutional Conditioned U-Net (QCU-Net), a hybrid quantum--classical architecture that applies quantum operations within a conditioned diffusion framework using a novel quanvolutional feature-extraction approach, for generating synthetic labeled EO imagery. Extensive experiments on the EuroSAT RGB dataset demonstrate that our QCU-Net achieves superior results. Notably, it reduces the Fréchet Inception Distance by 64%, lowers the Kernel Inception Distance by 76%, and yields higher semantic accuracy. Ablation studies further reveal that strategically positioning quantum layers and employing entangling variational circuits enhance model performance and convergence. This work represents the first successful adaptation of class-conditioned quantum diffusion modeling in the EO domain, paving the way for quantum-enhanced remote sensing imagery synthesis.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-23T15:40:31Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Francesco Mauro</name>
+    </author>
+    <author>
+      <name>Francesca De Falco</name>
+    </author>
+    <author>
+      <name>Lorenzo Papa</name>
+    </author>
+    <author>
+      <name>Andrea Ceschini</name>
+    </author>
+    <author>
+      <name>Alessandro Sebastianelli</name>
+    </author>
+    <author>
+      <name>Paolo Gamba</name>
+    </author>
+    <author>
+      <name>Massimo Panella</name>
+    </author>
+    <author>
+      <name>Silvia Ullo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.17569v1</id>
+    <title>Conditioning in Generative Quantum Denoising Diffusion Models</title>
+    <updated>2025-09-22T11:01:03Z</updated>
+    <link href="https://arxiv.org/abs/2509.17569v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.17569v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum denoising diffusion models have recently emerged as a powerful framework for generative quantum machine learning. In this work, we extend these models by introducing a conditioning mechanism that enables the generation of quantum states drawn from multiple target distributions. By sharing parameters across distinct classes of quantum states, our approach avoids the need to train separate models for each distribution. We validate our method through numerical simulations that span single-qubit generation tasks, entangled state preparation, and many-body ground state generation. Across these tasks, conditioning significantly reduced the error of targeted state generation by up to an order of magnitude. Finally, we perform an ablation study to quantify the effect of key hyperparameters on the model performance.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-22T11:01:03Z</published>
+    <arxiv:comment>13 pages, 11 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Daniel Quinn</name>
+    </author>
+    <author>
+      <name>Lorenzo Buffoni</name>
+    </author>
+    <author>
+      <name>Stefano Gherardini</name>
+    </author>
+    <author>
+      <name>Gabriele De Chiara</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.20863v3</id>
+    <title>Leveraging Diffusion Models for Parameterized Quantum Circuit Generation</title>
+    <updated>2025-07-23T13:04:46Z</updated>
+    <link href="https://arxiv.org/abs/2505.20863v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.20863v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum computing holds immense potential, yet its practical success depends on multiple factors, including advances in quantum circuit design. In this paper, we introduce a generative approach based on denoising diffusion models (DMs) to synthesize parameterized quantum circuits (PQCs). Extending the recent diffusion model pipeline of Fürrutter et al. [1], our model effectively conditions the synthesis process, enabling the simultaneous generation of circuit architectures and their continuous gate parameters. We demonstrate our approach in synthesizing PQCs optimized for generating high-fidelity Greenberger-Horne-Zeilinger (GHZ) states and achieving high accuracy in quantum machine learning (QML) classification tasks. Our results indicate a strong generalization across varying gate sets and scaling qubit counts, highlighting the versatility and computational efficiency of diffusion-based methods. This work illustrates the potential of generative models as a powerful tool for accelerating and optimizing the design of PQCs, supporting the development of more practical and scalable quantum applications.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-27T08:14:58Z</published>
+    <arxiv:comment>This work has been accepted for presentation at IEEE Quantum Week 2025: IEEE International Conference on Quantum Computing and Engineering (QCE)</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Daniel Barta</name>
+    </author>
+    <author>
+      <name>Darya Martyniuk</name>
+    </author>
+    <author>
+      <name>Johannes Jung</name>
+    </author>
+    <author>
+      <name>Adrian Paschke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.02345v1</id>
+    <title>CQ CNN: A Hybrid Classical Quantum Convolutional Neural Network for Alzheimer's Disease Detection Using Diffusion Generated and U Net Segmented 3D MRI</title>
+    <updated>2025-03-04T07:08:47Z</updated>
+    <link href="https://arxiv.org/abs/2503.02345v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.02345v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The detection of Alzheimer disease (AD) from clinical MRI data is an active area of research in medical imaging. Recent advances in quantum computing, particularly the integration of parameterized quantum circuits (PQCs) with classical machine learning architectures, offer new opportunities to develop models that may outperform traditional methods. However, quantum machine learning (QML) remains in its early stages and requires further experimental analysis to better understand its behavior and limitations. In this paper, we propose an end to end hybrid classical quantum convolutional neural network (CQ CNN) for AD detection using clinically formatted 3D MRI data. Our approach involves developing a framework to make 3D MRI data usable for machine learning, designing and training a brain tissue segmentation model (Skull Net), and training a diffusion model to generate synthetic images for the minority class. Our converged models exhibit potential quantum advantages, achieving higher accuracy in fewer epochs than classical models. The proposed beta8 3 qubit model achieves an accuracy of 97.50%, surpassing state of the art (SOTA) models while requiring significantly fewer computational resources. In particular, the architecture employs only 13K parameters (0.48 MB), reducing the parameter count by more than 99.99% compared to current SOTA models. Furthermore, the diffusion-generated data used to train our quantum models, in conjunction with real samples, preserve clinical structural standards, representing a notable first in the field of QML. We conclude that CQCNN architecture like models, with further improvements in gradient optimization techniques, could become a viable option and even a potential alternative to classical models for AD detection, especially in data limited and resource constrained clinical settings.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-04T07:08:47Z</published>
+    <arxiv:comment>Application of hybrid quantum-classical machine learning for (early stage) disease detection</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mominul Islam</name>
+    </author>
+    <author>
+      <name>Mohammad Junayed Hasan</name>
+    </author>
+    <author>
+      <name>M. R. C. Mahdy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.04217v1</id>
+    <title>Quantum Diffusion Models for Few-Shot Learning</title>
+    <updated>2024-11-06T19:25:06Z</updated>
+    <link href="https://arxiv.org/abs/2411.04217v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.04217v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern quantum machine learning (QML) methods involve the variational optimization of parameterized quantum circuits on training datasets, followed by predictions on testing datasets. Most state-of-the-art QML algorithms currently lack practical advantages due to their limited learning capabilities, especially in few-shot learning tasks. In this work, we propose three new frameworks employing quantum diffusion model (QDM) as a solution for the few-shot learning: label-guided generation inference (LGGI); label-guided denoising inference (LGDI); and label-guided noise addition inference (LGNAI). Experimental results demonstrate that our proposed algorithms significantly outperform existing methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-06T19:25:06Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ruhan Wang</name>
+    </author>
+    <author>
+      <name>Ye Wang</name>
+    </author>
+    <author>
+      <name>Jing Liu</name>
+    </author>
+    <author>
+      <name>Toshiaki Koike-Akino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.07049v1</id>
+    <title>Quantum Denoising Diffusion Models</title>
+    <updated>2024-01-13T11:38:08Z</updated>
+    <link href="https://arxiv.org/abs/2401.07049v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.07049v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In recent years, machine learning models like DALL-E, Craiyon, and Stable Diffusion have gained significant attention for their ability to generate high-resolution images from concise descriptions. Concurrently, quantum computing is showing promising advances, especially with quantum machine learning which capitalizes on quantum mechanics to meet the increasing computational requirements of traditional machine learning algorithms. This paper explores the integration of quantum machine learning and variational quantum circuits to augment the efficacy of diffusion-based image generation models. Specifically, we address two challenges of classical diffusion models: their low sampling speed and the extensive parameter requirements. We introduce two quantum diffusion models and benchmark their capabilities against their classical counterparts using MNIST digits, Fashion MNIST, and CIFAR-10. Our models surpass the classical models with similar parameter counts in terms of performance metrics FID, SSIM, and PSNR. Moreover, we introduce a consistency model unitary single sampling architecture that combines the diffusion procedure into a single step, enabling a fast one-step image generation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-13T11:38:08Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Michael Kölle</name>
+    </author>
+    <author>
+      <name>Gerhard Stenzel</name>
+    </author>
+    <author>
+      <name>Jonas Stein</name>
+    </author>
+    <author>
+      <name>Sebastian Zielinski</name>
+    </author>
+    <author>
+      <name>Björn Ommer</name>
+    </author>
+    <author>
+      <name>Claudia Linnhoff-Popien</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.07797v1</id>
+    <title>Quantum sequential scattering model for quantum state learning</title>
+    <updated>2023-10-11T18:31:40Z</updated>
+    <link href="https://arxiv.org/abs/2310.07797v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.07797v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning probability distribution is an essential framework in classical learning theory. As a counterpart, quantum state learning has spurred the exploration of quantum machine learning theory. However, as dimensionality increases, learning a high-dimensional unknown quantum state via conventional quantum neural network approaches remains challenging due to trainability issues. In this work, we devise the quantum sequential scattering model (QSSM), inspired by the classical diffusion model, to overcome this scalability issue. Training of our model could effectively circumvent the vanishing gradient problem to a large class of high-dimensional target states possessing polynomial-scaled Schmidt ranks. Theoretical analysis and numerical experiments provide evidence for our model's effectiveness in learning both physical and algorithmic meaningful quantum states and show an out-performance beating the conventional approaches in training speed and learning accuracy. Our work has indicated that an increasing entanglement, a property of quantum states, in the target states, necessitates a larger scaled model, which could reduce our model's learning performance and efficiency.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-11T18:31:40Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mingrui Jing</name>
+    </author>
+    <author>
+      <name>Geng Liu</name>
+    </author>
+    <author>
+      <name>Hongbin Ren</name>
+    </author>
+    <author>
+      <name>Xin Wang</name>
+    </author>
+  </entry>
+</feed>

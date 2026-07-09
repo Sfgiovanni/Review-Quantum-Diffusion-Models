@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q11",
+    "concept": "quantum neural network diffusion model",
+    "arxiv_query": "all:\"quantum neural network\" AND all:\"diffusion model\"",
+    "crossref_query": "\"quantum neural network\" \"diffusion model\"",
+    "rationale": "QNN diffusion models.",
+    "strategy": "high_recall"
+  },
+  "meta": {
+    "api_total_results": 3,
+    "retrieved_records": 3,
+    "truncated": false
+  }
+}

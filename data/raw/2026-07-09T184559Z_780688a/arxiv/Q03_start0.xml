@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/WUTg9OeSy9Ha28M025fF57rHk1A</id>
+  <title>arXiv Query: search_query=all:"quantum denoising diffusion"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-07-09T18:23:29Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum+denoising+diffusion%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>9</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07072v1</id>
+    <title>An Hybrid Quantum-Classical Diffusion Model for Image Generation</title>
+    <updated>2026-07-08T07:01:07Z</updated>
+    <link href="https://arxiv.org/abs/2607.07072v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07072v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum diffusion models provide a physics-consistent route to generative learning by formulating noising and denoising directly on quantum states. However, applying such models to classical high-dimensional data is constrained by the qubit cost of state encoding and the computational burden of simulating large density operators. We propose a scalable hybrid generative pipeline that combines a classical autoencoder for dimensionality reduction with a mixed-state quantum denoising diffusion probabilistic model (MSQuDDPM) operating in the learned latent space. The autoencoder compresses data into compact latent codes that can be embedded into a small-qubit Hilbert space, after which the quantum diffusion model learns a generative distribution over latent density operators and decodes samples back to the original domain. Algorithmically, we simplify the reverse dynamics by predicting an estimate of the clean state $ρ_0$ at timestep $t$ and computing the one-step reverse update via an analytic backward propagation rule, rather than learning an explicit predictor for $ρ_{t-1}$. We demonstrate the proposed approach on MNIST image generation and discuss how mixed-state quantum diffusion can serve as a practical backbone for hybrid quantum--classical generative modeling under realistic qubit budgets.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T07:01:07Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Qipeng Qian</name>
+    </author>
+    <author>
+      <name>Keli Deng</name>
+    </author>
+    <author>
+      <name>Yuntao Qian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.02834v1</id>
+    <title>Identification of quantum generative circuits with parallel quantum neural network</title>
+    <updated>2026-03-03T10:31:04Z</updated>
+    <link href="https://arxiv.org/abs/2603.02834v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.02834v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid emergence of quantum technology has raised new challenges in distinguishing various quantum circuits of similar functions. In this work, we propose parallel quantum embedding neural network (ParaQuanNet) for the efficient identification of quantum generative circuits via classifications of the corresponding output data. Specifically, we generated W-like states with eight generative quantum circuits realizing the generative quantum denoising diffusion probabilistic models (QDDPM). Our ParaQuanNet can classify these eight classes of generated quantum data with an accuracy of {$99.5\%$}, even though all of them are trained to generate the same types of quantum data. With a novel design of parallel quantum embedding unit (PQEU) in our neural networks, our ParaQuanNet enables the quantum kernel circuit parallelly process all the receptive fields of quantum data, which empowers the quantum data processing efficiency. We also integrate the mutually unbiased measurements into our ParaQuanNet and further improve its performance. We apply our ParaQuanNet on the classification of classical data sets and demonstrate a good performance of quantum neural networks on these tasks. Our approach demonstrates good robustness to noisy data and the circuit-level noise with a Python realization in a classical GPU. Our results highlight ParaQuanNet as a scalable and effective framework for quantum circuits identification, contributing to the broader development of quantum machine intelligence.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-03T10:31:04Z</published>
+    <arxiv:comment>11pages, 9 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>https://journal.hep.com.cn/fop/EN/10.15302/frontphys.2026.113201</arxiv:journal_ref>
+    <author>
+      <name>Zheping Wu</name>
+    </author>
+    <author>
+      <name>Xiaopeng Huang</name>
+    </author>
+    <author>
+      <name>Hengyue Jia</name>
+    </author>
+    <author>
+      <name>Haobin Shi</name>
+    </author>
+    <author>
+      <name>Wei-Wei Zhang</name>
+    </author>
+    <arxiv:doi>10.15302/frontphys.2026.113201</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.15302/frontphys.2026.113201" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.22061v2</id>
+    <title>Learning Quantum Data Distribution via Chaotic Quantum Diffusion Model</title>
+    <updated>2026-03-01T07:27:23Z</updated>
+    <link href="https://arxiv.org/abs/2602.22061v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.22061v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models for quantum data pose significant challenges but hold immense potential in fields such as chemoinformatics and quantum physics. Quantum denoising diffusion probabilistic models (QuDDPMs) enable efficient learning of quantum data distributions by progressively scrambling and denoising quantum states; however, existing implementations typically rely on circuit-based random unitary dynamics that can be costly to realize and sensitive to control imperfections, particularly on analog quantum hardware. We propose the chaotic quantum diffusion model, a framework that generates projected ensembles via chaotic Hamiltonian time evolution, providing a flexible and hardware-compatible diffusion mechanism. Requiring only global, time-independent control, our approach substantially reduces implementation overhead across diverse analog quantum platforms while achieving accuracy comparable to QuDDPMs. This method improves trainability and robustness, broadening the applicability of quantum generative modeling.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-25T16:09:50Z</published>
+    <arxiv:comment>Update citations and Fig. 7</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Quoc Hoan Tran</name>
+    </author>
+    <author>
+      <name>Koki Chinzei</name>
+    </author>
+    <author>
+      <name>Yasuhiro Endo</name>
+    </author>
+    <author>
+      <name>Hirotaka Oshima</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.22005v1</id>
+    <title>Hierarchy of discriminative power and complexity in learning quantum ensembles</title>
+    <updated>2026-01-29T17:13:48Z</updated>
+    <link href="https://arxiv.org/abs/2601.22005v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.22005v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Distance metrics are central to machine learning, yet distances between ensembles of quantum states remain poorly understood due to fundamental quantum measurement constraints. We introduce a hierarchy of integral probability metrics, termed MMD-$k$, which generalizes the maximum mean discrepancy to quantum ensembles and exhibit a strict trade-off between discriminative power and statistical efficiency as the moment order $k$ increases. For pure-state ensembles of size $N$, estimating MMD-$k$ using experimentally feasible SWAP-test-based estimators requires $Θ(N^{2-2/k})$ samples for constant $k$, and $Θ(N^3)$ samples to achieve full discriminative power at $k = N$. In contrast, the quantum Wasserstein distance attains full discriminative power with $Θ(N^2 \log N)$ samples. These results provide principled guidance for the design of loss functions in quantum machine learning, which we illustrate in the training quantum denoising diffusion probabilistic models.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-29T17:13:48Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Jian Yao</name>
+    </author>
+    <author>
+      <name>Pengtao Li</name>
+    </author>
+    <author>
+      <name>Xiaohui Chen</name>
+    </author>
+    <author>
+      <name>Quntao Zhuang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.06695v2</id>
+    <title>Mitigating Barren Plateaus in Quantum Denoising Diffusion Probabilistic Model</title>
+    <updated>2026-04-15T07:37:03Z</updated>
+    <link href="https://arxiv.org/abs/2512.06695v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.06695v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum generative models exploit quantum superposition and entanglement to enhance learning efficiency for both classical and quantum data. Recently, inspired by classical diffusion frameworks, the quantum denoising diffusion probabilistic model (QuDDPM) has emerged as a powerful tool for learning correlated noise models, many-body phases, and topological data structure. However, we demonstrate that QuDDPM's efficacy is currently restricted to small-scale systems (typically $\le$ 5 qubits). As the system size increases, a severe barren plateau (BP) problem emerges, fundamentally limiting the model's scalability. We provide rigorous theoretical proofs and experimental validation to identify the origin of this BP, distinct from previously known causes. To restore trainability, we introduce an architectureal enhancement that mitigates the BP and ensures training stability. Furthermore, we propose a conditional QuDDPM, capable of generating ground states based on Hamiltonian parameters, significantly expanding the utility of quantum generative models for complex quantum state preparation. Our approach not only restores the scalability and trainability bottlenecks of quantum diffusion models but also provides a robust tool for exploring complex quantum matter and state preparation in the NISQ era.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-07T07:01:44Z</published>
+    <arxiv:comment>14 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Haipeng Cao</name>
+    </author>
+    <author>
+      <name>Kaining Zhang</name>
+    </author>
+    <author>
+      <name>Dacheng Tao</name>
+    </author>
+    <author>
+      <name>Zhaofeng Su</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.17569v1</id>
+    <title>Conditioning in Generative Quantum Denoising Diffusion Models</title>
+    <updated>2025-09-22T11:01:03Z</updated>
+    <link href="https://arxiv.org/abs/2509.17569v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.17569v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum denoising diffusion models have recently emerged as a powerful framework for generative quantum machine learning. In this work, we extend these models by introducing a conditioning mechanism that enables the generation of quantum states drawn from multiple target distributions. By sharing parameters across distinct classes of quantum states, our approach avoids the need to train separate models for each distribution. We validate our method through numerical simulations that span single-qubit generation tasks, entangled state preparation, and many-body ground state generation. Across these tasks, conditioning significantly reduced the error of targeted state generation by up to an order of magnitude. Finally, we perform an ablation study to quantify the effect of key hyperparameters on the model performance.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-22T11:01:03Z</published>
+    <arxiv:comment>13 pages, 11 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Daniel Quinn</name>
+    </author>
+    <author>
+      <name>Lorenzo Buffoni</name>
+    </author>
+    <author>
+      <name>Stefano Gherardini</name>
+    </author>
+    <author>
+      <name>Gabriele De Chiara</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.17608v2</id>
+    <title>Mixed-State Quantum Denoising Diffusion Probabilistic Model</title>
+    <updated>2025-03-04T05:15:50Z</updated>
+    <link href="https://arxiv.org/abs/2411.17608v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.17608v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative quantum machine learning has gained significant attention for its ability to produce quantum states with desired distributions. Among various quantum generative models, quantum denoising diffusion probabilistic models (QuDDPMs) [Phys. Rev. Lett. 132, 100602 (2024)] provide a promising approach with stepwise learning that resolves the training issues. However, the requirement of high-fidelity scrambling unitaries in QuDDPM poses a challenge in near-term implementation. We propose the \textit{mixed-state quantum denoising diffusion probabilistic model} (MSQuDDPM) to eliminate the need for scrambling unitaries. Our approach focuses on adapting the quantum noise channels to the model architecture, which integrates depolarizing noise channels in the forward diffusion process and parameterized quantum circuits with projective measurements in the backward denoising steps. We also introduce several techniques to improve MSQuDDPM, including a cosine-exponent schedule of noise interpolation, the use of single-qubit random ancilla, and superfidelity-based cost functions to enhance the convergence. We evaluate MSQuDDPM on quantum ensemble generation tasks, demonstrating its successful performance.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-26T17:20:58Z</published>
+    <arxiv:comment>8 pages, 8 figures; Fig.8 added, appendix C added</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Gino Kwun</name>
+    </author>
+    <author>
+      <name>Bingzhi Zhang</name>
+    </author>
+    <author>
+      <name>Quntao Zhuang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.07049v1</id>
+    <title>Quantum Denoising Diffusion Models</title>
+    <updated>2024-01-13T11:38:08Z</updated>
+    <link href="https://arxiv.org/abs/2401.07049v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.07049v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In recent years, machine learning models like DALL-E, Craiyon, and Stable Diffusion have gained significant attention for their ability to generate high-resolution images from concise descriptions. Concurrently, quantum computing is showing promising advances, especially with quantum machine learning which capitalizes on quantum mechanics to meet the increasing computational requirements of traditional machine learning algorithms. This paper explores the integration of quantum machine learning and variational quantum circuits to augment the efficacy of diffusion-based image generation models. Specifically, we address two challenges of classical diffusion models: their low sampling speed and the extensive parameter requirements. We introduce two quantum diffusion models and benchmark their capabilities against their classical counterparts using MNIST digits, Fashion MNIST, and CIFAR-10. Our models surpass the classical models with similar parameter counts in terms of performance metrics FID, SSIM, and PSNR. Moreover, we introduce a consistency model unitary single sampling architecture that combines the diffusion procedure into a single step, enabling a fast one-step image generation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-13T11:38:08Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Michael Kölle</name>
+    </author>
+    <author>
+      <name>Gerhard Stenzel</name>
+    </author>
+    <author>
+      <name>Jonas Stein</name>
+    </author>
+    <author>
+      <name>Sebastian Zielinski</name>
+    </author>
+    <author>
+      <name>Björn Ommer</name>
+    </author>
+    <author>
+      <name>Claudia Linnhoff-Popien</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.05866v5</id>
+    <title>Generative quantum machine learning via denoising diffusion probabilistic models</title>
+    <updated>2026-01-30T17:41:16Z</updated>
+    <link href="https://arxiv.org/abs/2310.05866v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.05866v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep generative models are key-enabling technology to computer vision, text generation, and large language models. Denoising diffusion probabilistic models (DDPMs) have recently gained much attention due to their ability to generate diverse and high-quality samples in many computer vision tasks, as well as to incorporate flexible model architectures and a relatively simple training scheme. Quantum generative models, empowered by entanglement and superposition, have brought new insight to learning classical and quantum data. Inspired by the classical counterpart, we propose the quantum denoising diffusion probabilistic model (QuDDPM) to enable efficiently trainable generative learning of quantum data. QuDDPM adopts sufficient layers of circuits to guarantee expressivity, while it introduces multiple intermediate training tasks as interpolation between the target distribution and noise to avoid barren plateau and guarantee efficient training. We provide bounds on the learning error and demonstrate QuDDPM's capability in learning correlated quantum noise model, quantum many-body phases, and topological structure of quantum data. The results provide a paradigm for versatile and efficient quantum generative learning.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-09T17:03:08Z</published>
+    <arxiv:comment>5+10 pages, 16 figures. PRL accepted version. Code available at: https://github.com/francis-hsu/quantgenmdl</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 132, 100602 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Bingzhi Zhang</name>
+    </author>
+    <author>
+      <name>Peng Xu</name>
+    </author>
+    <author>
+      <name>Xiaohui Chen</name>
+    </author>
+    <author>
+      <name>Quntao Zhuang</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.132.100602</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.132.100602" title="doi"/>
+  </entry>
+</feed>

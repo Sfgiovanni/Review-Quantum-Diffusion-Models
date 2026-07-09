@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q09",
+    "concept": "quantum generative models diffusion",
+    "arxiv_query": "all:\"quantum generative models\" AND all:\"diffusion\"",
+    "crossref_query": "\"quantum generative models\" diffusion",
+    "rationale": "Plural generative terminology.",
+    "strategy": "high_recall"
+  },
+  "meta": {
+    "api_total_results": 11,
+    "retrieved_records": 11,
+    "truncated": false
+  }
+}

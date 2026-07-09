@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/DdrogGt+wbKCmVVXzoyExXQqWH4</id>
+  <title>arXiv Query: search_query=all:"quantum circuit" AND all:"diffusion model"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-07-09T18:23:31Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum+circuit%22+AND+all:%22diffusion+model%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>21</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.29636v1</id>
+    <title>Lie Group Diffusion Models for Hardware-Aware Quantum Circuit Synthesis</title>
+    <updated>2026-06-28T22:59:34Z</updated>
+    <link href="https://arxiv.org/abs/2606.29636v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.29636v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An important task in quantum computing is unitary circuit synthesis compatible with physical hardware constraints. This problem has a natural hybrid structure as local single-qubit gates are continuous variables on the Lie group $SU(2)$ while the entangling circuit structure is discrete and hardware-dependent. In this work, we use generative models to perform quantum circuit synthesis incorporating both the natural $SU(2)$ manifold geometry of quantum gates and hardware constraints that determine the overall circuit structure. Our model comprises two components: a circuit skeleton selector that chooses an entangling circuit and a diffusion model that generates quantum gates on the given circuit template by performing diffusion on the curved manifold $\mathrm{SU(2)} \simeq S^3$ itself. We demonstrate this approach with unitary compilation of physically motivated three-qubit Hamiltonian simulation targets such as the Transverse Field Ising Model and the Heisenberg-XXZ Model and show that Lie group diffusion outperforms comparable baselines. The synthesised circuits can also be customised subject to constraints, which we demonstrate by producing circuits with large and small gate rotation angles for the same target unitary evolution. We also investigate the fidelity-complexity frontier of the synthesised gates to demonstrate that the circuit selector learns to select circuits that balance fidelity with complexity rather than collapsing onto the most expansive entangling template. These results demonstrate that Lie group diffusion provides a natural generative framework for hardware-aware quantum circuit synthesis.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-28T22:59:34Z</published>
+    <arxiv:comment>14 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Jyotirmai Singh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.28483v1</id>
+    <title>Quantum Fourier Generative Models Trainable at Large Scale</title>
+    <updated>2026-06-26T18:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.28483v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.28483v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose an algorithmic framework for building and training quantum generative models corresponding to multivariate probability distributions. Our model uses parallel Fourier feature maps for embedding continuous-valued variables combined with a forrelation-type quantum circuit for tuning Fourier coefficients of the quantum model. Crucially, we develop a distinct training strategy where training is enabled at large scale by log-likelihood loss with unbiased Monte Carlo estimator based on Parseval's identity. Unlike prior work that relied on maximal mean discrepancy (MMD) loss, our approach goes beyond matching just low frequency moments, while enabling efficient classical training. Once the model is trained, we use inverse quantum Fourier transforms to map it into a separate sampling circuit in the computational basis. We demonstrate the efficiency of the suggested framework by validating loss estimation at the scale of over 1000 qubits on a single GPU. We show that univariate and bivariate models with highly non-trivial structure can be trained to low total variation distance, while fine-tuned IQP models with MMD loss show poor performance. Comparing to classical baselines represented by normalizing flow and diffusion models, we show that our approach avoids oversmoothing and preserves multi-modal structure of the target. Finally, we have deployed the trained models on superconducting quantum devices, successfully sampling distributions with per-sample execution times of approximately $300\,μ\mathrm{s}$. Our work shows that quantum generative models with the train-on-classical deploy-on-quantum approach can provide both high-quality structure at increased scale and fast sampling access needed for inference.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-26T18:00:00Z</published>
+    <arxiv:comment>12 pages, 6 figures; supplementary material 21 pages, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Cenk Tüysüz</name>
+    </author>
+    <author>
+      <name>Oleksandr Kyriienko</name>
+    </author>
+    <author>
+      <name>Michele Grossi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.23403v1</id>
+    <title>Hybrid Quantum-Classical Corrective Diffusion Modeling for Meteorological Downscaling</title>
+    <updated>2026-05-22T09:14:25Z</updated>
+    <link href="https://arxiv.org/abs/2605.23403v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.23403v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Statistical downscaling is a crucial component of the weather modeling field, where high-resolution outputs must be reconstructed from coarse-resolution inputs with the full cost of dynamical refinement. In this work, we investigate a hybrid quantum-classical corrective diffusion model for probabilistic statistical downscaling of weather fields. The proposed model inserts variational quantum circuit layers into the most compressed bottleneck of the diffusion UNet while leaving the regression branch fully classical. This placement tests whether quantum circuits can act as compact nonlinear feature maps for latent-channel mixing. We evaluate intra-channel and cross-channel ansätze on 10m wind components. On the 2020 validation set, the hybrid models remain stable, preserve the large-scale spatial organization of the generated wind fields, and improve both MAE and CRPS relative to a classical corrective diffusion model in several configurations. Structural diagnostics further show that the hybrid variants preserve kinetic-energy spectra and windspeed distributions similar to its classical counterpart while producing controlled changes in tail behavior, extreme-windspeed localization, and joint wind field components structure. Backend studies on the 2020 validation set show negligible impact from simulated device noise at the tested circuit scale, whereas real-hardware deployment remains limited by qubit availability and execution fidelity. The 2021 out-of-distribution test shows that these in-distribution gains do not transfer uniformly under temporal shift, revealing a generalization gap that motivates future mitigation through stabilization and regularization. These results show that bottleneck-level quantum hybridization can make a nontrivial contribution to weather statistical downscaling, while also highlighting that circuit scale and hardware deployment remain key limiting factors.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-22T09:14:25Z</published>
+    <arxiv:comment>11 pages, 9 figures. Submitted to IEEE QCE 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rui Wang</name>
+    </author>
+    <author>
+      <name>Edoardo Pasetto</name>
+    </author>
+    <author>
+      <name>Amer Delilbasic</name>
+    </author>
+    <author>
+      <name>Morris Riedel</name>
+    </author>
+    <author>
+      <name>Kristel Michielsen</name>
+    </author>
+    <author>
+      <name>Gabriele Cavallaro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01367v1</id>
+    <title>From Characterization To Construction: Generative Quantum Circuit Synthesis from Gate Set Tomography Data</title>
+    <updated>2026-05-02T10:25:10Z</updated>
+    <link href="https://arxiv.org/abs/2605.01367v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01367v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-fidelity circuit execution on noisy intermediate-scale quantum devices is bottlenecked by compilation pipelines that disregard complex, correlated noise. To address this, this methodology article proposes a quantum machine learning control (QMLC) framework for generative quantum circuit synthesis from gate-set tomography (GST) data that bypasses the traditional two-step pipeline of characterizing native quantum gates via GST followed by unitary decomposition algorithms. Instead, a generative concept space is directly learnt from GST data, enabling conditional synthesis of quantum circuits on a desired output distribution. Our approach tokenizes GST germ circuits and embeds them into a structured latent space using a curriculum-learning-motivated strategy, starting with short circuits and progressively incorporating longer ones with diverse output statistics. The embedded sequences are processed by a set-vision transformer with permutation-invariant pooling, producing k-seed vectors that represent the learned concept space of the quantum device. Aggregating data across multiple circuits makes this latent representation inherently context-aware, capturing the shared physical noise environment (e.g., crosstalk, drift) that isolated gate metrics miss. We propose an unconditional diffusion model to sample from the concept space. During inference, a user provides a target measurement distribution, and the model generates a corresponding circuit. To ensure fidelity and robustness, the output is denoised using a diffusion model that operates on the target conditional covariance matrix. This end-to-end framework is a step towards context-aware, hardware-native circuit synthesis directly from raw GST data, which offers a new paradigm for integrating quantum control and compilation. The QMLC framework is particularly suited for near-term quantum devices with complex calibration procedures.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-02T10:25:10Z</published>
+    <arxiv:comment>19 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>King Yiu Yu</name>
+    </author>
+    <author>
+      <name>Aritra Sarkar</name>
+    </author>
+    <author>
+      <name>Erbing Hua</name>
+    </author>
+    <author>
+      <name>Maximilian Rimbach-Russ</name>
+    </author>
+    <author>
+      <name>Ryoichi Ishihara</name>
+    </author>
+    <author>
+      <name>Sebastian Feld</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14163v1</id>
+    <title>Quantum Reinforcement Learning-Guided Diffusion Model for Image Synthesis via Hybrid Quantum-Classical Generative Model Architectures</title>
+    <updated>2025-09-17T16:47:04Z</updated>
+    <link href="https://arxiv.org/abs/2509.14163v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.14163v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models typically employ static or heuristic classifier-free guidance (CFG) schedules, which often fail to adapt across timesteps and noise conditions. In this work, we introduce a quantum reinforcement learning (QRL) controller that dynamically adjusts CFG at each denoising step. The controller adopts a hybrid quantum--classical actor--critic architecture: a shallow variational quantum circuit (VQC) with ring entanglement generates policy features, which are mapped by a compact multilayer perceptron (MLP) into Gaussian actions over $Δ$CFG, while a classical critic estimates value functions. The policy is optimized using Proximal Policy Optimization (PPO) with Generalized Advantage Estimation (GAE), guided by a reward that balances classification confidence, perceptual improvement, and action regularization. Experiments on CIFAR-10 demonstrate that our QRL policy improves perceptual quality (LPIPS, PSNR, SSIM) while reducing parameter count compared to classical RL actors and fixed schedules. Ablation studies on qubit number and circuit depth reveal trade-offs between accuracy and efficiency, and extended evaluations confirm robust generation under long diffusion schedules.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-17T16:47:04Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Chi-Sheng Chen</name>
+    </author>
+    <author>
+      <name>En-Jui Kuo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.22755v2</id>
+    <title>Scaling Laws of Quantum Information Lifetime in Monitored Quantum Dynamics</title>
+    <updated>2026-04-02T22:50:47Z</updated>
+    <link href="https://arxiv.org/abs/2506.22755v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.22755v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum information is typically fragile under measurements and environmental coupling. Remarkably, we find that its lifetime can scale exponentially with system size when the environment is continuously monitored via mid-circuit measurements -- regardless of bath size. Starting from a maximally entangled state with a reference, we analytically prove this exponential scaling for typical Haar random unitaries and confirm it through numerical simulations in both random unitary circuits and chaotic Hamiltonian systems. In the absence of bath monitoring, the lifetime exhibits a markedly different scaling: it grows at most linearly -- or remains constant -- with system size and decays inversely with the bath size. We further extend our findings numerically to a broad class of initial states. In the intermediate regime of partial monitoring, we identify and prove a two-scale transition, where the QMI decays logarithmically at microscopic time scales but linearly at macroscopic time scales.} We discuss implications for {monitored quantum circuits in the weak measurement limit, quantum algorithms such as quantum diffusion models and quantum reservoir computing, and quantum communication. Finally, we experimentally verify the gap of persisted information on IBM Quantum hardwares.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-28T05:01:21Z</published>
+    <arxiv:comment>20+32 pages, 14+16 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. X 16, 021027 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Bingzhi Zhang</name>
+    </author>
+    <author>
+      <name>Fangjun Hu</name>
+    </author>
+    <author>
+      <name>Runzhe Mo</name>
+    </author>
+    <author>
+      <name>Tianyang Chen</name>
+    </author>
+    <author>
+      <name>Hakan E. Türeci</name>
+    </author>
+    <author>
+      <name>Quntao Zhuang</name>
+    </author>
+    <arxiv:doi>10.1103/7717-1mw2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/7717-1mw2" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.21015v2</id>
+    <title>MediQ-GAN: Quantum-Inspired GAN for High Resolution Medical Image Generation</title>
+    <updated>2025-11-03T21:45:49Z</updated>
+    <link href="https://arxiv.org/abs/2506.21015v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.21015v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning-assisted diagnosis shows promise, yet medical imaging datasets are often scarce, imbalanced, and constrained by privacy, making data augmentation essential. Classical generative models typically demand extensive computational and sample resources. Quantum computing offers a promising alternative, but existing quantum-based image generation methods remain limited in scale and often face barren plateaus. We present MediQ-GAN, a quantum-inspired GAN with prototype-guided skip connections and a dual-stream generator that fuses classical and quantum-inspired branches. Its variational quantum circuits inherently preserve full-rank mappings, avoid rank collapse, and are theory-guided to balance expressivity with trainability. Beyond generation quality, we provide the first latent-geometry and rank-based analysis of quantum-inspired GANs, offering theoretical insight into their performance. Across three medical imaging datasets, MediQ-GAN outperforms state-of-the-art GANs and diffusion models. While validated on IBM hardware for robustness, our contribution is hardware-agnostic, offering a scalable and data-efficient framework for medical image generation and augmentation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-26T05:14:45Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Qingyue Jiao</name>
+    </author>
+    <author>
+      <name>Yongcan Tang</name>
+    </author>
+    <author>
+      <name>Jun Zhuang</name>
+    </author>
+    <author>
+      <name>Jason Cong</name>
+    </author>
+    <author>
+      <name>Yiyu Shi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.01666v3</id>
+    <title>Synthesis of discrete-continuous quantum circuits with multimodal diffusion models</title>
+    <updated>2026-04-07T13:07:51Z</updated>
+    <link href="https://arxiv.org/abs/2506.01666v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.01666v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Efficiently compiling quantum operations remains a major bottleneck in scaling quantum computing. Today's state-of-the-art methods achieve low compilation error by combining search algorithms with gradient-based parameter optimization, but they incur long runtimes and require multiple calls to quantum hardware or expensive classical simulations, making their scaling prohibitive. Recently, machine-learning models have emerged as an alternative, though they are currently restricted to discrete gate sets. Here, we introduce a multimodal denoising diffusion model that simultaneously generates a circuit's structure and its continuous parameters for compiling a target unitary. It leverages two independent diffusion processes, one for discrete gate selection and one for parameter prediction. We benchmark the model over different experiments, analyzing the method's accuracy across varying qubit counts and circuit depths, showcasing the ability of the method to outperform existing approaches in gate counts and under noisy conditions. Additionally, we show that a simple post-optimization scheme allows us to significantly improve the generated ansätze. Finally, by exploiting its rapid circuit generation, we create large datasets of circuits for particular operations and use these to extract valuable heuristics that can help us discover new insights into quantum circuit synthesis.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-02T13:35:33Z</published>
+    <arxiv:comment>Main Text: 11 pages, 8 figures and 1 table; Code available at: https://github.com/FlorianFuerrutter/genQC</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Machine Learning: Science and Technology 7.2 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Florian Fürrutter</name>
+    </author>
+    <author>
+      <name>Zohim Chandani</name>
+    </author>
+    <author>
+      <name>Ikko Hamamura</name>
+    </author>
+    <author>
+      <name>Hans J. Briegel</name>
+    </author>
+    <author>
+      <name>Gorka Muñoz-Gil</name>
+    </author>
+    <arxiv:doi>10.1088/2632-2153/ae5b21</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2632-2153/ae5b21" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.20863v3</id>
+    <title>Leveraging Diffusion Models for Parameterized Quantum Circuit Generation</title>
+    <updated>2025-07-23T13:04:46Z</updated>
+    <link href="https://arxiv.org/abs/2505.20863v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.20863v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum computing holds immense potential, yet its practical success depends on multiple factors, including advances in quantum circuit design. In this paper, we introduce a generative approach based on denoising diffusion models (DMs) to synthesize parameterized quantum circuits (PQCs). Extending the recent diffusion model pipeline of Fürrutter et al. [1], our model effectively conditions the synthesis process, enabling the simultaneous generation of circuit architectures and their continuous gate parameters. We demonstrate our approach in synthesizing PQCs optimized for generating high-fidelity Greenberger-Horne-Zeilinger (GHZ) states and achieving high accuracy in quantum machine learning (QML) classification tasks. Our results indicate a strong generalization across varying gate sets and scaling qubit counts, highlighting the versatility and computational efficiency of diffusion-based methods. This work illustrates the potential of generative models as a powerful tool for accelerating and optimizing the design of PQCs, supporting the development of more practical and scalable quantum applications.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-27T08:14:58Z</published>
+    <arxiv:comment>This work has been accepted for presentation at IEEE Quantum Week 2025: IEEE International Conference on Quantum Computing and Engineering (QCE)</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Daniel Barta</name>
+    </author>
+    <author>
+      <name>Darya Martyniuk</name>
+    </author>
+    <author>
+      <name>Johannes Jung</name>
+    </author>
+    <author>
+      <name>Adrian Paschke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05151v3</id>
+    <title>Overcoming Dimensional Factorization Limits in Discrete Diffusion Models through Quantum Joint Distribution Learning</title>
+    <updated>2025-06-29T15:35:22Z</updated>
+    <link href="https://arxiv.org/abs/2505.05151v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05151v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Discrete diffusion models represent a significant advance in generative modeling, demonstrating remarkable success in synthesizing complex, high-quality discrete data. However, to avoid exponential computational costs, they typically rely on calculating per-dimension transition probabilities when learning high-dimensional distributions. In this study, we rigorously prove that this approach leads to a worst-case linear scaling of Kullback-Leibler (KL) divergence with data dimension. To address this, we propose a Quantum Discrete Denoising Diffusion Probabilistic Model (QD3PM), which enables joint probability learning through diffusion and denoising in exponentially large Hilbert spaces, offering a theoretical pathway to faithfully capture the true joint distribution. By deriving posterior states through quantum Bayes' theorem, similar to the crucial role of posterior probabilities in classical diffusion models, and by learning the joint probability, we establish a solid theoretical foundation for quantum-enhanced diffusion models. For denoising, we design a quantum circuit that utilizes temporal information for parameter sharing and incorporates learnable classical-data-controlled rotations for encoding. Exploiting joint distribution learning, our approach enables single-step sampling from pure noise, eliminating iterative requirements of existing models. Simulations demonstrate the proposed model's superior accuracy in modeling complex distributions compared to factorization methods. Hence, this paper establishes a new theoretical paradigm in generative models by leveraging the quantum advantage in joint distribution learning.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T11:48:21Z</published>
+    <arxiv:comment>Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Chuangtao Chen</name>
+    </author>
+    <author>
+      <name>Qinglin Zhao</name>
+    </author>
+    <author>
+      <name>MengChu Zhou</name>
+    </author>
+    <author>
+      <name>Dusit Niyato</name>
+    </author>
+    <author>
+      <name>Zhimin He</name>
+    </author>
+    <author>
+      <name>Haozhen Situ</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.02345v1</id>
+    <title>CQ CNN: A Hybrid Classical Quantum Convolutional Neural Network for Alzheimer's Disease Detection Using Diffusion Generated and U Net Segmented 3D MRI</title>
+    <updated>2025-03-04T07:08:47Z</updated>
+    <link href="https://arxiv.org/abs/2503.02345v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.02345v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The detection of Alzheimer disease (AD) from clinical MRI data is an active area of research in medical imaging. Recent advances in quantum computing, particularly the integration of parameterized quantum circuits (PQCs) with classical machine learning architectures, offer new opportunities to develop models that may outperform traditional methods. However, quantum machine learning (QML) remains in its early stages and requires further experimental analysis to better understand its behavior and limitations. In this paper, we propose an end to end hybrid classical quantum convolutional neural network (CQ CNN) for AD detection using clinically formatted 3D MRI data. Our approach involves developing a framework to make 3D MRI data usable for machine learning, designing and training a brain tissue segmentation model (Skull Net), and training a diffusion model to generate synthetic images for the minority class. Our converged models exhibit potential quantum advantages, achieving higher accuracy in fewer epochs than classical models. The proposed beta8 3 qubit model achieves an accuracy of 97.50%, surpassing state of the art (SOTA) models while requiring significantly fewer computational resources. In particular, the architecture employs only 13K parameters (0.48 MB), reducing the parameter count by more than 99.99% compared to current SOTA models. Furthermore, the diffusion-generated data used to train our quantum models, in conjunction with real samples, preserve clinical structural standards, representing a notable first in the field of QML. We conclude that CQCNN architecture like models, with further improvements in gradient optimization techniques, could become a viable option and even a potential alternative to classical models for AD detection, especially in data limited and resource constrained clinical settings.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-04T07:08:47Z</published>
+    <arxiv:comment>Application of hybrid quantum-classical machine learning for (early stage) disease detection</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mominul Islam</name>
+    </author>
+    <author>
+      <name>Mohammad Junayed Hasan</name>
+    </author>
+    <author>
+      <name>M. R. C. Mahdy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.16380v1</id>
+    <title>UDiTQC: U-Net-Style Diffusion Transformer for Quantum Circuit Synthesis</title>
+    <updated>2025-01-24T15:15:50Z</updated>
+    <link href="https://arxiv.org/abs/2501.16380v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.16380v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum computing is a transformative technology with wide-ranging applications, and efficient quantum circuit generation is crucial for unlocking its full potential. Current diffusion model approaches based on U-Net architectures, while promising, encounter challenges related to computational efficiency and modeling global context. To address these issues, we propose UDiT,a novel U-Net-style Diffusion Transformer architecture, which combines U-Net's strengths in multi-scale feature extraction with the Transformer's ability to model global context. We demonstrate the framework's effectiveness on two tasks: entanglement generation and unitary compilation, where UDiTQC consistently outperforms existing methods. Additionally, our framework supports tasks such as masking and editing circuits to meet specific physical property requirements. This dual advancement, improving quantum circuit synthesis and refining generative model architectures, marks a significant milestone in the convergence of quantum computing and machine learning research.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-24T15:15:50Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zhiwei Chen</name>
+    </author>
+    <author>
+      <name>Hao Tang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.05666v1</id>
+    <title>Diffusion-Enhanced Optimization of Variational Quantum Eigensolver for General Hamiltonians</title>
+    <updated>2025-01-10T02:32:46Z</updated>
+    <link href="https://arxiv.org/abs/2501.05666v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.05666v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Variational quantum algorithms (VQAs) have emerged as a promising approach for achieving quantum advantage on current noisy intermediate-scale quantum devices. However, their large-scale applications are significantly hindered by optimization challenges, such as the barren plateau (BP) phenomenon, local minima, and numerous iteration demands. In this work, we leverage denoising diffusion models (DMs) to address these difficulties. The DM is trained on a few data points in the Heisenberg model parameter space and then can be guided to generate high-performance parameters for parameterized quantum circuits (PQCs) in variational quantum eigensolver (VQE) tasks for general Hamiltonians. Numerical experiments demonstrate that DM-parameterized VQE can explore the ground-state energies of Heisenberg models with parameters not included in the training dataset. Even when applied to previously unseen Hamiltonians, such as the Ising and Hubbard models, it can generate the appropriate initial state to achieve rapid convergence and mitigate the BP and local minima problems. These results highlight the effectiveness of our proposed method in improving optimization efficiency for general Hamiltonians.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-10T02:32:46Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Advanced Quantum Technologies 9, e00766 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Shikun Zhang</name>
+    </author>
+    <author>
+      <name>Zheng Qin</name>
+    </author>
+    <author>
+      <name>Yongyou Zhang</name>
+    </author>
+    <author>
+      <name>Yang Zhou</name>
+    </author>
+    <author>
+      <name>Rui Li</name>
+    </author>
+    <author>
+      <name>Chunxiao Du</name>
+    </author>
+    <author>
+      <name>Zhisong Xiao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.21082v1</id>
+    <title>Quantum Diffusion Model for Quark and Gluon Jet Generation</title>
+    <updated>2024-12-30T17:00:54Z</updated>
+    <link href="https://arxiv.org/abs/2412.21082v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.21082v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models have demonstrated remarkable success in image generation, but they are computationally intensive and time-consuming to train. In this paper, we introduce a novel diffusion model that benefits from quantum computing techniques in order to mitigate computational challenges and enhance generative performance within high energy physics data. The fully quantum diffusion model replaces Gaussian noise with random unitary matrices in the forward process and incorporates a variational quantum circuit within the U-Net in the denoising architecture. We run evaluations on the structurally complex quark and gluon jets dataset from the Large Hadron Collider. The results demonstrate that the fully quantum and hybrid models are competitive with a similar classical model for jet generation, highlighting the potential of using quantum techniques for machine learning problems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-30T17:00:54Z</published>
+    <arxiv:comment>Accepted for the NeurIPS 2024 MLNCP workshop</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mariia Baidachna</name>
+    </author>
+    <author>
+      <name>Rey Guadarrama</name>
+    </author>
+    <author>
+      <name>Gopal Ramesh Dahale</name>
+    </author>
+    <author>
+      <name>Tom Magorsch</name>
+    </author>
+    <author>
+      <name>Isabel Pedraza</name>
+    </author>
+    <author>
+      <name>Konstantin T. Matchev</name>
+    </author>
+    <author>
+      <name>Katia Matcheva</name>
+    </author>
+    <author>
+      <name>Kyoungchul Kong</name>
+    </author>
+    <author>
+      <name>Sergei Gleyzer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.15973v1</id>
+    <title>Enhancing Quantum Diffusion Models with Pairwise Bell State Entanglement</title>
+    <updated>2024-11-24T20:14:57Z</updated>
+    <link href="https://arxiv.org/abs/2411.15973v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.15973v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces a novel quantum diffusion model designed for Noisy Intermediate-Scale Quantum (NISQ) devices. Unlike previous methods, this model efficiently processes higher-dimensional images with complex pixel structures, even on qubit-limited platforms. This is accomplished through a pairwise Bell-state entangling technique, which reduces space complexity. Additionally, parameterized quantum circuits enable the generation of quantum states with minimal parameters, while still delivering high performance. We conduct comprehensive experiments, comparing the proposed model with both classical and quantum techniques using datasets such as MNIST and CIFAR-10. The results show significant improvements in computational efficiency and performance metrics such as FID, SSIM and PSNR. By leveraging quantum entanglement and superposition, this approach advances quantum generative learning. This advancement paves the way for more sophisticated and resource-efficient quantum diffusion algorithms capable of handling complex data on the NISQ devices.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-24T20:14:57Z</published>
+    <arxiv:comment>16 pages, 6 figures, 2 tables, ICPR 2024</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Shivalee Shah</name>
+    </author>
+    <author>
+      <name>Mayank Vatsa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.04217v1</id>
+    <title>Quantum Diffusion Models for Few-Shot Learning</title>
+    <updated>2024-11-06T19:25:06Z</updated>
+    <link href="https://arxiv.org/abs/2411.04217v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.04217v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern quantum machine learning (QML) methods involve the variational optimization of parameterized quantum circuits on training datasets, followed by predictions on testing datasets. Most state-of-the-art QML algorithms currently lack practical advantages due to their limited learning capabilities, especially in few-shot learning tasks. In this work, we propose three new frameworks employing quantum diffusion model (QDM) as a solution for the few-shot learning: label-guided generation inference (LGGI); label-guided denoising inference (LGDI); and label-guided noise addition inference (LGNAI). Experimental results demonstrate that our proposed algorithms significantly outperform existing methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-06T19:25:06Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ruhan Wang</name>
+    </author>
+    <author>
+      <name>Ye Wang</name>
+    </author>
+    <author>
+      <name>Jing Liu</name>
+    </author>
+    <author>
+      <name>Toshiaki Koike-Akino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.00843v3</id>
+    <title>Diffusion-Inspired Quantum Noise Mitigation in Parameterized Quantum Circuits</title>
+    <updated>2025-02-22T22:22:49Z</updated>
+    <link href="https://arxiv.org/abs/2406.00843v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.00843v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Parameterized Quantum Circuits (PQCs) have been acknowledged as a leading strategy to utilize near-term quantum advantages in multiple problems, including machine learning and combinatorial optimization. When applied to specific tasks, the parameters in the quantum circuits are trained to minimize the target function. Although there have been comprehensive studies to improve the performance of the PQCs on practical tasks, the errors caused by the quantum noise downgrade the performance when running on real quantum computers. In particular, when the quantum state is transformed through multiple quantum circuit layers, the effect of the quantum noise happens cumulatively and becomes closer to the maximally mixed state or complete noise. This paper studies the relationship between the quantum noise and the diffusion model. Then, we propose a novel diffusion-inspired learning approach to mitigate the quantum noise in the PQCs and reduce the error for specific tasks. Through our experiments, we illustrate the efficiency of the learning strategy and achieve state-of-the-art performance on classification tasks in the quantum noise scenarios.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-02T19:35:38Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Hoang-Quan Nguyen</name>
+    </author>
+    <author>
+      <name>Xuan Bac Nguyen</name>
+    </author>
+    <author>
+      <name>Samuel Yen-Chi Chen</name>
+    </author>
+    <author>
+      <name>Hugh Churchill</name>
+    </author>
+    <author>
+      <name>Nicholas Borys</name>
+    </author>
+    <author>
+      <name>Samee U. Khan</name>
+    </author>
+    <author>
+      <name>Khoa Luu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.07049v1</id>
+    <title>Quantum Denoising Diffusion Models</title>
+    <updated>2024-01-13T11:38:08Z</updated>
+    <link href="https://arxiv.org/abs/2401.07049v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.07049v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In recent years, machine learning models like DALL-E, Craiyon, and Stable Diffusion have gained significant attention for their ability to generate high-resolution images from concise descriptions. Concurrently, quantum computing is showing promising advances, especially with quantum machine learning which capitalizes on quantum mechanics to meet the increasing computational requirements of traditional machine learning algorithms. This paper explores the integration of quantum machine learning and variational quantum circuits to augment the efficacy of diffusion-based image generation models. Specifically, we address two challenges of classical diffusion models: their low sampling speed and the extensive parameter requirements. We introduce two quantum diffusion models and benchmark their capabilities against their classical counterparts using MNIST digits, Fashion MNIST, and CIFAR-10. Our models surpass the classical models with similar parameter counts in terms of performance metrics FID, SSIM, and PSNR. Moreover, we introduce a consistency model unitary single sampling architecture that combines the diffusion procedure into a single step, enabling a fast one-step image generation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-13T11:38:08Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Michael Kölle</name>
+    </author>
+    <author>
+      <name>Gerhard Stenzel</name>
+    </author>
+    <author>
+      <name>Jonas Stein</name>
+    </author>
+    <author>
+      <name>Sebastian Zielinski</name>
+    </author>
+    <author>
+      <name>Björn Ommer</name>
+    </author>
+    <author>
+      <name>Claudia Linnhoff-Popien</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.15444v1</id>
+    <title>Quantum Diffusion Models</title>
+    <updated>2023-11-26T22:07:12Z</updated>
+    <link href="https://arxiv.org/abs/2311.15444v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.15444v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a quantum version of a generative diffusion model. In this algorithm, artificial neural networks are replaced with parameterized quantum circuits, in order to directly generate quantum states. We present both a full quantum and a latent quantum version of the algorithm; we also present a conditioned version of these models. The models' performances have been evaluated using quantitative metrics complemented by qualitative assessments. An implementation of a simplified version of the algorithm has been executed on real NISQ quantum hardware.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-26T22:07:12Z</published>
+    <arxiv:comment>20 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Andrea Cacioppo</name>
+    </author>
+    <author>
+      <name>Lorenzo Colantonio</name>
+    </author>
+    <author>
+      <name>Simone Bordoni</name>
+    </author>
+    <author>
+      <name>Stefano Giagu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.02041v2</id>
+    <title>Quantum circuit synthesis with diffusion models</title>
+    <updated>2024-05-21T11:37:43Z</updated>
+    <link href="https://arxiv.org/abs/2311.02041v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.02041v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum computing has recently emerged as a transformative technology. Yet, its promised advantages rely on efficiently translating quantum operations into viable physical realizations. In this work, we use generative machine learning models, specifically denoising diffusion models (DMs), to facilitate this transformation. Leveraging text-conditioning, we steer the model to produce desired quantum operations within gate-based quantum circuits. Notably, DMs allow to sidestep during training the exponential overhead inherent in the classical simulation of quantum dynamics -- a consistent bottleneck in preceding ML techniques. We demonstrate the model's capabilities across two tasks: entanglement generation and unitary compilation. The model excels at generating new circuits and supports typical DM extensions such as masking and editing to, for instance, align the circuit generation to the constraints of the targeted quantum device. Given their flexibility and generalization abilities, we envision DMs as pivotal in quantum circuit synthesis, enhancing both practical applications but also insights into theoretical quantum computation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-03T17:17:08Z</published>
+    <arxiv:comment>Code available at: https://github.com/FlorianFuerrutter/genQC</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Nature Machine Intelligence (2024)</arxiv:journal_ref>
+    <author>
+      <name>Florian Fürrutter</name>
+    </author>
+    <author>
+      <name>Gorka Muñoz-Gil</name>
+    </author>
+    <author>
+      <name>Hans J. Briegel</name>
+    </author>
+    <arxiv:doi>10.1038/s42256-024-00831-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s42256-024-00831-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.02511v1</id>
+    <title>Prepare Ansatz for VQE with Diffusion Model</title>
+    <updated>2023-10-04T01:12:35Z</updated>
+    <link href="https://arxiv.org/abs/2310.02511v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.02511v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Variational Quantum Eigensolver (VQE) is a quantum algorithm used to find the ground state energy of a given Hamiltonian. The key component of VQE is the ansatz, which is a trial wavefunction that the algorithm uses to approximate the ground state. Designing a good ansatz can significantly improve the performance of the VQE algorithm. Typical ansatz structures include the Unitary Coupled Cluster (UCC) ansatz and the Hardware-Efficient Ansatz (HEA). The primary distinction between these two structures lies in their dependence on the problem and hardware. The UCC ansatz is tailored to the target Hamiltonian, whereas the HEA is determined by the hardware topology. We believe that an intermediate approach could combine the benefits of the UCC ansatz while introducing additional parameters to increase its expressiveness and capability. In this paper, we propose utilizing a diffusion model to facilitate the generation of ansatz. We create a sequence of UCC ansatzes as training data and input this data into the diffusion model. The model then generates quantum circuits that have a similar structure to the input data. These quantum circuits are subsequently tested using a VQE task to evaluate their performance. This approach provides a systematic method for generating ansatzes that maintain a similar structure while incorporating additional parameters, enhancing their expressiveness and capability. We validate on small molecules that the diffusion model can help prepare ansatz circuits for VQE.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-04T01:12:35Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Yilin Shen</name>
+    </author>
+  </entry>
+</feed>
