@@ -2,7 +2,7 @@
 
 This repository provides a reproducible literature-search pipeline for a review on **Quantum Diffusion Models**.
 
-IEEE- and Springer-scoped records are retrieved from the Crossref REST API using DOI-prefix restrictions. The repository does not claim direct programmatic access to IEEE Xplore or Springer Nature proprietary APIs.
+IEEE- and Springer-scoped records are retrieved from the Crossref REST API using DOI-prefix restrictions
 
 ## Scope
 
