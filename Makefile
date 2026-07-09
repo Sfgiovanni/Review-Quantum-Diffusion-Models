@@ -10,10 +10,10 @@ lint:
 	ruff check .
 
 smoke-test:
-	python -m quantum_diffusion_search search --config configs/search_config.yaml --max-results-per-query 1 --sleep-seconds 0 --sources arxiv,ieee,springer
+	python -m quantum_diffusion_search search --config configs/search_config_smoke.yaml --sources arxiv,ieee,springer
 
 search:
-	python -m quantum_diffusion_search search --config configs/search_config.yaml
+	python -m quantum_diffusion_search search --config configs/search_config_full.yaml
 
 report:
 	python -m quantum_diffusion_search report --run-id $(RUN_ID)

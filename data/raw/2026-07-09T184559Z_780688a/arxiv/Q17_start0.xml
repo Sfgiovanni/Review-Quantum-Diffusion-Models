@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/rMRXTa8usXD5vb14W2Ufx7WtqEc</id>
+  <title>arXiv Query: search_query=all:"quantum" AND all:"Schrödinger bridge" AND all:"diffusion"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-07-09T18:23:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum%22+AND+(all:%22Schr%C3%B6dinger+bridge%22+AND+all:%22diffusion%22)&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2508.08511v2</id>
+    <title>Control-affine Schrödinger Bridge and Generalized Bohm Potential</title>
+    <updated>2025-11-12T17:30:54Z</updated>
+    <link href="https://arxiv.org/abs/2508.08511v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.08511v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The control-affine Schrödinger bridge concerns with a stochastic optimal control problem. Its solution is a controlled evolution of joint state probability density subject to a control-affine Itô diffusion with a given deadline connecting a given pair of initial and terminal densities. In this work, we recast the necessary conditions of optimality for the control-affine Schrödinger bridge problem as a two point boundary value problem for a quantum mechanical Schrödinger PDE with complex potential. This complex-valued potential is a generalization of the real-valued Bohm potential in quantum mechanics. Our derived potential is akin to the optical potential in nuclear physics where the real part of the potential encodes elastic scattering (transmission of wave function), and the imaginary part encodes inelastic scattering (absorption of wave function). The key takeaway is that the process noise that drives the evolution of probability densities induces an absorbing medium in the evolution of wave function. These results make new connections between control theory and non-equilibrium statistical mechanics through the lens of quantum mechanics.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-11T22:41:41Z</published>
+    <arxiv:comment>This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344. Partial funding for this work was provided by LLNL Laboratory Directed Research and Development grant GS 25-ERD-044. Document release number: LLNL-JRNL-2008865</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Alexis M. H. Teter</name>
+    </author>
+    <author>
+      <name>Abhishek Halder</name>
+    </author>
+    <author>
+      <name>Michael D. Schneider</name>
+    </author>
+    <author>
+      <name>Alexx S. Perloff</name>
+    </author>
+    <author>
+      <name>Jane Pratt</name>
+    </author>
+    <author>
+      <name>Conor M. Artman</name>
+    </author>
+    <author>
+      <name>Maria Demireva</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.15245v3</id>
+    <title>Weyl Calculus and Exactly Solvable Schrödinger Bridges with Quadratic State Cost</title>
+    <updated>2024-08-13T01:01:59Z</updated>
+    <link href="https://arxiv.org/abs/2407.15245v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.15245v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Schrödinger bridge--a stochastic dynamical generalization of optimal mass transport--exhibits a learning-control duality. Viewed as a stochastic control problem, the Schrödinger bridge finds an optimal control policy that steers a given joint state statistics to another while minimizing the total control effort subject to controlled diffusion and deadline constraints. Viewed as a stochastic learning problem, the Schrödinger bridge finds the most-likely distribution-valued trajectory connecting endpoint distributional observations, i.e., solves the two point boundary-constrained maximum likelihood problem over the manifold of probability distributions. Recent works have shown that solving the Schrödinger bridge problem with state cost requires finding the Markov kernel associated with a reaction-diffusion PDE where the state cost appears as a state-dependent reaction rate. We explain how ideas from Weyl calculus in quantum mechanics, specifically the Weyl operator and the Weyl symbol, can help determine such Markov kernels. We illustrate these ideas by explicitly finding the Markov kernel for the case of quadratic state cost via Weyl calculus, recovering our earlier results but avoiding tedious computation with Hermite polynomials.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-21T19:05:30Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Alexis M. H. Teter</name>
+    </author>
+    <author>
+      <name>Wenqing Wang</name>
+    </author>
+    <author>
+      <name>Abhishek Halder</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.00503v4</id>
+    <title>Schrödinger Bridge with Quadratic State Cost is Exactly Solvable</title>
+    <updated>2024-10-27T23:21:54Z</updated>
+    <link href="https://arxiv.org/abs/2406.00503v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.00503v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Schrödinger bridge is a diffusion process that steers a given distribution to another in a prescribed time while minimizing the effort to do so. It can be seen as the stochastic dynamical version of the optimal mass transport, and has growing applications in generative diffusion models and stochastic optimal control. {\black{We say a Schrödinger bridge is ``exactly solvable'' if the associated uncontrolled Markov kernel is available in closed form, since then the bridge can be numerically computed using dynamic Sinkhorn recursion for arbitrary endpoint distributions with finite second moments.}} In this work, we propose a regularized variant of the Schrödinger bridge with a quadratic state cost-to-go that incentivizes the optimal sample paths to stay close to a nominal level.
+  Unlike the conventional Schrödinger bridge, the regularization induces a state-dependent rate of killing and creation of probability mass, and its solution requires determining the Markov kernel of a reaction-diffusion partial differential equation. We derive this Markov kernel in closed form, {\black{showing that the regularized Schrödinger bridge is exactly solvable, even for non-Gaussian endpoints. This advances the state-of-the-art because closed form Markov kernel for the regularized Schrödinger bridge is available in existing literature only for Gaussian endpoints}}. Our solution recovers the heat kernel in the vanishing regularization (i.e., diffusion without reaction) limit, thereby recovering the solution of the conventional Schrödinger bridge {\black{as a special case}}. We deduce properties of the new kernel and explain its connections with certain exactly solvable models in quantum mechanics.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-01T17:22:00Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Alexis M. H. Teter</name>
+    </author>
+    <author>
+      <name>Wenqing Wang</name>
+    </author>
+    <author>
+      <name>Abhishek Halder</name>
+    </author>
+  </entry>
+</feed>

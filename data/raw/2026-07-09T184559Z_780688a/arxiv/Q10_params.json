@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q10",
+    "concept": "quantum circuit diffusion model",
+    "arxiv_query": "all:\"quantum circuit\" AND all:\"diffusion model\"",
+    "crossref_query": "\"quantum circuit\" \"diffusion model\"",
+    "rationale": "Circuit-based diffusion models.",
+    "strategy": "high_recall"
+  },
+  "meta": {
+    "api_total_results": 21,
+    "retrieved_records": 21,
+    "truncated": false
+  }
+}

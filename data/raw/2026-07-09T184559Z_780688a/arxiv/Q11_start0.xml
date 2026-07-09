@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/tsMANIcMBoL8zesMd2+yQ6I2REI</id>
+  <title>arXiv Query: search_query=all:"quantum neural network" AND all:"diffusion model"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-07-09T18:23:32Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum+neural+network%22+AND+all:%22diffusion+model%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27561v1</id>
+    <title>Quantum Generative Diffusion Model for Real-World Time Series</title>
+    <updated>2026-06-25T21:33:57Z</updated>
+    <link href="https://arxiv.org/abs/2606.27561v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27561v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models have achieved remarkable success in data synthesis, though recent advances driven by increasing model scale have introduced challenges in computational cost and efficiency. Quantum machine learning offers a promising alternative, representing complex data distributions using compact, highly expressive models. Here, we propose QDiffusion-TS, the first quantum generative diffusion model for time series synthesis, and validate it on the IQM quantum processor. The framework extends a classical diffusion architecture by replacing feed-forward components within the denoising transformer with quantum neural networks, yielding a hybrid quantum transformer that reduces the number of trainable parameters in each replaced component by nearly three orders of magnitude. Evaluated on financial time series from Apple and Amazon, the model generates synthetic data that more accurately reproduces the real distributions, reducing Wasserstein distance by approximately 44% relative to its classical counterpart across both datasets. In a downstream forecasting task, augmentation with the generated data improves predictive performance by up to 71% in RMSE over a baseline trained solely on real data. These results show that quantum enhanced architectures can consistently match and frequently surpass classical performance with substantially fewer parameters, establishing a practical framework towards more efficient and scalable data-driven generative modelling.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T21:33:57Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jack Waller</name>
+    </author>
+    <author>
+      <name>Filippo Caruso</name>
+    </author>
+    <author>
+      <name>Dimitrios Makris</name>
+    </author>
+    <author>
+      <name>Rajagopal Nilavalan</name>
+    </author>
+    <author>
+      <name>Xing Liang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.19270v1</id>
+    <title>Continuous-variable Quantum Diffusion Model for State Generation and Restoration</title>
+    <updated>2025-06-24T03:04:21Z</updated>
+    <link href="https://arxiv.org/abs/2506.19270v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.19270v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The generation and preservation of complex quantum states against environmental noise are paramount challenges in advancing continuous-variable (CV) quantum information processing. This paper introduces a novel framework based on continuous-variable quantum diffusion principles, synergizing them with CV quantum neural networks (CVQNNs) to address these dual challenges. For the task of state generation, our Continuous-Variable Quantum Diffusion Generative model (CVQD-G) employs a physically driven forward diffusion process using a thermal loss channel, which is then inverted by a learnable, parameter-efficient backward denoising process based on a CVQNN with time-embedding. This framework's capability is further extended for state recovery by the Continuous-Variable Quantum Diffusion Restoration model (CVQD-R), a specialized variant designed to restore quantum states, particularly coherent states with unknown parameters, from thermal degradation. Extensive numerical simulations validate these dual capabilities, demonstrating the high-fidelity generation of diverse Gaussian (coherent, squeezed) and non-Gaussian (Fock, cat) states, typically with fidelities exceeding 99%, and confirming the model's ability to robustly restore corrupted states. Furthermore, a comprehensive complexity analysis reveals favorable training and inference costs, highlighting the framework's efficiency, scalability, and its potential as a robust tool for quantum state engineering and noise mitigation in realistic CV quantum systems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-24T03:04:21Z</published>
+    <arxiv:comment>15+3 pages, 14 figures, 7 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Haitao Huang</name>
+    </author>
+    <author>
+      <name>Chuangtao Chen</name>
+    </author>
+    <author>
+      <name>Qinglin Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.07797v1</id>
+    <title>Quantum sequential scattering model for quantum state learning</title>
+    <updated>2023-10-11T18:31:40Z</updated>
+    <link href="https://arxiv.org/abs/2310.07797v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.07797v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning probability distribution is an essential framework in classical learning theory. As a counterpart, quantum state learning has spurred the exploration of quantum machine learning theory. However, as dimensionality increases, learning a high-dimensional unknown quantum state via conventional quantum neural network approaches remains challenging due to trainability issues. In this work, we devise the quantum sequential scattering model (QSSM), inspired by the classical diffusion model, to overcome this scalability issue. Training of our model could effectively circumvent the vanishing gradient problem to a large class of high-dimensional target states possessing polynomial-scaled Schmidt ranks. Theoretical analysis and numerical experiments provide evidence for our model's effectiveness in learning both physical and algorithmic meaningful quantum states and show an out-performance beating the conventional approaches in training speed and learning accuracy. Our work has indicated that an increasing entanglement, a property of quantum states, in the target states, necessitates a larger scaled model, which could reduce our model's learning performance and efficiency.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-11T18:31:40Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mingrui Jing</name>
+    </author>
+    <author>
+      <name>Geng Liu</name>
+    </author>
+    <author>
+      <name>Hongbin Ren</name>
+    </author>
+    <author>
+      <name>Xin Wang</name>
+    </author>
+  </entry>
+</feed>

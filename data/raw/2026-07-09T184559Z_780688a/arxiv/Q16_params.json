@@ -1,0 +1,15 @@
+{
+  "query": {
+    "query_id": "Q16",
+    "concept": "quantum score matching diffusion",
+    "arxiv_query": "all:\"quantum\" AND all:\"score matching\" AND all:\"diffusion\"",
+    "crossref_query": "quantum \"score matching\" diffusion",
+    "rationale": "Score matching and diffusion.",
+    "strategy": "high_recall"
+  },
+  "meta": {
+    "api_total_results": 5,
+    "retrieved_records": 5,
+    "truncated": false
+  }
+}

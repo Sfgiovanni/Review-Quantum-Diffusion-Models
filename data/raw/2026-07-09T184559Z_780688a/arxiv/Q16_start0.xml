@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/6+WVvI/InM7d13KPJZrpMzRP2g8</id>
+  <title>arXiv Query: search_query=all:"quantum" AND all:"score matching" AND all:"diffusion"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-07-09T18:23:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum%22+AND+(all:%22score+matching%22+AND+all:%22diffusion%22)&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05217v2</id>
+    <title>The Score Hamiltonian: Mapping Diffusion Models to Adiabatic Transport</title>
+    <updated>2026-06-22T00:30:31Z</updated>
+    <link href="https://arxiv.org/abs/2606.05217v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05217v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We exhibit an exact correspondence between sampling with score-based diffusion models and adiabatic transport of ground states for a family of Schrödinger operators we call Score Hamiltonians, built from the learned score's quantum potential. We obtain novel density reconstruction bounds and principled annealing schedules via adiabatic theorems for Fokker-Planck equations with time-varying potentials. We find the fundamental limit of sampling is set by the ratio of squared score-matching error to Score Hamiltonian spectral gap - the inverse Poincaré constant of the data density.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-28T18:39:52Z</published>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Peter Halmos</name>
+    </author>
+    <author>
+      <name>Boris Hanin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.21210v1</id>
+    <title>The Feedback Hamiltonian is the Score Function: A Diffusion-Model Framework for Quantum Trajectory Reversal</title>
+    <updated>2026-04-23T02:02:13Z</updated>
+    <link href="https://arxiv.org/abs/2604.21210v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.21210v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In continuously monitored quantum systems, the feedback protocol of García-Pintos, Liu, and Gorshkov reshapes the arrow of time: a Hamiltonian $H_{\mathrm{meas}} = r A / τ$ applied with gain $X$ tilts the distribution of measurement trajectories, with $X &lt; -2$ producing statistically time-reversed outcomes. Why this specific Hamiltonian achieves reversal, and how the mechanism relates to score-based diffusion models in machine learning, has remained unexplained.
+  We compute the functional derivative of the log path probability of the quantum trajectory distribution directly in density-matrix space. Combining Girsanov's theorem applied to the measurement record, Fréchet differentiation on the Banach space of trace-class operators, and Kähler geometry on the pure-state projective manifold, we prove that $δ\log P_F / δρ= r A / τ= H_{\mathrm{meas}}$. The García-Pintos feedback Hamiltonian is the score function of the quantum trajectory distribution -- exactly the object Anderson's reverse-time diffusion theorem requires for trajectory reversal. The identification extends to multi-qubit systems with independent measurement channels, where the score is a sum of local operators.
+  Two consequences follow. First, the feedback gain $X$ generates a continuous one-parameter family of path measures (for feedback-active Hamiltonians with $[H, A] \neq 0$), with $X = -2$ recovering the backward process in leading-order linearization -- a structure absent from classical diffusion, where reversal is binary. Second, the score identification enables machine learning (ML) score estimation methods -- denoising score matching, sliced score matching -- to replace the analytic formula when its idealizations (unit efficiency, zero delay, Gaussian noise) fail in real experiments.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-23T02:02:13Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Sagar Dubey</name>
+    </author>
+    <author>
+      <name>Alan John</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.19877v1</id>
+    <title>Spectral Diffusion for Sampling on ${\rm SU}(N)$</title>
+    <updated>2025-12-22T21:03:47Z</updated>
+    <link href="https://arxiv.org/abs/2512.19877v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.19877v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although ensemble generation remains a central challenge in lattice field theory simulations, recent advances in generative modeling may offer a path to accelerated sampling in these contexts. In this work, we implement a framework for efficiently training diffusion models acting on ${\rm SU}(N)$ degrees of freedom, adapting the traditional score matching technique to the group manifold. We demonstrate that our models can effectively reproduce several target densities, resulting in precise unbiased expectation values. These results mark a step for diffusion models towards modeling full ${\rm SU}(N)$ lattice field theories, including lattice Quantum Chromodynamics.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-22T21:03:47Z</published>
+    <arxiv:comment>10 pages, 4 figures; Proceedings of the 42nd International Symposium on Lattice Field Theory (LATTICE2025), 2-8 November 2025, Mumbai, India. Code available at https://github.com/ovega14/sun_diffusion/</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Octavio Vega</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.08799v4</id>
+    <title>Measurement-Based Quantum Diffusion Models</title>
+    <updated>2026-05-09T19:53:51Z</updated>
+    <link href="https://arxiv.org/abs/2508.08799v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.08799v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce measurement-based quantum diffusion models that bridge classical and quantum diffusion theory through randomized weak measurements. The measurement-based approach naturally generates stochastic quantum trajectories while preserving purity at the trajectory level and inducing depolarization at the ensemble level. We address two quantum state generation problems: trajectory-level recovery of pure state ensembles and ensemble-average recovery of mixed states. For trajectory-level recovery, we establish that quantum score matching is mathematically equivalent to learning unitary generators for the reverse process. For ensemble-average recovery, we introduce local Petz recovery maps for states with finite correlation length and classical shadow reconstruction for general states, both with rigorous error bounds. Our framework establishes Petz recovery maps as quantum generalizations of reverse Fokker-Planck equations, providing a rigorous bridge between quantum recovery channels and classical stochastic reversals. This work enables new approaches to quantum state generation with potential applications in quantum information science.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-12T09:55:50Z</published>
+    <arxiv:comment>11 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Xinyu Liu</name>
+    </author>
+    <author>
+      <name>Jingze Zhuang</name>
+    </author>
+    <author>
+      <name>Wanda Hou</name>
+    </author>
+    <author>
+      <name>Yi-Zhuang You</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.16540v1</id>
+    <title>A Score-Based Model for Learning Neural Wavefunctions</title>
+    <updated>2023-05-25T23:44:27Z</updated>
+    <link href="https://arxiv.org/abs/2305.16540v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.16540v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum Monte Carlo coupled with neural network wavefunctions has shown success in computing ground states of quantum many-body systems. Existing optimization approaches compute the energy by sampling local energy from an explicit probability distribution given by the wavefunction. In this work, we provide a new optimization framework for obtaining properties of quantum many-body ground states using score-based neural networks. Our new framework does not require explicit probability distribution and performs the sampling via Langevin dynamics. Our method is based on the key observation that the local energy is directly related to scores, defined as the gradient of the logarithmic wavefunction. Inspired by the score matching and diffusion Monte Carlo methods, we derive a weighted score matching objective to guide our score-based models to converge correctly to ground states. We first evaluate our approach with experiments on quantum harmonic traps, and results show that it can accurately learn ground states of atomic systems. By implicitly modeling high-dimensional data distributions, our work paves the way toward a more efficient representation of quantum systems.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-25T23:44:27Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Xuan Zhang</name>
+    </author>
+    <author>
+      <name>Shenglong Xu</name>
+    </author>
+    <author>
+      <name>Shuiwang Ji</name>
+    </author>
+  </entry>
+</feed>

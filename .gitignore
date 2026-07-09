@@ -19,3 +19,4 @@ pdfs/
 *.token
 arxiv_quantum_diffusion_results/
 *.egg-info/
+data/smoke/
