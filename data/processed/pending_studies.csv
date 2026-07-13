@@ -1,0 +1,4 @@
+record_id,arxiv_id,doi,year,title,decision,screening_category,exclusion_reason,in_automated_pool,notes
+2026-07-09T184559Z_780688a_R007369,2606.28483,,2026,Quantum Fourier Generative Models Trainable at Large Scale,pending,MANUAL_REVIEW,,True,Quantum Fourier generative models; unclear if diffusion-based. Needs full text.
+2026-07-09T184559Z_780688a_R007374,2604.01197,,2026,Learning and Generating Mixed States Prepared by Shallow Channel Circuits,pending,MANUAL_REVIEW,,True,Generating mixed states via shallow channels; verify it is diffusion-based.
+2026-07-09T184559Z_780688a_R007384,2310.07797,,2023,Quantum sequential scattering model for quantum state learning,pending,MANUAL_REVIEW,,True,Quantum sequential scattering for state learning; verify diffusion link.

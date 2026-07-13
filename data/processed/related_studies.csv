@@ -1,0 +1,4 @@
+record_id,arxiv_id,doi,year,title,decision,screening_category,exclusion_reason,in_automated_pool,notes
+2026-07-09T184559Z_780688a_R007370,2601.22005,,2026,Hierarchy of discriminative power and complexity in learning quantum ensembles,related,RELATED,,True,"MMD-k evaluation metric for quantum ensembles; supporting, not a generative model."
+2026-07-09T184559Z_780688a_R004154,,10.1007/jhep05(2024)060,2024,Diffusion models as stochastic quantization in lattice field theory,related,RELATED,,True,Diffusion models as stochastic quantization in lattice field theory; conceptual link.
+2026-07-09T184559Z_780688a_R007393,2605.13268,,2026,Physics Guided Generative Optimization for Trotter Suzuki Decomposition,related,RELATED,,True,Generative optimization for Trotter-Suzuki decomposition; not diffusion.

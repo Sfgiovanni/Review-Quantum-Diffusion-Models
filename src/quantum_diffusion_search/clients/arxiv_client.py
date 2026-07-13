@@ -129,7 +129,9 @@ class ArxivClient:
                 break
             if start < max_results:
                 time.sleep(sleep_seconds)
-        if total_results is not None and total_results > len(rows) and len(rows) >= max_results:
+        # Flag truncation whenever the API reports more results than we retrieved,
+        # not only when the max-results cap was hit (an early stop is also a partial query).
+        if total_results is not None and total_results > len(rows):
             truncated = True
         meta = {"api_total_results": total_results, "retrieved_records": len(rows), "truncated": truncated}
         (self.raw_dir / f"{query['query_id']}_params.json").write_text(json.dumps({"query": query, "meta": meta}, indent=2), encoding="utf-8")

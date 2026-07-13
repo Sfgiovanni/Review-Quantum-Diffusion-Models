@@ -195,6 +195,8 @@ class CrossrefClient:
                 break
             cursor = next_cursor
             page += 1
-        if total_results is not None and total_results > retrieved and retrieved >= max_results:
+        # Flag truncation whenever the API reports more results than we retrieved,
+        # not only when the max-results cap was hit.
+        if total_results is not None and total_results > retrieved:
             truncated = True
         return all_rows, {"api_total_results": total_results, "retrieved_records": len(all_rows), "truncated": truncated}

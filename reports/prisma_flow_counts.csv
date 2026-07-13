@@ -1,14 +1,12 @@
 prisma_item,count,status
-records identified from original notebook,63,observed
-records identified from fresh arXiv search,147,observed
-records identified from IEEE-scoped Crossref,3600,observed
-records identified from Springer-scoped Crossref,3598,observed
-duplicate records removed,2516,computed
-records after deduplication,4892,computed
-records screened,4892,automated metadata screening
-records excluded,4783,automated metadata screening
-records marked for manual review,17,automated metadata screening
-records included as CORE,54,automated metadata screening
-records included as RELATED,1,automated metadata screening
-records included as BACKGROUND,37,automated metadata screening
-primary quantum-diffusion studies,54,computed
+"records identified (all sources, with cross-source duplicates)",7408,observed
+unique records after deduplication,4892,computed
+"automated CORE candidates (cross-source, pre-deduplication)",275,recomputed
+unique CORE candidates after deduplication,72,computed
+manually screened (all years),72,manual screening
+manually added beyond automated pool,0,manual screening
+included studies (CORE),48,manual screening
+related studies (RELATED),3,manual screening
+pending / manual review,3,manual screening
+excluded studies (EXCLUDE),18,manual screening
+review corpus (all years),48,computed

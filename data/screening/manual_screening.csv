@@ -1,0 +1,73 @@
+arxiv_id,doi,year,title,automated_category,screening_category,confidence,exclusion_reason,notes
+2602.22061,,2026,Learning Quantum Data Distribution via Chaotic Quantum Diffusion Model,CORE,CORE,high,,Quantum-native chaotic QuDDPM.
+2603.02834,10.15302/frontphys.2026.113201,2026,Identification of quantum generative circuits with parallel quantum neural network,CORE,EXCLUDE,high,Discriminative circuit identification (ParaQuanNet); not generative diffusion.,Discriminative circuit identification (ParaQuanNet); not generative diffusion.
+2605.03573,,2026,Stochastic Schrödinger Diffusion Models for Pure-State Ensemble Generation,CORE,CORE,high,,Score-based quantum-native diffusion (SSDM).
+2606.27561,,2026,Quantum Generative Diffusion Model for Real-World Time Series,CORE,CORE,high,,Quantum generative diffusion for time series.
+2607.07072,,2026,An Hybrid Quantum-Classical Diffusion Model for Image Generation,CORE,CORE,high,,Hybrid quantum-classical diffusion for images.
+2601.22005,,2026,Hierarchy of discriminative power and complexity in learning quantum ensembles,CORE,RELATED,high,,"MMD-k evaluation metric for quantum ensembles; supporting, not a generative model."
+2606.28483,,2026,Quantum Fourier Generative Models Trainable at Large Scale,CORE,MANUAL_REVIEW,medium,,Quantum Fourier generative models; unclear if diffusion-based. Needs full text.
+2604.21210,,2026,The Feedback Hamiltonian is the Score Function: A Diffusion-Model Framework for Quantum Trajectory Reversal,CORE,CORE,medium,,Feedback Hamiltonian as score function; diffusion-model framework for quantum.
+2602.03405,,2026,Enhancing Quantum Diffusion Models for Complex Image Generation,CORE,CORE,high,,Hybrid Q-C U-Net QDM for complex images.
+2604.01197,,2026,Learning and Generating Mixed States Prepared by Shallow Channel Circuits,CORE,MANUAL_REVIEW,medium,,Generating mixed states via shallow channels; verify it is diffusion-based.
+2605.19754,,2026,Hypothesis Tests for Observing Quantum Entanglement in HWW at the LHC,CORE,EXCLUDE,high,LHC particle-physics entanglement hypothesis test; off-topic.,LHC particle-physics entanglement hypothesis test; off-topic.
+2605.01367,,2026,From Characterization To Construction: Generative Quantum Circuit Synthesis from Gate Set Tomography Data,CORE,CORE,high,,Generative quantum circuit synthesis from gate sets.
+2606.29636,,2026,Lie Group Diffusion Models for Hardware-Aware Quantum Circuit Synthesis,CORE,CORE,high,,Lie-group diffusion models for hardware-aware circuit synthesis.
+2605.23403,,2026,Hybrid Quantum-Classical Corrective Diffusion Modeling for Meteorological Downscaling,CORE,CORE,medium,,Hybrid quantum-classical corrective diffusion (meteorological downscaling).
+2606.05217,,2026,The Score Hamiltonian: Mapping Diffusion Models to Adiabatic Transport,CORE,CORE,medium,,Theory: mapping diffusion models to adiabatic transport (Score Hamiltonian).
+2509.14163,10.1109/icassp55912.2026.11461991,2026,Quantum Reinforcement Learning-Guided Diffusion Model for Image Synthesis via Hybrid Quantum-Classical Generative Model Architectures,CORE,CORE,medium,,Quantum RL-guided hybrid diffusion for image synthesis.
+2509.17324,10.1109/icassp55912.2026.11461326,2026,DiffQ: Unified Parameter Initialization for Variational Quantum Algorithms Via Diffusion Models,CORE,CORE,medium,,DiffQ: diffusion for VQA parameter initialization (circuit-adjacent).
+2607.00566,,2026,Effective Color Dipole Approach to Color Transparency in $ρ^0$ Electroproduction,CORE,EXCLUDE,high,"Nuclear-physics color transparency; transport, not generative.","Nuclear-physics color transparency; transport, not generative."
+2512.20448,10.1109/tgrs.2026.3661445,2026,Enriching Earth Observation Labeled Data With Quantum Conditioned Diffusion Models,CORE,CORE,high,,Quantum conditioned diffusion for Earth-observation data.
+,10.1007/s42484-026-00352-1,2026,Quantum latent diffusion model for high-dimensional state generation,CORE,CORE,high,,Quantum latent diffusion for high-dimensional state generation (QMI).
+2603.06488,,2026,Score Reversal Is Not Free for Quantum Diffusion Models,CORE,CORE,high,,No-go theory for reverse quantum diffusion.
+2512.06695,,2025,Mitigating Barren Plateaus in Quantum Denoising Diffusion Probabilistic Model,CORE,CORE,high,,QuDDPM barren-plateau mitigation.
+2505.05151,,2025,Overcoming Dimensional Factorization Limits in Discrete Diffusion Models through Quantum Joint Distribution Learning,CORE,CORE,high,,Quantum discrete diffusion (dimensional factorization limits).
+2501.05666,,2025,Diffusion-Enhanced Optimization of Variational Quantum Eigensolver for General Hamiltonians,CORE,CORE,medium,,Diffusion-enhanced VQE optimization (diffusion for quantum optimization).
+2509.17569,,2025,Conditioning in Generative Quantum Denoising Diffusion Models,CORE,CORE,high,,Conditioning in generative QuDDPM.
+2506.21015,,2025,MediQ-GAN: Quantum-Inspired GAN for High Resolution Medical Image Generation,CORE,EXCLUDE,high,"Quantum-inspired GAN, not a diffusion model.","Quantum-inspired GAN, not a diffusion model."
+2506.01666,10.1088/2632-2153/ae5b21,2025,Synthesis of discrete-continuous quantum circuits with multimodal diffusion models,CORE,CORE,high,,Multimodal diffusion for discrete-continuous circuit synthesis.
+2506.19270,,2025,Continuous-variable Quantum Diffusion Model for State Generation and Restoration,CORE,CORE,high,,Continuous-variable quantum diffusion model.
+2503.02345,,2025,CQ CNN: A Hybrid Classical Quantum Convolutional Neural Network for Alzheimer's Disease Detection Using Diffusion Generated and U Net Segmented 3D MRI,CORE,EXCLUDE,high,Hybrid classical-quantum CNN classifier; not diffusion.,Hybrid classical-quantum CNN classifier; not diffusion.
+2501.16380,,2025,UDiTQC: U-Net-Style Diffusion Transformer for Quantum Circuit Synthesis,CORE,CORE,high,,U-Net diffusion transformer for quantum circuit synthesis.
+2505.22193,,2025,Physics-inspired Generative AI models via real hardware-based noisy quantum diffusion,CORE,CORE,high,,Noise-driven QDM on real hardware.
+2508.08799,,2025,Measurement-Based Quantum Diffusion Models,CORE,CORE,high,,Measurement-based quantum diffusion.
+2505.20863,10.1109/qce65121.2025.00180,2025,Leveraging Diffusion Models for Parameterized Quantum Circuit Generation,CORE,CORE,high,,Diffusion for parameterized quantum circuit generation (Barta).
+2506.22755,10.1103/7717-1mw2,2025,Scaling Laws of Quantum Information Lifetime in Monitored Quantum Dynamics,CORE,EXCLUDE,high,Monitored-dynamics physics; not a generative diffusion model.,Monitored-dynamics physics; not a generative diffusion model.
+2511.12221,,2025,Channel-Constrained Markovian Quantum Diffusion Model from Open System Perspective,CORE,CORE,high,,Open-system Markovian quantum diffusion (CCMQD).
+2411.15973,10.1007/978-3-031-78395-1_23,2025,Enhancing Quantum Diffusion Models with Pairwise Bell State Entanglement,CORE,CORE,high,,Bell-state entanglement QDM.
+2508.09903,10.1109/qce65121.2025.10364,2025,Hybrid Quantum-Classical Latent Diffusion Models for Medical Image Generation,CORE,CORE,high,,Hybrid latent QDM for medical imaging.
+2506.15331,10.1088/1674-1137/ae6b20,2025,"Naive parton picture for kaon color transparency in $A(e,e'K^+)$",CORE,EXCLUDE,high,Nuclear-physics kaon color transparency; off-topic.,Nuclear-physics kaon color transparency; off-topic.
+2411.04217,10.1109/icad65464.2025.11114033,2025,Quantum Diffusion Models for Few-Shot Learning,CORE,CORE,high,,QDM for few-shot learning.
+2406.00843,10.1007/s42484-025-00276-2,2025,Diffusion-inspired quantum noise mitigation in parameterized quantum circuits,CORE,CORE,medium,,Diffusion-inspired quantum noise mitigation in PQCs (QMI).
+2411.17608,,2024,Mixed-State Quantum Denoising Diffusion Probabilistic Model,CORE,CORE,high,,Mixed-state QuDDPM (Kwun).
+2407.12242,,2024,Conditional Diffusion-based Parameter Generation for Quantum Approximate Optimization Algorithm,CORE,CORE,high,,Conditional diffusion for QAOA parameter generation.
+2401.07049,10.1109/qsw62656.2024.00023,2024,Quantum Denoising Diffusion Models,CORE,CORE,high,,Quantum Denoising Diffusion Models (Kolle).
+,10.1109/qce60285.2024.10259,2024,QRNG-DDPM: Enhancing Diffusion Models Through Fitting Mixture Noise with Quantum Random Number,CORE,CORE,medium,,QRNG-DDPM: quantum random noise in DDPM (hybrid quantum component).
+2412.21082,,2024,Quantum Diffusion Model for Quark and Gluon Jet Generation,CORE,CORE,high,,QDM for quark/gluon jet generation.
+2406.00503,,2024,Schrödinger Bridge with Quadratic State Cost is Exactly Solvable,CORE,EXCLUDE,medium,Classical Schrodinger-bridge control theory; not a quantum diffusion model.,Classical Schrodinger-bridge control theory; not a quantum diffusion model.
+2409.05129,,2024,"Nuclear transparency and shadowing of the two-step process in the $A(e,e'π^+)$ reaction",CORE,EXCLUDE,high,Nuclear transparency (Glauber); off-topic.,Nuclear transparency (Glauber); off-topic.
+2402.16147,10.1007/s13218-024-00858-5,2024,Towards Efficient Quantum Hybrid Diffusion Models,CORE,CORE,high,,Towards efficient quantum hybrid diffusion (De Falco).
+2311.02041,10.1038/s42256-024-00831-9,2023,Quantum circuit synthesis with diffusion models,CORE,CORE,high,,"Quantum circuit synthesis with diffusion (genQC, Furrutter)."
+2310.07797,,2023,Quantum sequential scattering model for quantum state learning,CORE,MANUAL_REVIEW,medium,,Quantum sequential scattering for state learning; verify diffusion link.
+2310.02511,,2023,Prepare Ansatz for VQE with Diffusion Model,CORE,CORE,high,,Diffusion model to prepare VQE ansatz.
+2305.16540,,2023,A Score-Based Model for Learning Neural Wavefunctions,CORE,CORE,medium,,Score-based model for learning neural wavefunctions.
+2311.15444,,2023,Quantum Diffusion Models,CORE,CORE,high,,Quantum Diffusion Models (Cacioppo).
+2208.08832,10.1103/physrevc.107.014605,2022,"Color coherence effects in the reaction $d(p,2p)n$",CORE,EXCLUDE,high,Nuclear-physics color coherence; off-topic.,Nuclear-physics color coherence; off-topic.
+2604.05612,,2026,Deuteron normalization and channel-dependent formation dynamics in pion and kaon color transparency,MANUAL_REVIEW,EXCLUDE,high,Nuclear-physics color transparency; off-topic.,Nuclear-physics color transparency; off-topic.
+,10.1007/978-3-032-09973-0_7,2026,Ecological Pollution Control Using a Nonlinear Diffusion Model Based on Quantum Optimization,MANUAL_REVIEW,EXCLUDE,high,"Ecological pollution nonlinear diffusion; physical, off-topic.","Ecological pollution nonlinear diffusion; physical, off-topic."
+,10.1007/978-3-032-15931-1_4,2026,Quantum Diffusion Models for Few-Shot Learning,MANUAL_REVIEW,CORE,medium,,QDM for few-shot learning (book chapter; possible duplicate of 2411.04217).
+2501.11174,10.1007/s42484-024-00224-6,2025,Quantum Latent Diffusion Models,MANUAL_REVIEW,CORE,high,,"Quantum Latent Diffusion Models (De Falco, QMI)."
+2512.19877,,2025,Spectral Diffusion for Sampling on ${\rm SU}(N)$,MANUAL_REVIEW,CORE,medium,,Spectral diffusion for sampling on SU(N).
+,10.1109/sispad66650.2025.11185919,2025,Discretization Methods for Quantum Drift-Diffusion Model: A Comparison Based on the Quasi-Fermi Scheme,MANUAL_REVIEW,EXCLUDE,high,"Semiconductor quantum drift-diffusion; physical transport, off-topic.","Semiconductor quantum drift-diffusion; physical transport, off-topic."
+,10.1109/ijcnn64981.2025.11227283,2025,Hybrid and hardware-oriented approaches for quantum diffusion models,MANUAL_REVIEW,CORE,high,,Hybrid hardware-oriented quantum diffusion approaches.
+,10.1109/igarss55030.2025.11242723,2025,Leveraging Quantum Latent Diffusion Models for Data Augmentation on The Eurosat Dataset,MANUAL_REVIEW,CORE,high,,Quantum latent diffusion for EuroSAT data augmentation.
+,10.1109/ccpqt64497.2024.00016,2024,Adversarial Attacks Defense for Continuous Variable Quantum Key Distribution System Based on Diffusion Model,MANUAL_REVIEW,EXCLUDE,high,CV-QKD adversarial defense; not a generative diffusion model.,CV-QKD adversarial defense; not a generative diffusion model.
+,10.1007/jhep05(2024)060,2024,Diffusion models as stochastic quantization in lattice field theory,MANUAL_REVIEW,RELATED,medium,,Diffusion models as stochastic quantization in lattice field theory; conceptual link.
+,10.1109/tpami.2024.3430839,2024,STQD-Det: Spatio-Temporal Quantum Diffusion Model for Real-Time Coronary Stenosis Detection in X-Ray Angiography,MANUAL_REVIEW,CORE,medium,,Spatio-temporal quantum diffusion for stenosis detection (STQD-Det).
+,10.1109/qce60285.2024.10371,2024,Understanding of the Diffusion Noise in Quantum Latent Diffusion Model,MANUAL_REVIEW,CORE,medium,,Analysis of diffusion noise in quantum latent diffusion.
+,10.1109/iemcon62851.2024.11093551,2024,A Latency Score based Benchmarking Framework integrating Quantum Computing in Edge-Cloud Environments,MANUAL_REVIEW,EXCLUDE,high,Latency-score benchmarking framework; not a QDM.,Latency-score benchmarking framework; not a QDM.
+2310.05866,10.1103/physrevlett.132.100602,2023,Generative quantum machine learning via denoising diffusion probabilistic models,MANUAL_REVIEW,CORE,high,,Generative QML via DDPM (Zhang QuDDPM; foundational).
+,10.1109/i3cs58314.2023.10127313,2023,Photo-electric Characteristics Analysis of Quantum Corrected Strained Nanowire Drift-Diffusion Model based Si/Si<sub>0.98</sub>C<sub>0.02</sub> Asymmetrical Super-lattice Near Infrared Photo-detector,MANUAL_REVIEW,EXCLUDE,high,"Semiconductor nanowire drift-diffusion; physical, off-topic.","Semiconductor nanowire drift-diffusion; physical, off-topic."
+,10.1007/s10825-021-01782-9,2021,Quantum energy-transport and drift-diffusion models for electron transport in graphene: an approach by the wigner function,MANUAL_REVIEW,EXCLUDE,high,"Graphene drift-diffusion transport; physical, off-topic.","Graphene drift-diffusion transport; physical, off-topic."
+2011.14953,10.3847/1538-4357/abf141,2020,"Neutron tunneling: A new mechanism to power explosive phenomena in neutron stars, magnetars, and neutron star mergers",MANUAL_REVIEW,EXCLUDE,high,Neutron tunneling astrophysics; off-topic.,Neutron tunneling astrophysics; off-topic.
+2605.13268,,2026,Physics Guided Generative Optimization for Trotter Suzuki Decomposition,RELATED,RELATED,medium,,Generative optimization for Trotter-Suzuki decomposition; not diffusion.

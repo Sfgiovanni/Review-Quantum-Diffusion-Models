@@ -5,7 +5,7 @@ study:
   strategy_version: 1.0.0
 date_range:
   from_pub_date: '2020-01-01'
-  until_pub_date: null
+  until_pub_date: '2026-07-09'
   interpretation: Publication year greater than or equal to 2020, matching the original
     notebook MIN_YEAR = 2020
 sources:
@@ -57,6 +57,11 @@ relevance:
     \bquantum machine learning\b: 4
     \bquantum neural network(s)?\b: 4
     \bquantum circuit(s)?\b: 3
+    \bquantum circuit synthesis\b: 5
+    \bquantum circuit generation\b: 4
+    \bquantum architecture search\b: 4
+    \bparameterized quantum circuit(s)?\b: 3
+    \bdiffusing quantum circuits\b: 7
     \bvariational quantum\b: 3
     \bstochastic schr[oö]dinger diffusion\b: 8
     \bschr[oö]dinger bridge\b: 4
@@ -84,6 +89,11 @@ topic_patterns:
   - schr[oö]dinger bridge
   quantum circuit diffusion:
   - quantum circuit
+  diffusion-based quantum circuit synthesis:
+  - quantum circuit generation
+  - quantum architecture search
+  - diffusing quantum circuits
+  - quantum circuit synthesis
   variational quantum diffusion:
   - variational quantum
   quantum neural-network diffusion:
@@ -265,5 +275,35 @@ queries:
   arxiv_query: all:"quantum" AND all:"Schrodinger bridge" AND all:"diffusion"
   crossref_query: quantum "Schrodinger bridge" diffusion
   rationale: ASCII Schrodinger bridge.
+  strategy: high_recall
+- query_id: Q19
+  concept: diffusing quantum circuits
+  arxiv_query: all:"diffusing quantum circuits"
+  crossref_query: '"diffusing quantum circuits"'
+  rationale: Diffusion-based generation of quantum circuits (e.g. Q-Fusion, arXiv:2504.20794).
+  strategy: high_precision
+- query_id: Q20
+  concept: diffusion parameterized quantum circuit
+  arxiv_query: all:"diffusion" AND all:"parameterized quantum circuit"
+  crossref_query: diffusion "parameterized quantum circuit"
+  rationale: Diffusion synthesis of parameterized quantum circuits (e.g. Barta et al., arXiv:2505.20863).
+  strategy: high_recall
+- query_id: Q21
+  concept: quantum circuit synthesis diffusion
+  arxiv_query: all:"quantum circuit synthesis" AND all:"diffusion"
+  crossref_query: '"quantum circuit synthesis" diffusion'
+  rationale: Diffusion models for quantum circuit synthesis (e.g. genQC, arXiv:2311.02041).
+  strategy: high_recall
+- query_id: Q22
+  concept: quantum architecture search diffusion
+  arxiv_query: all:"quantum architecture search" AND all:"diffusion"
+  crossref_query: '"quantum architecture search" diffusion'
+  rationale: Diffusion-based quantum architecture search.
+  strategy: high_recall
+- query_id: Q23
+  concept: diffusion quantum circuit generation
+  arxiv_query: all:"diffusion" AND all:"quantum circuit generation"
+  crossref_query: diffusion "quantum circuit generation"
+  rationale: Broad recall for diffusion-driven quantum circuit generation.
   strategy: high_recall
 run_mode: full

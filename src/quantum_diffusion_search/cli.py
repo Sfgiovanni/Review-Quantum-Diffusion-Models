@@ -45,6 +45,12 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--run-id", required=True)
     p = sub.add_parser("reproduce")
     p.add_argument("--raw-run", required=True)
+    p = sub.add_parser("apply-screening")
+    p.add_argument("--screening", default="data/screening/manual_screening.csv")
+    p.add_argument("--processed", default="data/processed")
+    p.add_argument("--reports", default="reports")
+    p.add_argument("--corpus-from", type=int, default=2025)
+    p.add_argument("--corpus-to", type=int, default=2026)
     args = parser.parse_args(argv)
     if args.command in {"search", "all", "update-search"}:
         return run_search(args)
@@ -54,6 +60,12 @@ def main(argv: list[str] | None = None) -> int:
         return run_validate(args.run_id)
     if args.command == "reproduce":
         return run_reproduce(Path(args.raw_run))
+    if args.command == "apply-screening":
+        from .apply_screening import apply_screening
+        summary = apply_screening(Path(args.screening), Path(args.processed), Path(args.reports), corpus_from=args.corpus_from, corpus_to=args.corpus_to)
+        for key, value in summary.items():
+            print(f"{key}: {value}")
+        return 0
     return 2
 
 
@@ -317,6 +329,13 @@ def _write_final_counts_reports(all_records: pd.DataFrame, unique: pd.DataFrame,
     }
     lines = ["# Search report", "", f"Run ID: `{run_id}`", f"Date range: {cfg['date_range']['from_pub_date']} to {cfg['date_range']['until_pub_date']}", "", "## Final counts"]
     lines.extend([f"- {k}: {v}" for k, v in counts.items()])
+    lines.extend([
+        "",
+        "> Note: CORE/RELATED/BACKGROUND and 'primary quantum-diffusion models' are automated",
+        "> labels applied to cross-source records before deduplication; they are screening aids,",
+        "> not the final included set. Unique-candidate, included, excluded and pending counts are",
+        "> produced by `apply-screening` (see reports/selection_flow.md).",
+    ])
     lines.extend(["", "## Method", "arXiv was queried through the public arXiv API. IEEE-scoped and Springer-scoped records were retrieved from Crossref using DOI prefixes `10.1109` and `10.1007`, respectively. The original notebook filtered records were reproduced and included as a mandatory legacy source before deduplication."])
     (reports_dir / "search_report.md").write_text("\n".join(lines), encoding="utf-8")
     files.append(str(reports_dir / "search_report.md"))
@@ -330,10 +349,10 @@ def _write_final_counts_reports(all_records: pd.DataFrame, unique: pd.DataFrame,
         ("records screened", counts["Total after deduplication"], "automated metadata screening"),
         ("records excluded", counts["EXCLUDE"], "automated metadata screening"),
         ("records marked for manual review", counts["MANUAL_REVIEW"], "automated metadata screening"),
-        ("records included as CORE", counts["CORE"], "automated metadata screening"),
+        ("automated CORE labels (cross-source records, pre-deduplication)", counts["CORE"], "automated metadata screening"),
         ("records included as RELATED", counts["RELATED"], "automated metadata screening"),
         ("records included as BACKGROUND", counts["BACKGROUND"], "automated metadata screening"),
-        ("primary quantum-diffusion studies", counts["Primary quantum-diffusion models"], "computed"),
+        ("automated CORE candidates for manual screening (cross-source)", counts["Primary quantum-diffusion models"], "screening aid, not final inclusion"),
     ], columns=["prisma_item", "count", "status"])
     prisma.to_csv(reports_dir / "prisma_flow_counts.csv", index=False)
     files.append(str(reports_dir / "prisma_flow_counts.csv"))
@@ -377,19 +396,9 @@ def run_validate(run_id: str) -> int:
 
 
 def run_reproduce(raw_run: Path) -> int:
-    cfg_path = raw_run / "resolved_search_config.yaml"
-    if not cfg_path.exists():
-        raise FileNotFoundError(cfg_path)
-    records: list[dict[str, Any]] = []
-    for raw_file in raw_run.rglob("*.json.gz"):
-        if "_params" in raw_file.name:
-            continue
-        # Reproduction from raw Crossref files is intentionally conservative here.
-        # The original manifest and raw payloads remain the authoritative acquisition record.
-        pass
-    if not records and Path("data/processed/all_source_records.csv").exists():
-        shutil.copy("data/processed/all_source_records.csv", "data/processed/all_source_records_reproduced.csv")
-    return 0
+    from .reproduce import reproduce_run
+
+    return reproduce_run(raw_run)
 
 
 if __name__ == "__main__":
