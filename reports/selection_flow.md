@@ -6,8 +6,8 @@
 - unique CORE candidates after deduplication: 72
 - manually screened (all years): 72
 - manually added beyond automated pool: 0
-- included studies (CORE): 48
-- related studies (RELATED): 3
+- included studies (CORE): 40
+- related studies (RELATED): 1
 - pending / manual review: 3
-- excluded studies (EXCLUDE): 18
-- review corpus (all years): 48
+- excluded studies (EXCLUDE): 28
+- review corpus (all years): 40

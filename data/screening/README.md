@@ -34,23 +34,25 @@ auto-exclude:
 | RELATED | 1 |
 | **Total handed to human screening** | **72** |
 
-**Output — final human decision** (`screening_category` column). After full-text
-review the 72 records are *re-distributed*: several automated "CORE" records were
-physics false positives (e.g. color transparency) and became EXCLUDE, while several
-automated "MANUAL_REVIEW" records (e.g. the Zhang QuDDPM and De Falco quantum latent
-diffusion papers) were promoted to CORE:
+**Output — final human decision** (`screening_category` column), after a manual
+audit (2026-07-13). Several automated "CORE" records were physics false positives
+(e.g. color transparency) and became EXCLUDE; several automated "MANUAL_REVIEW"
+records (e.g. the Zhang QuDDPM and De Falco quantum latent diffusion papers) were
+promoted to CORE; and a further 10 records that had passed an earlier screening pass
+were reclassified to EXCLUDE on closer inspection as insufficiently related to
+quantum diffusion models:
 
 | Final decision | Count |
 |---|---|
-| CORE (review corpus) | 48 |
-| RELATED | 3 |
+| CORE (review corpus) | 40 |
+| RELATED | 1 |
 | MANUAL_REVIEW (pending full-text) | 3 |
-| EXCLUDE | 18 |
+| EXCLUDE | 28 |
 | **Total screened** | **72** |
 
 So the totals match (72 in, 72 out); only the per-category split changes between the
 automated label and the human decision. Each row also carries a `confidence` flag
-(high/medium) on the manual decision.
+(high/medium) on the manual decision. The review corpus is the 40 CORE records.
 
 ## Regenerate the flow
 ```bash

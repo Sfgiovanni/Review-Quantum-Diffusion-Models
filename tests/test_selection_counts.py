@@ -23,9 +23,9 @@ pytestmark = pytest.mark.skipif(
 def test_committed_selection_flow(tmp_path):
     s = apply_screening(SCREENING, Path("data/processed"), tmp_path / "reports")
     assert s["core_unique_candidates"] == 72   # CORE 54 + MANUAL_REVIEW 17 + RELATED 1
-    assert s["included"] == 48                  # CORE after manual screening
-    assert s["related"] == 3
+    assert s["included"] == 40                  # CORE after manual screening
+    assert s["related"] == 1
     assert s["pending"] == 3
-    assert s["excluded"] == 18
-    assert s["review_corpus"] == 48
+    assert s["excluded"] == 28
+    assert s["review_corpus"] == 40
     assert s["manually_added_beyond_pool"] == 0
