@@ -20,9 +20,27 @@ protocol.
 - `notes` — free text.
 
 ## Counts (frozen)
-Built from the automated shortlist: CORE (54) + MANUAL_REVIEW (17) + RELATED (1) = 72 records, human-screened.
 
-| Screening category | Count |
+Two different things share the same category names, so keep them apart:
+
+**Input — automated pipeline labels** (`automated_category` column). This is the
+shortlist handed to the human reviewers, i.e. every record the pipeline did *not*
+auto-exclude:
+
+| Automated label | Count |
+|---|---|
+| CORE | 54 |
+| MANUAL_REVIEW | 17 |
+| RELATED | 1 |
+| **Total handed to human screening** | **72** |
+
+**Output — final human decision** (`screening_category` column). After full-text
+review the 72 records are *re-distributed*: several automated "CORE" records were
+physics false positives (e.g. color transparency) and became EXCLUDE, while several
+automated "MANUAL_REVIEW" records (e.g. the Zhang QuDDPM and De Falco quantum latent
+diffusion papers) were promoted to CORE:
+
+| Final decision | Count |
 |---|---|
 | CORE (review corpus) | 48 |
 | RELATED | 3 |
@@ -30,8 +48,9 @@ Built from the automated shortlist: CORE (54) + MANUAL_REVIEW (17) + RELATED (1)
 | EXCLUDE | 18 |
 | **Total screened** | **72** |
 
-Each row also carries `automated_category` (the pipeline's CORE/RELATED/MANUAL_REVIEW
-label) and a `confidence` flag (high/medium) on the manual decision.
+So the totals match (72 in, 72 out); only the per-category split changes between the
+automated label and the human decision. Each row also carries a `confidence` flag
+(high/medium) on the manual decision.
 
 ## Regenerate the flow
 ```bash
