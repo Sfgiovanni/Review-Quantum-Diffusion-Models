@@ -5,8 +5,8 @@ unique records after deduplication,4892,computed
 unique CORE candidates after deduplication,72,computed
 manually screened (all years),72,manual screening
 manually added beyond automated pool,0,manual screening
-included studies (CORE),40,manual screening
+included studies (CORE),39,manual screening
 related studies (RELATED),1,manual screening
 pending / manual review,3,manual screening
-excluded studies (EXCLUDE),28,manual screening
-review corpus (all years),40,computed
+excluded studies (EXCLUDE),29,manual screening
+review corpus (all years),39,computed

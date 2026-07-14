@@ -140,14 +140,14 @@ The review scope is now the whole field across all years, not just 2025–2026.
 - **Screening sheet re-labelled for all years.** `data/screening/manual_screening.csv`
   (+ `.xlsx`) now uses the standard `screening_category` vocabulary
   (CORE / RELATED / MANUAL_REVIEW / EXCLUDE) over the full corpus:
-  **CORE = 40, RELATED = 1, MANUAL_REVIEW = 3, EXCLUDE = 28 (audited 2026-07-13)** (72 screened; the human-screened universe is the automated CORE 54 + MANUAL_REVIEW 17 + RELATED 1). The
+  **CORE = 39, RELATED = 1, MANUAL_REVIEW = 3, EXCLUDE = 29 (audited 2026-07-13)** (72 screened; the human-screened universe is the automated CORE 54 + MANUAL_REVIEW 17 + RELATED 1). The
   pre-2025 antecedents (Cacioppo, Zhang, Kölle, Parigi, Fürrutter, Kwun, …) are now
   **CORE included studies**, not background.
 - **`apply-screening` updated.** Reads `screening_category`, adds a RELATED bucket
   and `related_studies.csv`, and defaults to all years (no 2025–2026 window; pass
-  `--corpus-from/--corpus-to` to restrict). It emits `included_studies.csv` (40),
-  `related_studies.csv` (1), `pending_studies.csv` (3), `excluded_studies.csv` (28),
-  `main_corpus.csv` (40), and rebuilds the PRISMA flow.
+  `--corpus-from/--corpus-to` to restrict). It emits `included_studies.csv` (39),
+  `related_studies.csv` (1), `pending_studies.csv` (3), `excluded_studies.csv` (29),
+  `main_corpus.csv` (39), and rebuilds the PRISMA flow.
 - **Tests updated** to the all-years counts (`tests/test_selection_counts.py`).
 
 Manuscript changes (intro/abstract to all-years, ~26 studies, positioning vs the

@@ -33,7 +33,6 @@ record_id,arxiv_id,doi,year,title,decision,screening_category,exclusion_reason,i
 2026-07-09T184559Z_780688a_R007380,2311.02041,10.1038/s42256-024-00831-9,2023,Quantum circuit synthesis with diffusion models,included,CORE,,True,"Quantum circuit synthesis with diffusion (genQC, Furrutter)."
 2026-07-09T184559Z_780688a_R007397,2310.02511,,2023,Prepare Ansatz for VQE with Diffusion Model,included,CORE,,True,Diffusion model to prepare VQE ansatz.
 2026-07-09T184559Z_780688a_R007405,2311.15444,,2023,Quantum Diffusion Models,included,CORE,,True,Quantum Diffusion Models (Cacioppo).
-2026-07-09T184559Z_780688a_R003925,,10.1007/978-3-032-15931-1_4,2026,Quantum Diffusion Models for Few-Shot Learning,included,CORE,,True,QDM for few-shot learning (book chapter; possible duplicate of 2411.04217).
 2026-07-09T184559Z_780688a_R007395,2501.11174,10.1007/s42484-024-00224-6,2025,Quantum Latent Diffusion Models,included,CORE,,True,"Quantum Latent Diffusion Models (De Falco, QMI)."
 2026-07-09T184559Z_780688a_R000220,,10.1109/ijcnn64981.2025.11227283,2025,Hybrid and hardware-oriented approaches for quantum diffusion models,included,CORE,,True,Hybrid hardware-oriented quantum diffusion approaches.
 2026-07-09T184559Z_780688a_R000368,,10.1109/igarss55030.2025.11242723,2025,Leveraging Quantum Latent Diffusion Models for Data Augmentation on The Eurosat Dataset,included,CORE,,True,Quantum latent diffusion for EuroSAT data augmentation.

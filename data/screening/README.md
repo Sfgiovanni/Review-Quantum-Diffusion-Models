@@ -39,27 +39,4 @@ audit (2026-07-13). Several automated "CORE" records were physics false positive
 (e.g. color transparency) and became EXCLUDE; several automated "MANUAL_REVIEW"
 records (e.g. the Zhang QuDDPM and De Falco quantum latent diffusion papers) were
 promoted to CORE; and a further 10 records that had passed an earlier screening pass
-were reclassified to EXCLUDE on closer inspection as insufficiently related to
-quantum diffusion models:
-
-| Final decision | Count |
-|---|---|
-| CORE (review corpus) | 40 |
-| RELATED | 1 |
-| MANUAL_REVIEW (pending full-text) | 3 |
-| EXCLUDE | 28 |
-| **Total screened** | **72** |
-
-So the totals match (72 in, 72 out); only the per-category split changes between the
-automated label and the human decision. Each row also carries a `confidence` flag
-(high/medium) on the manual decision. The review corpus is the 40 CORE records.
-
-## Regenerate the flow
-```bash
-python -m quantum_diffusion_search apply-screening \
-  --screening data/screening/manual_screening.csv
-```
-This writes the per-stage tables to `data/processed/` (`included_studies.csv`,
-`related_studies.csv`, `pending_studies.csv`, `excluded_studies.csv`,
-`main_corpus.csv`, `manually_added_studies.csv`) and rebuilds
-`reports/prisma_flow_counts.csv` + `reports/selection_flow.md`.
+were reclassified to EXCLUDE on closer inspection as i
