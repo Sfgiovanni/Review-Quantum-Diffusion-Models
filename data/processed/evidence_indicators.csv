@@ -1,0 +1,40 @@
+unit,classical_baseline,multiple_runs,public_code,classical_baseline_source,multiple_runs_source,public_code_source
+furrutter2024quantum,no,yes,yes,Not identified,Yes,Yes
+shen2023prepare,yes,no,no,Yes (randomly generated ansatzes; unequal gate budget),Not reported,No public code identified
+cacioppo2023quantum,yes,no,yes,Yes (task-matched),Not reported,Yes (shared public repository)
+zhang2024generative,no,no,yes,Not identified,Not reported,Yes
+shah2025enhancing,yes,no,no,Yes (task-matched),Not reported,No public code identified
+wang2025quantum,no,yes,no,Not identified,Yes,No public code identified
+nguyen2025noise,no,yes,no,Not identified,Yes --- five runs per configuration,No public code identified
+kwun2025mixed,no,no,no,Not identified,Not reported,No public code identified
+meng2024conditional,yes,no,no,Yes (GNN; TQA also reported as a comparator),Not reported,No public code identified
+kolle2024quantum,yes,no,no,Yes (task-matched),Not reported,No public code identified
+baidachna2024quantum,yes,no,yes,Yes (task-matched),Not reported,Yes
+defalco2024towards,yes,no,no,Yes (task-matched),Not reported,No public code identified
+cho2024understanding,no,no,no,Not identified,Not reported,No public code identified
+chen2026qrl,yes,no,no,Yes (task-matched),Not reported,No public code identified
+zhang2026diffq,yes,no,no,Yes (random parameter initialization),Not reported,No public code identified
+mauro2026enriching,yes,no,yes,Yes (task-matched),Not reported,Yes
+cao2025mitigating,no,no,no,Not identified,Not reported,No public code identified
+chen2025joint,yes,yes,yes,Yes (Classical D3PM; task-matched),Yes,Yes (QD3PM repository)
+quinn2025conditioning,no,no,yes,Not identified,Not reported,Yes
+furrutter2026multimodal,yes,no,yes,"Yes (QSD, AQC, and LEAP)",Not reported,Yes
+huang2025continuous,no,no,no,Not identified,Not reported,No public code identified
+chen2025uditqc,no,no,no,Not identified,Not reported,No public code identified
+"parigi2023quantum,parigi2025physics",yes,yes,no,Yes (task-matched),Yes --- 10 simulations per noise-parameter value,No public code identified
+liu2025measurement,no,no,no,Not identified,Not reported,No public code identified
+barta2025leveraging,no,no,no,Not identified,Not reported,No public code identified
+zhu2025channel,no,yes,yes,Not identified,Yes,Yes
+bauer2025hybrid,yes,no,no,Yes (task-matched),Not reported,No public code identified
+defalco2025quantum,yes,no,no,Yes (task-matched),Not reported,No public code identified
+cacioppo2025hardware,yes,no,yes,Yes (task-matched),Not reported,Yes (shared public repository)
+defalco2025eurosat,yes,no,no,Yes (task-matched),Not reported,No public code identified
+tran2026chaotic,no,yes,yes,Not identified,Yes,Yes
+xu2026stochastic,yes,yes,no,Yes (Euclidean VP-SDE and adapted Riemannian baseline),Yes,No public code identified
+waller2026timeseries,yes,no,no,Yes (task-matched),Not reported,No public code identified
+qian2026hybrid,no,no,no,Not identified,Not reported,No public code identified
+jo2026enhancing,no,no,yes,Not identified,Not reported,Yes
+yu2026characterization,na,na,no,N/A,N/A,No public code identified
+singh2026liegroup,yes,yes,yes,Yes (Haar-random and generated-search baselines; equivalent local refinement),Yes,Yes
+li2026latent,no,no,no,Not identified,Not reported,No public code identified
+fayad2026score,na,na,no,N/A,N/A,No public code identified
